@@ -18,33 +18,41 @@ const Donate = () => {
       id: 'education',
       title: 'Education Support',
       icon: GraduationCap,
-      description: 'Fund school supplies, uniforms, and educational programs',
+      description: 'Fund school supplies, uniforms, and educational programs for children and orphanages',
       color: 'from-blue-500 to-blue-600',
       impact: '$25 = School supplies for 1 child for a month'
     },
     {
-      id: 'business',
-      title: 'Business Empowerment',
-      icon: Building2,
-      description: 'Provide microloans and business training',
-      color: 'from-green-500 to-green-600',
-      impact: '$100 = Microloan to start a small business'
+      id: 'water',
+      title: 'Clean Water Access',
+      icon: Droplets,
+      description: 'Install water systems and promote hygiene in communities',
+      color: 'from-cyan-500 to-cyan-600',
+      impact: '$200 = Clean water access for 10 families'
     },
     {
       id: 'health',
       title: 'Healthcare Access',
       icon: Stethoscope,
-      description: 'Support mobile clinics and health education',
+      description: 'Support mobile clinics, health education, and medical care for orphanages',
       color: 'from-red-500 to-red-600',
       impact: '$75 = Medical care for a family of 5'
     },
     {
-      id: 'water',
-      title: 'Clean Water',
-      icon: Droplets,
-      description: 'Install water systems and promote hygiene',
-      color: 'from-cyan-500 to-cyan-600',
-      impact: '$200 = Clean water access for 10 families'
+      id: 'orphanage',
+      title: 'Orphanage Support',
+      icon: Heart,
+      description: 'Provide food, shelter, and care for orphaned children',
+      color: 'from-pink-500 to-pink-600',
+      impact: '$50 = Monthly support for 1 orphaned child'
+    },
+    {
+      id: 'church',
+      title: 'Church & Faith Programs',
+      icon: Building2,
+      description: 'Support churches and faith-based community initiatives',
+      color: 'from-purple-500 to-purple-600',
+      impact: '$100 = Support community faith programs'
     },
     {
       id: 'general',
@@ -63,15 +71,18 @@ const Donate = () => {
     if (selectedCategory === 'education') {
       const months = Math.floor(amount / 25);
       return months > 0 ? `Provides school supplies for ${months} child${months > 1 ? 'ren' : ''} for a month` : '';
-    } else if (selectedCategory === 'business') {
-      const loans = Math.floor(amount / 100);
-      return loans > 0 ? `Enables ${loans} microloan${loans > 1 ? 's' : ''} for small businesses` : '';
-    } else if (selectedCategory === 'health') {
-      const families = Math.floor(amount / 75);
-      return families > 0 ? `Provides medical care for ${families} famil${families > 1 ? 'ies' : 'y'}` : '';
     } else if (selectedCategory === 'water') {
       const families = Math.floor(amount / 20);
       return families > 0 ? `Provides clean water access for ${families} famil${families > 1 ? 'ies' : 'y'}` : '';
+    } else if (selectedCategory === 'health') {
+      const families = Math.floor(amount / 75);
+      return families > 0 ? `Provides medical care for ${families} famil${families > 1 ? 'ies' : 'y'}` : '';
+    } else if (selectedCategory === 'orphanage') {
+      const children = Math.floor(amount / 50);
+      return children > 0 ? `Provides monthly support for ${children} orphaned child${children > 1 ? 'ren' : ''}` : '';
+    } else if (selectedCategory === 'church') {
+      const programs = Math.floor(amount / 100);
+      return programs > 0 ? `Supports ${programs} community faith program${programs > 1 ? 's' : ''}` : '';
     }
     return 'Makes a significant impact in our communities';
   };
@@ -113,8 +124,8 @@ const Donate = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl max-w-3xl mx-auto"
           >
-            Your donation creates lasting change in the lives of children and families across Ghana. 
-            Every contribution matters, no matter the size.
+            Your donation creates lasting change through education, clean water, healthcare, orphan care, 
+            and faith-based programs across Ghana. Every contribution matters, no matter the size.
           </motion.p>
         </div>
       </section>
