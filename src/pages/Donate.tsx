@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Shield, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets } from 'lucide-react';
+import { Heart, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets, ExternalLink } from 'lucide-react';
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(50);
   const [customAmount, setCustomAmount] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('general');
-  const [donorInfo, setDonorInfo] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    message: ''
-  });
 
   const donationCategories = [
     {
@@ -87,10 +81,18 @@ const Donate = () => {
     return 'Makes a significant impact in our communities';
   };
 
-  const handleDonate = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would integrate with Stripe or another payment processor
-    alert('Donation functionality would be integrated with Stripe here!');
+  const handleDonate = () => {
+    const amount = customAmount ? parseInt(customAmount) : selectedAmount;
+    
+    // Create URL with donation details as query parameters
+    const stripeUrl = new URL('https://buy.stripe.com/test_4gM5kF1NAd2vfF83KU4Rq00');
+    
+    // Add category and amount as metadata (you can process this in your Node.js backend)
+    stripeUrl.searchParams.append('client_reference_id', `${selectedCategory}_${amount}`);
+    stripeUrl.searchParams.append('prefilled_email', '');
+    
+    // Navigate to Stripe checkout
+    window.open(stripeUrl.toString(), '_blank');
   };
 
   return (
@@ -217,78 +219,45 @@ const Donate = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-xl sticky top-24"
+                className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-xl sticky top-24 text-center"
               >
-                <div className="flex items-center mb-6">
-                  <Shield className="h-6 w-6 text-green-500 mr-2" />
-                  <span className="text-sm text-gray-600">Secure donation powered by Stripe</span>
-                </div>
-
-                <form onSubmit={handleDonate} className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <input
-                      type="text"
-                      placeholder="First Name"
-                      value={donorInfo.firstName}
-                      onChange={(e) => setDonorInfo({...donorInfo, firstName: e.target.value})}
-                      className="p-3 border border-gray-300 rounded-lg focus:border-orange-500 focus:ring focus:ring-orange-200"
-                      required
-                    />
-                    <input
-                      type="text"
-                      placeholder="Last Name"
-                      value={donorInfo.lastName}
-                      onChange={(e) => setDonorInfo({...donorInfo, lastName: e.target.value})}
-                      className="p-3 border border-gray-300 rounded-lg focus:border-orange-500 focus:ring focus:ring-orange-200"
-                      required
-                    />
-                  </div>
-                  
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    value={donorInfo.email}
-                    onChange={(e) => setDonorInfo({...donorInfo, email: e.target.value})}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-orange-500 focus:ring focus:ring-orange-200"
-                    required
-                  />
-                  
-                  <textarea
-                    placeholder="Personal message (optional)"
-                    value={donorInfo.message}
-                    onChange={(e) => setDonorInfo({...donorInfo, message: e.target.value})}
-                    rows={3}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-orange-500 focus:ring focus:ring-orange-200"
-                  />
-
-                  <div className="bg-white p-4 rounded-lg shadow">
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Donate?</h3>
+                  <div className="bg-white p-4 rounded-lg shadow mb-6">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-600">Donation Amount:</span>
+                      <span className="text-gray-600">Category:</span>
+                      <span className="font-semibold text-orange-600 capitalize">
+                        {donationCategories.find(cat => cat.id === selectedCategory)?.title}
+                      </span>
+                    </div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-gray-600">Amount:</span>
                       <span className="text-2xl font-bold text-orange-600">
                         ${customAmount || selectedAmount}
                       </span>
                     </div>
-                    <div className="text-sm text-gray-500">
-                      100% of your donation goes directly to programs
+                    <div className="text-sm text-gray-500 mt-2">
+                      {getImpactMessage()}
                     </div>
                   </div>
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-orange-500 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
-                  >
-                    <Heart className="mr-2 h-5 w-5" />
-                    Donate Now
-                  </button>
-                </form>
+                </div>
 
-                <div className="mt-6 text-center">
-                  <div className="flex items-center justify-center mb-2">
-                    <Gift className="h-5 w-5 text-orange-500 mr-2" />
-                    <span className="text-sm text-gray-600">Tax-deductible donation</span>
-                  </div>
+
+                <button
+                  onClick={handleDonate}
+                  className="w-full bg-gradient-to-r from-orange-500 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center mb-4"
+                >
+                  <Heart className="mr-2 h-5 w-5" />
+                  Proceed to Stripe Checkout
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </button>
+
+                <div className="text-center">
+                  <p className="text-sm text-gray-600 mb-2">
+                    🔒 Secure payment powered by Stripe
+                  </p>
                   <p className="text-xs text-gray-500">
-                    Receipt will be emailed to you for your records
+                    You'll be redirected to Stripe's secure checkout page
                   </p>
                 </div>
               </motion.div>
