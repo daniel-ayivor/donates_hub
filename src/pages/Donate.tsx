@@ -220,10 +220,10 @@ const Donate = () => {
                     <div
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
-                    className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group ${
-                          ? 'ring-4 ring-orange-500 shadow-xl'
-                        ? 'ring-4 ring-orange-500 shadow-2xl shadow-orange-500/25'
+                      className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group ${
+                        selectedCategory === category.id
+                          ? 'ring-4 ring-orange-500 shadow-2xl shadow-orange-500/25'
+                          : 'hover:shadow-lg'
                       }`}
                     >
                       <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10`}></div>
@@ -240,12 +240,13 @@ const Donate = () => {
                       >
                         <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
                       </motion.div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
                         <p className="text-gray-600 mb-3">{category.description}</p>
-                        <div className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg">
                       <motion.div 
                         className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg"
                         whileHover={{ scale: 1.05 }}
                       >
+                        {category.impact}
                         </div>
                       </motion.div>
                     </div>
