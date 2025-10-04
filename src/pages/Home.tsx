@@ -5,6 +5,7 @@ import { Users, Building2, DollarSign, Heart } from 'lucide-react';
 import CountUp from '../components/CountUp';
 import FeaturedStories from '../components/FeaturedStories';
 import HeroCarousel from '../components/HeroCarousel';
+import ProgressBar from '../components/ProgressBar';
 
 const Home = () => {
   const stats = [
@@ -64,18 +65,54 @@ const Home = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl hover:shadow-lg transition-shadow duration-300"
+                className="text-center p-8 bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 transform hover:-translate-y-2 group"
               >
-                <stat.icon className="h-12 w-12 text-orange-500 mx-auto mb-4" />
+                <motion.div
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <stat.icon className="h-12 w-12 text-orange-500 mx-auto mb-4 group-hover:text-orange-600 transition-colors" />
+                </motion.div>
                 <div className="text-4xl font-bold text-gray-900 mb-2">
-                  {stat.prefix}
-                  <CountUp end={stat.value} />
-                  {stat.suffix}
+                  <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
                 <div className="text-lg text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Fundraising Progress */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Current Fundraising Goal</h2>
+            <p className="text-xl text-gray-600">Help us reach our target to expand our programs</p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-xl"
+          >
+            <ProgressBar
+              current={87500}
+              goal={150000}
+              label="Education & Water Access Program"
+              color="bg-gradient-to-r from-orange-500 to-pink-500"
+              height="h-6"
+              animationDuration={3000}
+            />
+          </motion.div>
         </div>
       </section>
 

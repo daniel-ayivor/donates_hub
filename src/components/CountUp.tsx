@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface CountUpProps {
   end: number;
   duration?: number;
+  prefix?: string;
+  suffix?: string;
 }
 
-const CountUp: React.FC<CountUpProps> = ({ end, duration = 2000 }) => {
+const CountUp: React.FC<CountUpProps> = ({ end, duration = 2000, prefix = '', suffix = '' }) => {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const countRef = useRef<HTMLSpanElement>(null);
@@ -51,7 +54,17 @@ const CountUp: React.FC<CountUpProps> = ({ end, duration = 2000 }) => {
     requestAnimationFrame(updateCount);
   }, [isVisible, end, duration]);
 
-  return <span ref={countRef}>{count.toLocaleString()}</span>;
+  return (
+    <motion.span 
+      ref={countRef}
+      initial={{ scale: 0.5, opacity: 0 }}
+      animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0.5, opacity: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="inline-block"
+    >
+      {prefix}{count.toLocaleString()}{suffix}
+    </motion.span>
+  );
 };
 
 export default CountUp;

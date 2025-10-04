@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets, ExternalLink } from 'lucide-react';
+import { Heart, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets, ExternalLink, Check, Sparkles } from 'lucide-react';
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(50);
   const [customAmount, setCustomAmount] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('general');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const donationCategories = [
     {
@@ -84,6 +86,16 @@ const Donate = () => {
   const handleDonate = () => {
     const amount = customAmount ? parseInt(customAmount) : selectedAmount;
     
+    setIsSubmitting(true);
+    
+    // Simulate processing delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      
+      // Hide success message and redirect after animation
+      setTimeout(() => {
+        setShowSuccess(false);
     // Create URL with donation details as query parameters
     const stripeUrl = new URL('https://buy.stripe.com/test_4gM5kF1NAd2vfF83KU4Rq00');
     
@@ -93,7 +105,66 @@ const Donate = () => {
     
     // Navigate to Stripe checkout
     window.open(stripeUrl.toString(), '_blank');
+      }, 2000);
+    }, 1000);
   };
+
+  // Success Animation Component
+  const SuccessAnimation = () => (
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      exit={{ scale: 0, opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+    >
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="bg-white rounded-2xl p-8 text-center max-w-md mx-4"
+      >
+        <motion.div
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
+        >
+          <Check className="h-8 w-8 text-white" />
+        </motion.div>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+        <p className="text-gray-600 mb-4">Redirecting to secure checkout...</p>
+        <div className="flex justify-center">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            className="w-6 h-6 border-2 border-orange-500 border-t-transparent rounded-full"
+          />
+        </div>
+      </motion.div>
+      
+      {/* Confetti Effect */}
+      {[...Array(50)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-2 h-2 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full"
+          initial={{
+            x: window.innerWidth / 2,
+            y: window.innerHeight / 2,
+            scale: 0,
+          }}
+          animate={{
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            scale: [0, 1, 0],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeOut",
+            delay: Math.random() * 0.5,
+          }}
+        />
+      ))}
+    </motion.div>
+  );
 
   return (
     <motion.div
@@ -150,20 +221,33 @@ const Donate = () => {
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
                       className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 ${
-                        selectedCategory === category.id
+                    className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group ${
                           ? 'ring-4 ring-orange-500 shadow-xl'
-                          : 'shadow-lg hover:shadow-xl'
+                        ? 'ring-4 ring-orange-500 shadow-2xl shadow-orange-500/25'
                       }`}
                     >
                       <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10`}></div>
-                      <div className="relative">
+                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                    <motion.div
+                      className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-0`}
+                      whileHover={{ opacity: 0.1 }}
+                      transition={{ duration: 0.3 }}
+                    />
                         <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">{category.title}</h3>
+                      <motion.div
+                        whileHover={{ scale: 1.1, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
+                      </motion.div>
                         <p className="text-gray-600 mb-3">{category.description}</p>
                         <div className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg">
-                          {category.impact}
+                      <motion.div 
+                        className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg"
+                        whileHover={{ scale: 1.05 }}
+                      >
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
                   ))}
                 </div>
@@ -172,20 +256,31 @@ const Donate = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Select Amount</h3>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-4 mb-6">
                   {presetAmounts.map((amount) => (
-                    <button
+                    <motion.button
                       key={amount}
                       onClick={() => {
                         setSelectedAmount(amount);
                         setCustomAmount('');
                       }}
-                      className={`p-4 rounded-xl font-semibold transition-all duration-300 ${
+                      className={`p-4 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden ${
                         selectedAmount === amount && !customAmount
-                          ? 'bg-orange-500 text-white transform scale-105'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          ? 'bg-orange-500 text-white transform scale-105 shadow-lg shadow-orange-500/25'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
                       }`}
+                      whileHover={{ y: -2 }}
+                      whileTap={{ scale: 0.95 }}
                     >
+                      {selectedAmount === amount && !customAmount && (
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500"
+                          animate={{ opacity: [0.5, 0.8, 0.5] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                        />
+                      )}
+                      <span className="relative z-10">
                       ${amount}
-                    </button>
+                      </span>
+                    </motion.button>
                   ))}
                 </div>
 
@@ -198,17 +293,21 @@ const Donate = () => {
                       setCustomAmount(e.target.value);
                       setSelectedAmount(0);
                     }}
-                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-orange-500 focus:ring focus:ring-orange-200 text-lg"
+                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-orange-500 focus:ring focus:ring-orange-200 text-lg transition-all duration-300 focus:scale-105 focus:shadow-lg"
                   />
                 </div>
 
                 {/* Impact Display */}
-                <div className="bg-green-50 p-6 rounded-xl mb-8">
+                <motion.div 
+                  className="bg-green-50 p-6 rounded-xl mb-8 border border-green-200"
+                  whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(34, 197, 94, 0.1)" }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
                   <h4 className="text-lg font-bold text-green-800 mb-2">Your Impact:</h4>
                   <p className="text-green-700 text-lg">
                     ${customAmount || selectedAmount} {getImpactMessage()}
                   </p>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
 
@@ -223,7 +322,10 @@ const Donate = () => {
               >
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Donate?</h3>
-                  <div className="bg-white p-4 rounded-lg shadow mb-6">
+                  <motion.div 
+                    className="bg-white p-4 rounded-lg shadow mb-6"
+                    whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)" }}
+                  >
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-600">Category:</span>
                       <span className="font-semibold text-orange-600 capitalize">
@@ -239,18 +341,48 @@ const Donate = () => {
                     <div className="text-sm text-gray-500 mt-2">
                       {getImpactMessage()}
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
 
 
-                <button
+                <motion.button
                   onClick={handleDonate}
-                  className="w-full bg-gradient-to-r from-orange-500 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center mb-4"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-orange-500 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center mb-4 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(249, 115, 22, 0.3)" }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <Heart className="mr-2 h-5 w-5" />
-                  Proceed to Stripe Checkout
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </button>
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      opacity: [0.5, 0.8, 0.5] 
+                    }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      ease: "easeInOut" 
+                    }}
+                  />
+                  <span className="relative z-10 flex items-center">
+                    {isSubmitting ? (
+                      <>
+                        <motion.div
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          className="w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-2"
+                        />
+                        Processing...
+                      </>
+                    ) : (
+                      <>
+                        <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
+                        Proceed to Stripe Checkout
+                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </>
+                    )}
+                  </span>
+                </motion.button>
 
                 <div className="text-center">
                   <p className="text-sm text-gray-600 mb-2">
@@ -265,6 +397,9 @@ const Donate = () => {
           </div>
         </div>
       </section>
+      
+      {/* Success Animation Overlay */}
+      {showSuccess && <SuccessAnimation />}
 
       {/* Other Ways to Help */}
       <section className="py-16 bg-gray-50">
