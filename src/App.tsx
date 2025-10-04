@@ -12,6 +12,7 @@ import AboutUs from './pages/AboutUs';
 import GetInvolved from './pages/GetInvolved';
 import ProjectDetail from './pages/ProjectDetail';
 import EventDetail from './pages/EventDetail';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/donate" element={<Donate />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/get-involved" element={<GetInvolved />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </AnimatePresence>
         <Footer />

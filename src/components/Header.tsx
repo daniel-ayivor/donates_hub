@@ -39,7 +39,7 @@ const Header = () => {
             <span className={`text-2xl font-bold ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
-              Brighter Futures
+              African Assistance Plan
             </span>
           </Link>
 

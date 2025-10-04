@@ -35,7 +35,7 @@ const AboutUs = () => {
   ];
 
   const milestones = [
-    { year: "2019", event: "Brighter Futures founded", description: "Started with a vision to transform communities" },
+    { year: "2019", event: "African Assistance Plan founded", description: "Started with a vision to transform communities" },
     { year: "2020", event: "First 100 children supported", description: "Educational support program launched" },
     { year: "2021", event: "Microfinance program begins", description: "Empowering small business owners" },
     { year: "2022", event: "Mobile health clinic launched", description: "Bringing healthcare to remote areas" },
