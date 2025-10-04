@@ -11,7 +11,7 @@ const Gallery = () => {
       id: 1,
       src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
       title: "Back-to-School Drive 2024",
-      category: "education",
+      category: "children-youth",
       location: "Accra, Ghana",
       date: "August 2024",
       participants: "500+ Children",
@@ -21,7 +21,7 @@ const Gallery = () => {
       id: 2,
       src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
       title: "Student Reading Program",
-      category: "education",
+      category: "children-youth",
       location: "Kumasi, Ghana",
       date: "July 2024",
       participants: "200+ Students",
@@ -31,7 +31,7 @@ const Gallery = () => {
       id: 3,
       src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
       title: "Youth Leadership Summit",
-      category: "education",
+      category: "children-youth",
       location: "Cape Coast, Ghana",
       date: "November 2024",
       participants: "120 Youth Leaders",
@@ -41,7 +41,7 @@ const Gallery = () => {
       id: 4,
       src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
       title: "Clean Water Installation",
-      category: "water",
+      category: "wash",
       location: "Northern Ghana",
       date: "October 2024",
       participants: "1200+ Residents",
@@ -50,18 +50,18 @@ const Gallery = () => {
     {
       id: 5,
       src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
-      title: "Mobile Health Clinic",
-      category: "health",
+      title: "Hygiene Education Program",
+      category: "wash",
       location: "Rural Communities",
       date: "December 2024",
-      participants: "800+ Patients",
-      description: "Providing free medical check-ups and health education."
+      participants: "300+ Families",
+      description: "Teaching proper hygiene practices and sanitation in rural communities."
     },
     {
       id: 6,
       src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
-      title: "Orphanage Support Visit",
-      category: "orphanage",
+      title: "Children's Home Support",
+      category: "children-youth",
       location: "Accra, Ghana",
       date: "September 2024",
       participants: "50+ Children",
@@ -70,18 +70,18 @@ const Gallery = () => {
     {
       id: 7,
       src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
-      title: "Women's Entrepreneurship Workshop",
-      category: "business",
+      title: "Youth Skills Training",
+      category: "children-youth",
       location: "Kumasi, Ghana",
       date: "September 2024",
-      participants: "75 Women",
-      description: "Training women in business skills and financial literacy."
+      participants: "60 Youth",
+      description: "Training young people in vocational skills and entrepreneurship."
     },
     {
       id: 8,
       src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
       title: "Digital Skills Training",
-      category: "education",
+      category: "children-youth",
       location: "Accra Tech Hub",
       date: "January 2025",
       participants: "60 Trainees",
@@ -91,7 +91,7 @@ const Gallery = () => {
       id: 9,
       src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
       title: "Community Church Outreach",
-      category: "church",
+      category: "church-community",
       location: "Various Communities",
       date: "Ongoing",
       participants: "Multiple Congregations",
@@ -100,43 +100,170 @@ const Gallery = () => {
     {
       id: 10,
       src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-      title: "School Infrastructure Project",
-      category: "education",
+      title: "After School Program",
+      category: "children-youth",
       location: "Rural Ghana",
       date: "June 2024",
-      participants: "300+ Students",
-      description: "Building and renovating classrooms for better learning environments."
+      participants: "150+ Children",
+      description: "Providing after-school tutoring and mentorship for children."
     },
     {
       id: 11,
       src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-      title: "Water Well Dedication",
-      category: "water",
+      title: "Sanitation Facility Construction",
+      category: "wash",
       location: "Tamale, Ghana",
       date: "August 2024",
-      participants: "500+ Villagers",
-      description: "Celebrating the completion of a new water well serving the entire village."
+      participants: "200+ Families",
+      description: "Building proper sanitation facilities for improved community health."
     },
     {
       id: 12,
       src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
-      title: "Medical Outreach Program",
-      category: "health",
+      title: "Water Quality Testing",
+      category: "wash",
       location: "Remote Villages",
       date: "November 2024",
-      participants: "600+ Patients",
-      description: "Bringing essential healthcare services to underserved communities."
+      participants: "50+ Communities",
+      description: "Testing and ensuring safe drinking water quality in rural areas."
+    },
+    {
+      id: 13,
+      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      title: "Youth Mentorship Program",
+      category: "children-youth",
+      location: "Cape Coast, Ghana",
+      date: "October 2024",
+      participants: "80+ Youth",
+      description: "Connecting young people with mentors for personal and professional development."
+    },
+    {
+      id: 14,
+      src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      title: "Children's Sports Day",
+      category: "children-youth",
+      location: "Accra, Ghana",
+      date: "September 2024",
+      participants: "200+ Children",
+      description: "Organizing sports activities to promote physical health and teamwork among children."
+    },
+    {
+      id: 15,
+      src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      title: "Educational Workshop",
+      category: "children-youth",
+      location: "Kumasi, Ghana",
+      date: "August 2024",
+      participants: "120+ Students",
+      description: "Interactive educational workshops covering science, technology, and life skills."
+    },
+    {
+      id: 16,
+      src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      title: "Computer Literacy Program",
+      category: "children-youth",
+      location: "Accra Tech Hub",
+      date: "July 2024",
+      participants: "90+ Youth",
+      description: "Teaching basic computer skills and digital literacy to young people."
+    },
+    {
+      id: 17,
+      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      title: "School Supply Distribution",
+      category: "children-youth",
+      location: "Multiple Schools",
+      date: "January 2024",
+      participants: "400+ Students",
+      description: "Distributing essential school supplies to students in need."
+    },
+    {
+      id: 18,
+      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      title: "Reading Club Initiative",
+      category: "children-youth",
+      location: "Community Centers",
+      date: "March 2024",
+      participants: "150+ Children",
+      description: "Establishing reading clubs to improve literacy rates among children."
+    },
+    {
+      id: 19,
+      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      title: "Leadership Training",
+      category: "children-youth",
+      location: "Youth Centers",
+      date: "May 2024",
+      participants: "75+ Youth",
+      description: "Training young leaders to become advocates for positive change in their communities."
+    },
+    {
+      id: 20,
+      src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      title: "Art & Creativity Workshop",
+      category: "children-youth",
+      location: "Community Centers",
+      date: "April 2024",
+      participants: "100+ Children",
+      description: "Encouraging creativity and self-expression through art and craft activities."
+    },
+    {
+      id: 21,
+      src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      title: "Career Guidance Session",
+      category: "children-youth",
+      location: "Schools",
+      date: "February 2024",
+      participants: "200+ Students",
+      description: "Providing career guidance and counseling to help students make informed decisions."
+    },
+    {
+      id: 22,
+      src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      title: "STEM Education Program",
+      category: "children-youth",
+      location: "Science Centers",
+      date: "June 2024",
+      participants: "80+ Students",
+      description: "Promoting science, technology, engineering, and mathematics education among youth."
+    },
+    {
+      id: 23,
+      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      title: "Scholarship Award Ceremony",
+      category: "children-youth",
+      location: "Accra, Ghana",
+      date: "December 2023",
+      participants: "50+ Recipients",
+      description: "Awarding scholarships to deserving students to support their educational journey."
+    },
+    {
+      id: 24,
+      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      title: "Health & Nutrition Education",
+      category: "children-youth",
+      location: "Schools & Communities",
+      date: "November 2023",
+      participants: "300+ Children",
+      description: "Teaching children about proper nutrition and healthy lifestyle choices."
+    },
+    {
+      id: 25,
+      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      title: "Music & Dance Program",
+      category: "children-youth",
+      location: "Cultural Centers",
+      date: "October 2023",
+      participants: "120+ Youth",
+      description: "Preserving cultural heritage through music and dance education programs."
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All Activities', count: galleryImages.length },
-    { id: 'education', label: 'Education', count: galleryImages.filter(img => img.category === 'education').length },
-    { id: 'water', label: 'Water Access', count: galleryImages.filter(img => img.category === 'water').length },
-    { id: 'health', label: 'Healthcare', count: galleryImages.filter(img => img.category === 'health').length },
-    { id: 'orphanage', label: 'Orphan Care', count: galleryImages.filter(img => img.category === 'orphanage').length },
-    { id: 'church', label: 'Faith Programs', count: galleryImages.filter(img => img.category === 'church').length },
-    { id: 'business', label: 'Business Support', count: galleryImages.filter(img => img.category === 'business').length }
+    { id: 'all', label: 'All', count: galleryImages.length },
+    { id: 'wash', label: 'WaSH', count: galleryImages.filter(img => img.category === 'wash').length },
+    { id: 'children-youth', label: 'Children & Youth Empowerment', count: galleryImages.filter(img => img.category === 'children-youth').length },
+    { id: 'church-community', label: 'Church & Community Empowerment', count: galleryImages.filter(img => img.category === 'church-community').length }
   ];
 
   const filteredImages = selectedCategory === 'all' 
