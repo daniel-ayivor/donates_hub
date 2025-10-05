@@ -58,6 +58,26 @@ const Gallery = () => {
       description: "Teaching proper hygiene practices and sanitation in rural communities."
     },
     {
+      id: 26,
+      src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      title: "Water System Maintenance",
+      category: "wash",
+      location: "Central Ghana",
+      date: "November 2024",
+      participants: "800+ Residents",
+      description: "Regular maintenance and repair of existing water systems."
+    },
+    {
+      id: 27,
+      src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      title: "Community Sanitation Workshop",
+      category: "wash",
+      location: "Western Ghana",
+      date: "September 2024",
+      participants: "150+ Community Members",
+      description: "Training community leaders on sanitation best practices."
+    },
+    {
       id: 6,
       src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
       title: "Children's Home Support",
@@ -260,10 +280,10 @@ const Gallery = () => {
   ];
 
   const categories = [
-    { id: 'all', label: 'All', count: galleryImages.length },
-    { id: 'wash', label: 'WaSH', count: galleryImages.filter(img => img.category === 'wash').length },
-    { id: 'children-youth', label: 'Children & Youth Empowerment', count: galleryImages.filter(img => img.category === 'children-youth').length },
-    { id: 'church-community', label: 'Church & Community Empowerment', count: galleryImages.filter(img => img.category === 'church-community').length }
+    { id: 'all', label: 'All', count: 25 },
+    { id: 'wash', label: 'WaSH', count: 4 },
+    { id: 'children-youth', label: 'Children & Youth Empowerment', count: 20 },
+    { id: 'church-community', label: 'Church & Community Empowerment', count: 1 }
   ];
 
   const filteredImages = selectedCategory === 'all' 
