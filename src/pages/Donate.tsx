@@ -226,14 +226,7 @@ const Donate = () => {
                           : 'hover:shadow-lg'
                       }`}
                     >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10`}></div>
-                    <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                    <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-0`}
-                      whileHover={{ opacity: 0.1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                        <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 300 }}
@@ -241,13 +234,12 @@ const Donate = () => {
                         <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
                       </motion.div>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
-                        <p className="text-gray-600 mb-3">{category.description}</p>
-                      <motion.div 
+                      <p className="text-gray-600 mb-3">{category.description}</p>
+                      <motion.div
                         className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg"
                         whileHover={{ scale: 1.05 }}
                       >
                         {category.impact}
-                        </div>
                       </motion.div>
                     </div>
                   ))}

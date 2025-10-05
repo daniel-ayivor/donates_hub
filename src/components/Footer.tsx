@@ -52,10 +52,11 @@ const Footer = () => {
               </div>
             </div>
           </div>
-            <span className="text-2xl font-bold">African Assistance Plan</span>
+        </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            Empowering children, families, and communities across Africa to build a brighter tomorrow. 
+          <p className="text-gray-400">
+            Empowering children, families, and communities across Africa to build a brighter tomorrow.
             © 2024 African Assistance Plan. All rights reserved. Making a difference, one life at a time.
           </p>
         </div>
