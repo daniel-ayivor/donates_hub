@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import BubbleBackground from './components/BubbleBackground';
 import Home from './pages/Home';
 import OurImpact from './pages/OurImpact';
 import Activities from './pages/Activities';
@@ -18,23 +19,26 @@ import BubbleDemo from './pages/BubbleDemo';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50 relative">
+        <BubbleBackground />
         <ScrollToTop />
         <Header />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/impact" element={<OurImpact />} />
-            <Route path="/impact/:id" element={<ProjectDetail />} />
-            <Route path="/activities" element={<Activities />} />
-            <Route path="/activities/:id" element={<EventDetail />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/about" element={<AboutUs />} />
-            <Route path="/get-involved" element={<GetInvolved />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/bubbles" element={<BubbleDemo />} />
-          </Routes>
-        </AnimatePresence>
+        <div className="relative z-10">
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/impact" element={<OurImpact />} />
+              <Route path="/impact/:id" element={<ProjectDetail />} />
+              <Route path="/activities" element={<Activities />} />
+              <Route path="/activities/:id" element={<EventDetail />} />
+              <Route path="/donate" element={<Donate />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/bubbles" element={<BubbleDemo />} />
+            </Routes>
+          </AnimatePresence>
+        </div>
         <Footer />
       </div>
     </Router>
