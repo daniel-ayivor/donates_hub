@@ -46,16 +46,32 @@ const FeaturedStories = () => {
           {stories.map((story, index) => (
             <motion.div
               key={story.id}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 transform hover:-translate-y-4 group"
+              initial={{ y: 80, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.7,
+                delay: index * 0.2,
+                ease: [0.25, 0.1, 0.25, 1]
+              }}
+              viewport={{ once: true, margin: '-50px' }}
+              whileHover={{
+                y: -12,
+                transition: { duration: 0.3 }
+              }}
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group"
             >
               <div className="relative overflow-hidden">
-                <img
+                <motion.img
                   src={story.image}
                   alt={story.title}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.15,
+                    ease: [0.25, 0.1, 0.25, 1]
+                  }}
                   className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>

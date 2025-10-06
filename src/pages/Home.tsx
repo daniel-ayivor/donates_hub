@@ -61,22 +61,58 @@ const Home = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ y: 50, opacity: 0 }}
+                initial={{ y: 60, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-8 bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 transform hover:-translate-y-2 group"
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.2,
+                  ease: [0.25, 0.1, 0.25, 1]
+                }}
+                viewport={{ once: true, margin: '-50px' }}
+                whileHover={{
+                  y: -8,
+                  transition: { duration: 0.3 }
+                }}
+                className="text-center p-8 bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group"
               >
                 <motion.div
+                  initial={{ scale: 0, rotate: -180 }}
+                  whileInView={{ scale: 1, rotate: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.2 + 0.3,
+                    type: "spring",
+                    stiffness: 200
+                  }}
+                  viewport={{ once: true }}
                   whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
                 >
                   <stat.icon className="h-12 w-12 text-orange-500 mx-auto mb-4 group-hover:text-orange-600 transition-colors" />
                 </motion.div>
-                <div className="text-4xl font-bold text-gray-900 mb-2">
+                <motion.div
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.2 + 0.4
+                  }}
+                  viewport={{ once: true }}
+                  className="text-4xl font-bold text-gray-900 mb-2"
+                >
                   <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
-                </div>
-                <div className="text-lg text-gray-600">{stat.label}</div>
+                </motion.div>
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.2 + 0.5
+                  }}
+                  viewport={{ once: true }}
+                  className="text-lg text-gray-600"
+                >
+                  {stat.label}
+                </motion.div>
               </motion.div>
             ))}
           </div>

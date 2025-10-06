@@ -146,9 +146,19 @@ const HeroCarousel = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-6xl font-bold mb-4 leading-tight">
+            <motion.h1
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1,
+                ease: [0.25, 0.1, 0.25, 1],
+                delay: 0.2
+              }}
+              className="text-4xl sm:text-6xl font-bold mb-4 leading-tight"
+            >
               {slides[currentSlide].title}
-            </h1>
+            </motion.h1>
             
             <h2 className="text-2xl sm:text-3xl text-orange-300 font-semibold mb-6">
               {slides[currentSlide].subtitle}
