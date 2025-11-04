@@ -95,23 +95,24 @@ const HeroCarousel = () => {
           />
         ))}
       </div>
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentSlide}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 z-0"
-        >
-          <img
-            src={slides[currentSlide].image}
-            alt={slides[currentSlide].title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-purple-900/60"></div>
-        </motion.div>
-      </AnimatePresence>
+      <div className="absolute inset-0 z-0">
+        {slides.map((slide, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: currentSlide === index ? 1 : 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-purple-900/60"></div>
+          </motion.div>
+        ))}
+      </div>
 
       {/* Navigation Arrows */}
       <button
