@@ -35,6 +35,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
       <motion.img
         src={src}
         alt={alt}
+        loading="lazy"
         className="w-full h-full object-cover"
         whileHover={{ scale: 1.1 }}
         transition={{ duration: 0.4 }}

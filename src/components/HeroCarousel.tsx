@@ -66,35 +66,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-pink-500 to-purple-600 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 via-teal-500 to-green-400 opacity-30 animate-pulse"></div>
-      </div>
-      
-      {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
-            initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            animate={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
-            }}
-            transition={{
-              duration: Math.random() * 20 + 10,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear",
-            }}
-          />
-        ))}
-      </div>
+    <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
           <motion.div

@@ -64,6 +64,7 @@ const FeaturedStories = () => {
                 <motion.img
                   src={story.image}
                   alt={story.title}
+                  loading="lazy"
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
