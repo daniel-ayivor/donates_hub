@@ -25,7 +25,7 @@ const Home = () => {
       <HeroCarousel />
 
       {/* Mission Statement */}
-      <section className="py-20 bg-gradient-to-br from-teal-50 to-orange-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-yellow-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -73,7 +73,7 @@ const Home = () => {
                   y: -8,
                   transition: { duration: 0.3 }
                 }}
-                className="text-center p-8 bg-gradient-to-br from-orange-50 to-teal-50 rounded-2xl hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group"
+                className="text-center p-8 bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-500 group"
               >
                 <motion.div
                   initial={{ scale: 0, rotate: -180 }}
@@ -87,7 +87,7 @@ const Home = () => {
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.1, rotate: 5 }}
                 >
-                  <stat.icon className="h-12 w-12 text-orange-500 mx-auto mb-4 group-hover:text-orange-600 transition-colors" />
+                  <stat.icon className="h-12 w-12 text-brand-blue mx-auto mb-4 group-hover:text-brand-blue/80 transition-colors" />
                 </motion.div>
                 <motion.div
                   initial={{ scale: 0.5, opacity: 0 }}
@@ -138,7 +138,7 @@ const Home = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-xl"
+            className="bg-gradient-to-br from-blue-50 to-yellow-50 p-8 rounded-2xl shadow-xl"
           >
             <ProgressBar
               current={87500}
@@ -156,7 +156,7 @@ const Home = () => {
       <FeaturedStories />
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-pink-600">
+      <section className="py-20 bg-gradient-to-r from-brand-blue to-brand-gold">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -171,13 +171,13 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/donate"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Donating
               </Link>
               <Link
                 to="/get-involved"
-                className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Volunteer With Us
               </Link>

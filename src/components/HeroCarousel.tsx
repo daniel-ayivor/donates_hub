@@ -114,7 +114,7 @@ const HeroCarousel = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="mb-4">
-              <span className="bg-orange-500/80 text-white px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
+              <span className="bg-brand-gold/90 text-brand-blue px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
                 {slides[currentSlide].focus}
               </span>
             </div>
@@ -133,7 +133,7 @@ const HeroCarousel = () => {
               {slides[currentSlide].title}
             </motion.h1>
             
-            <h2 className="text-2xl sm:text-3xl text-orange-300 font-semibold mb-6">
+            <h2 className="text-2xl sm:text-3xl text-brand-gold font-semibold mb-6">
               {slides[currentSlide].subtitle}
             </h2>
             
@@ -144,10 +144,10 @@ const HeroCarousel = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/donate"
-                className="relative bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
+                className="relative bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500"
+                  className="absolute inset-0 bg-gradient-to-r from-brand-gold to-brand-blue"
                   animate={{
                     scale: [1, 1.1, 1],
                     opacity: [0.5, 0.8, 0.5],
@@ -160,7 +160,7 @@ const HeroCarousel = () => {
                 />
                 <span className="relative z-10 flex items-center">
                   <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
-                  Donate Now 
+                  Donate Now
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
@@ -183,7 +183,7 @@ const HeroCarousel = () => {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide
-                ? 'bg-orange-500 scale-125'
+                ? 'bg-brand-gold scale-125'
                 : 'bg-white/50 hover:bg-white/70'
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -194,7 +194,7 @@ const HeroCarousel = () => {
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20">
         <motion.div
-          className="h-full bg-orange-500"
+          className="h-full bg-brand-gold"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
           transition={{ duration: 5, ease: "linear" }}

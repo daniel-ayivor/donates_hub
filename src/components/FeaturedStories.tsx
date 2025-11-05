@@ -58,7 +58,7 @@ const FeaturedStories = () => {
                 y: -12,
                 transition: { duration: 0.3 }
               }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-500 group"
             >
               <div className="relative overflow-hidden">
                 <motion.img
@@ -77,7 +77,7 @@ const FeaturedStories = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
                 <motion.div
-                  className="absolute top-4 right-4 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100"
+                  className="absolute top-4 right-4 w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -86,11 +86,11 @@ const FeaturedStories = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{story.title}</h3>
-                <h4 className="text-lg text-orange-500 font-semibold mb-3">{story.subtitle}</h4>
+                <h4 className="text-lg text-brand-blue font-semibold mb-3">{story.subtitle}</h4>
                 <p className="text-gray-600 mb-6">{story.description}</p>
                 <Link
                   to={`/impact/${story.id}`}
-                  className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold transition-all duration-300 group-hover:translate-x-2"
+                  className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 font-semibold transition-all duration-300 group-hover:translate-x-2"
                 >
                   Read Full Story <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
@@ -108,7 +108,7 @@ const FeaturedStories = () => {
         >
           <Link
             to="/impact"
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+            className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
           >
             View All Stories <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

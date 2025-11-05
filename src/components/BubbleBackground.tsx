@@ -41,8 +41,8 @@ const BubbleBackground: React.FC = () => {
               left: `${bubble.x}%`,
               width: `${bubble.size}px`,
               height: `${bubble.size}px`,
-              background: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(251, 146, 60, 0.15), rgba(244, 114, 182, 0.1))`,
-              boxShadow: `0 4px 20px rgba(251, 146, 60, 0.1)`,
+              background: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.5), rgba(0, 87, 160, 0.15), rgba(245, 185, 22, 0.1))`,
+              boxShadow: `0 4px 20px rgba(0, 87, 160, 0.1)`,
               border: '1px solid rgba(255, 255, 255, 0.3)',
             }}
             initial={{ y: '110vh', opacity: 0 }}
