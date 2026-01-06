@@ -43,7 +43,7 @@ const Header = () => {
               alt="African Assistance Plan Logo" 
               className="h-12 w-12 object-contain rounded-lg"
             />
-            <span className="text-2xl font-bold text-gray-900">
+            <span className="text-base md:text-2xl font-bold text-gray-900">
               African Assistance Plan
             </span>
           </Link>
