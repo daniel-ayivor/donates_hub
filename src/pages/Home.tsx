@@ -93,9 +93,9 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
             <p className="text-xl mb-8 text-yellow-100">
-              Join thousands of supporters who are helping provide education, clean water, healthcare, and hope to children and families across Ghana
+              Join supporters helping provide education, clean water, and hope to families across Ghana
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-row gap-4 justify-center">
               <Link
                 to="/donate"
                 className="bg-white text-brand-blue hover:bg-gray-100 px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-colors"
@@ -103,7 +103,7 @@ const Home = () => {
                 Start Donating
               </Link>
               <Link
-                to="/get-involved"
+                to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-colors"
               >
                 Volunteer With Us
