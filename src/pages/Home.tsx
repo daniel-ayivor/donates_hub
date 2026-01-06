@@ -31,8 +31,8 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Mission</h2>
-            <p className="text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-8">Our Mission</h2>
+            <p className="text-base md:text-xl text-gray-700 leading-relaxed max-w-4xl mx-auto">
               At Africa Assistance Plan, we are committed to eradicating poverty and deprivation among society's most vulnerable. 
               We work to ensure the holistic well-being of every individual through programs focused on water access, sanitation, hygiene, 
               health, children and youth empowerment, and church and community development across Ghana.
@@ -51,8 +51,8 @@ const Home = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
-            <p className="text-xl text-gray-600">Making a measurable difference in communities across Ghana</p>
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
+            <p className="text-base md:text-xl text-gray-600">Making a measurable difference in communities across Ghana</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -66,10 +66,10 @@ const Home = () => {
                 className="text-center p-8 bg-blue-50 rounded-xl hover:shadow-sm transition-shadow"
               >
                 <stat.icon className="h-12 w-12 text-brand-blue mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">
+                <div className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
                   <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
-                <div className="text-lg text-gray-600">
+                <div className="text-sm md:text-lg text-gray-600">
                   {stat.label}
                 </div>
               </motion.div>
@@ -91,8 +91,8 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
-            <p className="text-xl mb-8 text-yellow-100">
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
+            <p className="text-base md:text-xl mb-8 text-yellow-100">
               Join supporters helping provide education, clean water, and hope to families across Ghana
             </p>
             <div className="flex flex-row gap-4 justify-center">

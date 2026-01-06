@@ -104,7 +104,7 @@ const HeroCarousel = () => {
       </button>
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pb-20 md:pb-0">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -128,16 +128,16 @@ const HeroCarousel = () => {
                 ease: [0.25, 0.1, 0.25, 1],
                 delay: 0.2
               }}
-              className="text-4xl sm:text-6xl font-bold mb-4 leading-tight"
+              className="text-3xl md:text-4xl lg:text-6xl font-bold mb-3 md:mb-4 leading-tight"
             >
               {slides[currentSlide].title}
             </motion.h1>
             
-            <h2 className="text-2xl sm:text-3xl text-brand-gold font-semibold mb-6">
+            <h2 className="text-xl md:text-2xl lg:text-3xl text-brand-gold font-semibold mb-4 md:mb-6">
               {slides[currentSlide].subtitle}
             </h2>
             
-            <p className="text-xl sm:text-2xl mb-8 text-gray-200 leading-relaxed">
+            <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 leading-relaxed">
               {slides[currentSlide].description}
             </p>
             
