@@ -45,19 +45,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-orange-500" />
+                <MapPin className="h-4 w-4 text-brand-gold" />
                 <span className="text-gray-300 text-sm">GNAT ST BS-0064-4803, Sunyani, Bono Region, Ghana</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-orange-500" />
+                <Phone className="h-4 w-4 text-brand-gold" />
                 <span className="text-gray-300 text-sm">+233 50 403 7082</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-orange-500" />
+                <Phone className="h-4 w-4 text-brand-gold" />
                 <span className="text-gray-300 text-sm">+233 26 284 8837</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-orange-500" />
+                <Mail className="h-4 w-4 text-brand-gold" />
                 <span className="text-gray-300 text-sm">aap@aapghana.org</span>
               </div>
             </div>

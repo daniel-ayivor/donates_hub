@@ -19,10 +19,10 @@ const OurImpact = () => {
     },
     {
       id: 2,
-      title: "A Small Loan, A Big Dream",
+      title: "Community Support, Big Impact",
       subtitle: "Ama's Market Success",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
-      description: "With a $200 microloan, Ama transformed her small vegetable stand into a thriving market business, supporting her family of five.",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
+      description: "Through business training and mentorship, Ama transformed her small vegetable stand into a thriving market business, supporting her family of five.",
       impact: "300% income increase",
       category: "Business",
       beneficiary: "Ama Osei",
@@ -82,7 +82,7 @@ const OurImpact = () => {
   const impactMetrics = [
     { icon: Users, label: "Lives Directly Impacted", value: "2,800+", color: "text-blue-500" },
     { icon: Heart, label: "Families Supported", value: "650+", color: "text-red-500" },
-    { icon: TrendingUp, label: "Income Improvement", value: "85%", color: "text-green-500" },
+    { icon: TrendingUp, label: "Income Improvement", value: "85%", color: "text-brand-gold" },
     { icon: Award, label: "Success Rate", value: "92%", color: "text-purple-500" }
   ];
 
@@ -94,7 +94,7 @@ const OurImpact = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-brand-blue">
+      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg"
@@ -134,7 +134,7 @@ const OurImpact = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow transition-shadow"
               >
                 <metric.icon className={`h-12 w-12 ${metric.color} mx-auto mb-4`} />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
@@ -167,7 +167,7 @@ const OurImpact = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow transition-all"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -176,7 +176,7 @@ const OurImpact = () => {
                     className="w-full h-64 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {story.category}
                     </span>
                   </div>
@@ -185,7 +185,7 @@ const OurImpact = () => {
                 
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{story.title}</h3>
-                  <h4 className="text-lg text-orange-500 font-semibold mb-3">{story.subtitle}</h4>
+                  <h4 className="text-lg text-brand-gold font-semibold mb-3">{story.subtitle}</h4>
                   <p className="text-gray-600 mb-4">{story.description}</p>
                   
                   <div className="border-t border-gray-200 pt-4 mb-4">
@@ -197,15 +197,15 @@ const OurImpact = () => {
                       <span>Location:</span>
                       <span className="font-semibold">{story.location}</span>
                     </div>
-                    <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="text-green-700 font-semibold text-sm">Impact:</div>
-                      <div className="text-green-600 font-bold">{story.impact}</div>
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <div className="text-blue-700 font-semibold text-sm">Impact:</div>
+                      <div className="text-blue-600 font-bold">{story.impact}</div>
                     </div>
                   </div>
 
                   <Link
                     to={`/impact/${story.id}`}
-                    className="inline-flex items-center text-orange-500 hover:text-orange-600 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center text-brand-gold hover:text-yellow-700 font-semibold transition-colors duration-300"
                   >
                     Read Full Story <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -217,7 +217,7 @@ const OurImpact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-orange-500">
+      <section className="py-20 bg-brand-gold">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -226,12 +226,12 @@ const OurImpact = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Be Part of the Next Success Story</h2>
-            <p className="text-xl mb-8 text-orange-100">
+            <p className="text-xl mb-8 text-yellow-100">
               Every donation creates ripples of change. Help us write more stories of hope and transformation.
             </p>
             <Link
               to="/donate"
-              className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              className="bg-white text-brand-gold hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
             >
               Make a Difference Today <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

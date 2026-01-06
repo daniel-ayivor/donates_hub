@@ -146,7 +146,7 @@ const BubbleAnimation: React.FC = () => {
               className="group relative cursor-pointer"
             >
               {/* Image Container with Warm Color Overlay */}
-              <div className="relative overflow-hidden rounded-2xl shadow-lg">
+              <div className="relative overflow-hidden rounded-2xl shadow-sm">
                 <motion.img
                   src={image.src}
                   alt={image.alt}

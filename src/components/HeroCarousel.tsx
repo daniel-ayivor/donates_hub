@@ -81,7 +81,7 @@ const HeroCarousel = () => {
               alt={slide.title}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-orange-900/60"></div>
+            <div className="absolute inset-0 bg-blue-900/60"></div>
           </motion.div>
         ))}
       </div>

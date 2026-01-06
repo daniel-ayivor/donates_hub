@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, MapPin, Users, Clock, Target, Award, Camera } from 'lucide-react';
@@ -118,9 +117,9 @@ What made this workshop particularly powerful was the peer learning component. P
 
 The final day culminated in business plan presentations. Each participant pitched their business idea to a panel of local successful entrepreneurs. The quality and creativity of the presentations exceeded all expectations - from innovative farming techniques to unique handicraft businesses to digital service offerings.
 
-The immediate impact was remarkable. Within one month of the workshop, 45 women had taken concrete steps toward starting or expanding their businesses. Six secured microloans through our partner program, and 12 formed business cooperatives to share resources and support each other.
+The immediate impact was remarkable. Within one month of the workshop, 45 women had taken concrete steps toward starting or expanding their businesses. Twelve formed business cooperatives to share resources and support each other.
 
-One standout success story is Comfort Adjei, who attended with just an idea for a catering business. Three months post-workshop, she now employs four people and caters events across Kumasi. She credits the workshop with giving her the confidence and skills to formalize her business plan and seek funding.`,
+One standout success story is Comfort Adjei, who attended with just an idea for a catering business. Three months post-workshop, she now employs four people and caters events across Kumasi. She credits the workshop with giving her the confidence and skills to formalize her business plan and take action.`,
       objectives: [
         "Train 75 women in business fundamentals",
         "Develop comprehensive business plans",
@@ -132,7 +131,6 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
         "75 women completed the full program",
         "68 business plans developed",
         "45 businesses launched within 60 days",
-        "6 microloans secured",
         "12 business cooperatives formed"
       ],
       impact: {
@@ -154,19 +152,19 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
           role: "Workshop Participant"
         }
       ],
-      partners: ["Kumasi Business Association", "Women's Development Network", "Microfinance Partners"],
+      partners: ["Kumasi Business Association", "Women's Development Network"],
       nextEvent: "Youth Entrepreneurship Program - January 2025"
     }
   };
 
-  const event = events[id as keyof typeof events];
+  const event = events[id as '1' | '2'];
 
   if (!event) {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Event not found</h1>
-          <Link to="/activities" className="text-orange-500 hover:text-orange-600">
+          <Link to="/activities" className="text-brand-gold hover:text-yellow-600">
             Return to Activities
           </Link>
         </div>
@@ -174,10 +172,10 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
     );
   }
 
-  const statusColors = {
-    Completed: 'bg-green-100 text-green-800',
+  const statusColors: Record<string, string> = {
+    Completed: 'bg-yellow-100 text-yellow-800',
     Ongoing: 'bg-blue-100 text-blue-800',
-    Upcoming: 'bg-orange-100 text-orange-800'
+    Upcoming: 'bg-blue-100 text-blue-700'
   };
 
   return (
@@ -188,7 +186,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-teal-600">
+      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
         <div className="absolute inset-0">
           <img
             src={event.mainImage}
@@ -199,7 +197,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/activities"
-            className="inline-flex items-center text-white hover:text-teal-200 mb-8 transition-colors"
+            className="inline-flex items-center text-white hover:text-blue-200 mb-8 transition-colors"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Activities
@@ -220,23 +218,23 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">{event.title}</h1>
-            <p className="text-xl sm:text-2xl text-teal-100 mb-8">{event.description}</p>
+            <p className="text-xl sm:text-2xl text-blue-100 mb-8">{event.description}</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="flex items-center">
-                <Calendar className="h-5 w-5 mr-2 text-teal-300" />
+                <Calendar className="h-5 w-5 mr-2 text-blue-300" />
                 <span>{event.date}</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2 text-teal-300" />
+                <MapPin className="h-5 w-5 mr-2 text-blue-300" />
                 <span>{event.location}</span>
               </div>
               <div className="flex items-center">
-                <Users className="h-5 w-5 mr-2 text-teal-300" />
+                <Users className="h-5 w-5 mr-2 text-blue-300" />
                 <span>{event.participants}</span>
               </div>
               <div className="flex items-center">
-                <Clock className="h-5 w-5 mr-2 text-teal-300" />
+                <Clock className="h-5 w-5 mr-2 text-blue-300" />
                 <span>{event.duration}</span>
               </div>
             </div>
@@ -255,9 +253,9 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-teal-50 rounded-xl"
+                className="text-center p-6 bg-blue-50 rounded-xl"
               >
-                <metric.icon className="h-12 w-12 text-teal-600 mx-auto mb-4" />
+                <metric.icon className="h-12 w-12 text-brand-blue mx-auto mb-4" />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
                 <div className="text-gray-600">{metric.label}</div>
               </motion.div>
@@ -297,13 +295,13 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-2xl shadow-lg"
+                className="bg-white p-6 rounded-2xl shadow-sm"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Objectives</h3>
                 <ul className="space-y-2">
                   {event.objectives.map((objective, index) => (
                     <li key={index} className="flex items-start">
-                      <Target className="h-4 w-4 text-teal-500 mt-1 mr-2 flex-shrink-0" />
+                      <Target className="h-4 w-4 text-brand-blue mt-1 mr-2 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{objective}</span>
                     </li>
                   ))}
@@ -322,7 +320,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 <ul className="space-y-2">
                   {event.achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start">
-                      <Award className="h-4 w-4 text-green-500 mt-1 mr-2 flex-shrink-0" />
+                      <Award className="h-4 w-4 text-brand-gold mt-1 mr-2 flex-shrink-0" />
                       <span className="text-gray-700 text-sm">{achievement}</span>
                     </li>
                   ))}
@@ -382,7 +380,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group"
+                className="relative overflow-hidden rounded-2xl shadow-sm hover:shadow transition-shadow group"
               >
                 <img
                   src={image}
@@ -421,13 +419,13 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                   viewport={{ once: true }}
                   className="bg-white p-8 rounded-2xl shadow-lg"
                 >
-                  <div className="text-4xl text-teal-500 mb-4">"</div>
+                  <div className="text-4xl text-brand-gold mb-4">"</div>
                   <blockquote className="text-lg text-gray-700 mb-6 italic">
                     {testimonial.text}
                   </blockquote>
                   <div className="border-t border-gray-200 pt-4">
                     <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                    <div className="text-teal-600 text-sm">{testimonial.role}</div>
+                    <div className="text-blue-600 text-sm">{testimonial.role}</div>
                   </div>
                 </motion.div>
               ))}
@@ -437,7 +435,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
       )}
 
       {/* Call to Action */}
-      <section className="py-20 bg-teal-600">
+      <section className="py-20 bg-brand-gold">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -446,19 +444,19 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Join Our Next Event</h2>
-            <p className="text-xl mb-8 text-teal-100">
+            <p className="text-xl mb-8 text-yellow-100">
               Be part of creating positive change in communities. Your participation makes these transformative events possible.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/get-involved"
-                className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-brand-gold hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Volunteer With Us
               </Link>
               <Link
                 to="/donate"
-                className="border-2 border-white text-white hover:bg-white hover:text-teal-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-gold px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Support Our Events
               </Link>

@@ -1,6 +1,5 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -31,7 +30,7 @@ function App() {
               <Route path="/activities/:id" element={<EventDetail />} />
               <Route path="/donate" element={<Donate />} />
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/get-involved" element={<GetInvolved />} />
+              <Route path="/contact" element={<GetInvolved />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/bubbles" element={<BubbleDemo />} />
             </Routes>

@@ -14,10 +14,10 @@ const FeaturedStories = () => {
     },
     {
       id: 2,
-      title: "A Small Loan, A Big Dream",
+      title: "Community Support, Big Impact",
       subtitle: "Ama's Market Success",
       image: "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg",
-      description: "Discover how microfinancing helped a mother of three build a thriving business."
+      description: "How business training and mentorship helped a mother of three build a thriving enterprise."
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ const FeaturedStories = () => {
                 y: -12,
                 transition: { duration: 0.3 }
               }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-blue/10 transition-all duration-500 group"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow transition-all"
             >
               <div className="relative overflow-hidden">
                 <motion.img

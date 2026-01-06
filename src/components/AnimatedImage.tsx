@@ -30,7 +30,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
         y: -8,
         transition: { duration: 0.3 },
       }}
-      className={`relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer ${className}`}
+      className={`relative overflow-hidden rounded-2xl shadow-sm group cursor-pointer ${className}`}
     >
       <motion.img
         src={src}

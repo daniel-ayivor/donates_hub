@@ -5,42 +5,56 @@ import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield } from
 const AboutUs = () => {
   const teamMembers = [
     {
-      name: "Rose Meda D. Offei Asare",
-      role: "President & CEO",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.41 AM.jpeg",
-      bio: "Visionary leader committed to transforming lives across Ghana through sustainable community development programs.",
-      expertise: "Leadership, Strategic Planning, Community Development"
+      name: "Rose Meda Offei-Asare",
+      role: "CEO & PRESIDENT",
+      image: "https://aapghana.org/wp-content/uploads/2025/05/p-rose-1007x1024.jpg",
+      bio: "Rose is versatile person with over 22 years' experience in the WASH sector and brings a wealth of experience and knowledge to the developmental objective of AAP.",
+      expertise: "WASH Sector, Development, Leadership"
     },
     {
-      name: "Program Director",
-      role: "Water & Sanitation Programs",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg",
-      bio: "Expert in WASH programs, ensuring access to clean water and sanitation for vulnerable communities.",
-      expertise: "Water Systems, Hygiene Education, Infrastructure"
+      name: "Harrieta Bosomtwe",
+      role: "EXECUTIVE ASSISTANT",
+      image: "https://aapghana.org/wp-content/uploads/2025/05/Harrieta-1.jpeg",
+      bio: "Harrieta is a dedicated team player with excellent administrative and interpersonal skills. She serves as the Executive Assistant and Children's Ministry Coordinator. She is passionate about nurturing children's spiritual growth while supporting the smooth running of organizational activities.",
+      expertise: "Administration, Children's Ministry, Interpersonal Skills"
     },
     {
-      name: "Youth Programs Coordinator",
-      role: "Children & Youth Empowerment",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.43 AM.jpeg",
-      bio: "Dedicated to preparing children and youth for the future through training and empowerment programs.",
-      expertise: "Youth Development, Education, Skills Training"
+      name: "Maxwell Asuenabisa",
+      role: "DIGITAL MARKETER & FUND RAISING OFFICER",
+      image: "https://aapghana.org/wp-content/uploads/2025/05/max.jpeg",
+      bio: "Maxwell is a creative digital marketer with strong skills in content creation, social media strategy, and fundraising. He is passionate about using digital tools to drive impact and support community development.",
+      expertise: "Digital Marketing, Fundraising, Social Media"
     },
     {
-      name: "Community Outreach Manager",
-      role: "Church & Community Development",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.51.09 AM.jpeg",
-      bio: "Training and empowering church and community leaders to better serve society's most vulnerable.",
-      expertise: "Community Engagement, Faith-based Programs, Leadership Training"
+      name: "Abraham Akrofi",
+      role: "COMMUNITY AND CHURCH MOBILIZATION OFFICER",
+      image: "https://aapghana.org/wp-content/uploads/2025/05/Akrofi.jpg",
+      bio: "Abraham is a passionate development worker with strong skills in community engagement and faith-based mobilization. He has extensive experience working with churches to promote holistic and sustainable community transformation.",
+      expertise: "Community Engagement, Church Mobilization, Development"
+    },
+    {
+      name: "Alexander Agyei",
+      role: "PROGRAMS ASSISTANT",
+      image: "https://aapghana.org/wp-content/uploads/2025/05/Alex.jpeg",
+      bio: "Alexander is a committed and detail-oriented individual with strong skills in project coordination and community outreach. Alexander holds a degree in Environmental Science and is passionate about supporting impactful programs that promote positive change in underserved communities.",
+      expertise: "Project Coordination, Environmental Science, Community Outreach"
+    },
+    {
+      name: "Benson Henry Asante",
+      role: "CHIEF DRILLER & CHRISTIAN WITNESS COORDINATOR",
+      image: "https://aapghana.org/wp-content/uploads/2022/12/benson-asante.jpg",
+      bio: "Benson has over 18 years of drilling experience. He has worked with AAP for over 20 years. He is involved in all AAP's drilling projects either as driller and or supervisor of the projects.",
+      expertise: "Drilling, Water Systems, Project Supervision"
     }
   ];
 
   const milestones = [
-    { year: "2019", event: "African Assistance Plan founded", description: "Started with a vision to transform communities" },
-    { year: "2020", event: "First 100 children supported", description: "Educational support program launched" },
-    { year: "2021", event: "Microfinance program begins", description: "Empowering small business owners" },
-    { year: "2022", event: "Mobile health clinic launched", description: "Bringing healthcare to remote areas" },
-    { year: "2023", event: "1000+ lives impacted", description: "Major milestone in community transformation" },
-    { year: "2024", event: "Digital skills program", description: "Preparing youth for the digital economy" }
+    { year: "1980s", event: "Africa Assistance Plan founded", description: "Started with a vision that 'Africa might be saved'" },
+    { year: "2002", event: "WaSH Program Launched", description: "Began providing clean water and sanitation to vulnerable communities" },
+    { year: "2010s", event: "Regional Expansion", description: "Extended services to Liberia and Togo" },
+    { year: "2020", event: "Church & Community Empowerment", description: "Launched comprehensive program to equip churches and communities" },
+    { year: "2022", event: "CYE: 50,000 Empowered Initiative", description: "Major youth empowerment program targeting 50,000 children and youth" },
+    { year: "2024", event: "40+ Years of Service", description: "Celebrating over four decades of transforming communities across Africa" }
   ];
 
   const values = [
@@ -67,10 +81,10 @@ const AboutUs = () => {
   ];
 
   const achievements = [
-    { icon: Users, number: "2,800+", label: "Lives Transformed" },
-    { icon: Award, number: "15", label: "Communities Served" },
-    { icon: TrendingUp, number: "92%", label: "Success Rate" },
-    { icon: Calendar, number: "5+", label: "Years of Impact" }
+    { icon: Users, number: "50,000+", label: "Youth Empowered" },
+    { icon: Award, number: "100+", label: "Churches & Communities" },
+    { icon: TrendingUp, number: "22+", label: "Years of WaSH" },
+    { icon: Calendar, number: "40+", label: "Years of Service" }
   ];
 
   return (
@@ -81,7 +95,7 @@ const AboutUs = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-brand-blue">
+      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.51.10 AM.jpeg"
@@ -96,7 +110,7 @@ const AboutUs = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl font-bold mb-6"
           >
-            About Africa Assistance Plan
+            Who We Are
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -104,8 +118,9 @@ const AboutUs = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl max-w-3xl mx-auto"
           >
-            Founded in 2019, we are a dedicated team of changemakers committed to empowering 
-            children and small businesses across Ghana through education, healthcare, and economic opportunities.
+            Africa Assistance Plan is a Christian non-governmental organization registered in Ghana and 
+            the United States of America. With over 40 years of serving the poor and vulnerable, 
+            AAP has worked across Ghana from its base in Sunyani and touching countries such as Liberia and Togo.
           </motion.p>
         </div>
       </section>
@@ -119,14 +134,13 @@ const AboutUs = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-orange-50 p-8 rounded-2xl"
+              className="bg-yellow-50 p-8 rounded-2xl"
             >
-              <Target className="h-12 w-12 text-orange-500 mb-4" />
+              <Target className="h-12 w-12 text-brand-gold mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                To create sustainable pathways out of poverty by providing educational opportunities for children 
-                and economic empowerment for small business owners in Ghana, fostering self-reliant communities 
-                that can thrive independently.
+                Child-centred Christian organization that focuses on empowering the church and
+                community for holistic development.
               </p>
             </motion.div>
 
@@ -140,9 +154,7 @@ const AboutUs = () => {
               <Globe className="h-12 w-12 text-blue-500 mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                A Ghana where every child has access to quality education and every entrepreneur has the resources 
-                to succeed, creating a ripple effect of positive change that transforms entire communities 
-                for generations to come.
+                Africa Assistance Plan exists to end all forms of poverty.
               </p>
             </motion.div>
           </div>
@@ -171,9 +183,9 @@ const AboutUs = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow transition-shadow"
               >
-                <value.icon className="h-16 w-16 text-orange-500 mx-auto mb-4" />
+                <value.icon className="h-16 w-16 text-brand-gold mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
@@ -196,7 +208,7 @@ const AboutUs = () => {
             <p className="text-xl text-gray-600">Passionate individuals dedicated to creating positive change</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -204,20 +216,23 @@ const AboutUs = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group"
+                whileHover={{ y: -10, transition: { duration: 0.3 } }}
+                className="text-center group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
               >
-                <div className="relative mb-6">
+                <div className="relative overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-48 h-48 mx-auto rounded-full object-cover object-center shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
+                    className="w-full h-[350px] object-cover object-top transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 rounded-full bg-black/10"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent group-hover:from-black/60 transition-all duration-300"></div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-orange-500 font-semibold mb-3">{member.role}</p>
-                <p className="text-gray-600 mb-3">{member.bio}</p>
-                <p className="text-sm text-gray-500 font-medium">{member.expertise}</p>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
+                  <p className="text-brand-gold font-semibold mb-3">{member.role}</p>
+                  <p className="text-gray-600 mb-3">{member.bio}</p>
+                  <p className="text-sm text-gray-500 font-medium">{member.expertise}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -239,7 +254,7 @@ const AboutUs = () => {
           </motion.div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-orange-500"></div>
+            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-brand-gold"></div>
             
             {milestones.map((milestone, index) => (
               <motion.div
@@ -251,14 +266,14 @@ const AboutUs = () => {
                 className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
               >
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                  <div className="bg-white p-6 rounded-2xl shadow-lg">
-                    <div className="text-2xl font-bold text-orange-500 mb-2">{milestone.year}</div>
+                  <div className="bg-white p-6 rounded-2xl shadow-sm">
+                    <div className="text-2xl font-bold text-brand-gold mb-2">{milestone.year}</div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.event}</h3>
                     <p className="text-gray-600">{milestone.description}</p>
                   </div>
                 </div>
                 
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-orange-500 rounded-full border-4 border-white shadow"></div>
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-brand-gold rounded-full border-4 border-white shadow"></div>
               </motion.div>
             ))}
           </div>
@@ -287,9 +302,9 @@ const AboutUs = () => {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-orange-50 rounded-xl"
+                className="text-center p-8 bg-yellow-50 rounded-xl"
               >
-                <achievement.icon className="h-16 w-16 text-orange-500 mx-auto mb-4" />
+                <achievement.icon className="h-16 w-16 text-brand-gold mx-auto mb-4" />
                 <div className="text-4xl font-bold text-gray-900 mb-2">{achievement.number}</div>
                 <div className="text-gray-600 font-semibold">{achievement.label}</div>
               </motion.div>
@@ -308,20 +323,20 @@ const AboutUs = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Join Our Mission</h2>
-            <p className="text-xl mb-8 text-purple-100">
+            <p className="text-xl mb-8 text-blue-100">
               Be part of a team that's making a real difference in communities across Ghana. 
               Together, we can create lasting change.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/get-involved"
-                className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Involved
               </a>
               <a
                 href="/donate"
-                className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Support Our Work
               </a>

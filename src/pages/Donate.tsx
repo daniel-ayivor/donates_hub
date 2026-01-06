@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets, ExternalLink, Check, Sparkles } from 'lucide-react';
 
@@ -136,7 +136,7 @@ const Donate = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            className="w-6 h-6 border-2 border-orange-500 border-t-transparent rounded-full"
+            className="w-6 h-6 border-2 border-brand-gold border-t-transparent rounded-full"
           />
         </div>
       </motion.div>
@@ -145,7 +145,7 @@ const Donate = () => {
       {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-orange-500 rounded-full"
+          className="absolute w-2 h-2 bg-brand-gold rounded-full"
           initial={{
             x: window.innerWidth / 2,
             y: window.innerHeight / 2,
@@ -174,7 +174,7 @@ const Donate = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-orange-500">
+      <section className="relative py-32 min-h-[60vh] bg-brand-gold">
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg"
@@ -222,15 +222,15 @@ const Donate = () => {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`relative p-6 rounded-xl cursor-pointer transition-shadow bg-white ${
                         selectedCategory === category.id
-                          ? 'ring-4 ring-orange-500 shadow-xl'
-                          : 'shadow hover:shadow-lg'
+                          ? 'ring-4 ring-brand-gold shadow-md'
+                          : 'shadow-sm hover:shadow'
                       }`}
                     >
-                      <category.icon className="h-12 w-12 text-orange-500 mb-4" />
+                      <category.icon className="h-12 w-12 text-brand-gold mb-4" />
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
                       <p className="text-gray-600 mb-3">{category.description}</p>
                       <motion.div
-                        className="text-sm font-semibold text-orange-600 bg-orange-50 p-2 rounded-lg"
+                        className="text-sm font-semibold text-yellow-700 bg-yellow-50 p-2 rounded-lg"
                         whileHover={{ scale: 1.05 }}
                       >
                         {category.impact}
@@ -251,7 +251,7 @@ const Donate = () => {
                       }}
                       className={`p-4 rounded-xl font-semibold transition-all ${
                         selectedAmount === amount && !customAmount
-                          ? 'bg-orange-500 text-white shadow-lg'
+                          ? 'bg-brand-gold text-white shadow-sm'
                           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                       whileHover={{ y: -2 }}
@@ -271,18 +271,18 @@ const Donate = () => {
                       setCustomAmount(e.target.value);
                       setSelectedAmount(0);
                     }}
-                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-orange-500 focus:ring focus:ring-orange-200 text-lg transition-colors"
+                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-brand-gold focus:ring focus:ring-yellow-200 text-lg transition-colors"
                   />
                 </div>
 
                 {/* Impact Display */}
                 <motion.div 
-                  className="bg-green-50 p-6 rounded-xl mb-8 border border-green-200"
+                  className="bg-blue-50 p-6 rounded-xl mb-8 border border-blue-200"
                   whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(34, 197, 94, 0.1)" }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <h4 className="text-lg font-bold text-green-800 mb-2">Your Impact:</h4>
-                  <p className="text-green-700 text-lg">
+                  <h4 className="text-lg font-bold text-blue-800 mb-2">Your Impact:</h4>
+                  <p className="text-blue-700 text-lg">
                     ${customAmount || selectedAmount} {getImpactMessage()}
                   </p>
                 </motion.div>
@@ -296,7 +296,7 @@ const Donate = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-orange-50 p-8 rounded-xl shadow-xl sticky top-24 text-center"
+                className="bg-yellow-50 p-8 rounded-xl shadow-md sticky top-24 text-center"
               >
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Donate?</h3>
@@ -306,13 +306,13 @@ const Donate = () => {
                   >
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-600">Category:</span>
-                      <span className="font-semibold text-orange-600 capitalize">
+                      <span className="font-semibold text-yellow-700 capitalize">
                         {donationCategories.find(cat => cat.id === selectedCategory)?.title}
                       </span>
                     </div>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-600">Amount:</span>
-                      <span className="text-2xl font-bold text-orange-600">
+                      <span className="text-2xl font-bold text-yellow-700">
                         ${customAmount || selectedAmount}
                       </span>
                     </div>
@@ -326,7 +326,7 @@ const Donate = () => {
                 <motion.button
                   onClick={handleDonate}
                   disabled={isSubmitting}
-                  className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-colors flex items-center justify-center mb-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-gold text-white py-4 rounded-xl font-bold text-lg hover:bg-yellow-600 transition-colors flex items-center justify-center mb-4 disabled:opacity-50 disabled:cursor-not-allowed"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -376,21 +376,21 @@ const Donate = () => {
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-12">Other Ways to Support</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
                 <Users className="h-12 w-12 text-blue-500 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Volunteer</h3>
                 <p className="text-gray-600 mb-4">Join our team and contribute your skills directly to our mission.</p>
                 <button className="text-blue-500 font-semibold hover:text-blue-600">Learn More</button>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
-                <Gift className="h-12 w-12 text-green-500 mx-auto mb-4" />
+              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
+                <Gift className="h-12 w-12 text-brand-gold mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Monthly Giving</h3>
                 <p className="text-gray-600 mb-4">Provide sustained support with a monthly donation plan.</p>
-                <button className="text-green-500 font-semibold hover:text-green-600">Set Up Monthly</button>
+                <button className="text-brand-gold font-semibold hover:text-yellow-700">Set Up Monthly</button>
               </div>
               
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
                 <Heart className="h-12 w-12 text-purple-500 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Share Our Story</h3>
                 <p className="text-gray-600 mb-4">Help us reach more people by sharing our mission on social media.</p>

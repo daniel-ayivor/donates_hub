@@ -18,11 +18,11 @@ const Header = () => {
 
   const navItems = [
     { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Us' },
     { path: '/impact', label: 'Our Impact' },
     { path: '/activities', label: 'Activities' },
     { path: '/gallery', label: 'Gallery' },
-    { path: '/about', label: 'About Us' },
-    { path: '/get-involved', label: 'Get Involved' },
+    { path: '/contact', label: 'Contact' },
   ];
 
   return (
@@ -30,7 +30,9 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm shadow-md'
+        isScrolled 
+          ? 'bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20' 
+          : 'bg-white/60 backdrop-blur-lg shadow-sm border-b border-white/10'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +84,7 @@ const Header = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="md:hidden bg-white shadow-lg"
+          className="md:hidden bg-white shadow-md"
         >
           <nav className="px-4 py-6 space-y-4">
             {navItems.map((item) => (

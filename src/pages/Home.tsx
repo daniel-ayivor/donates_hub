@@ -63,7 +63,7 @@ const Home = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-blue-50 rounded-xl hover:shadow-lg transition-shadow"
+                className="text-center p-8 bg-blue-50 rounded-xl hover:shadow-sm transition-shadow"
               >
                 <stat.icon className="h-12 w-12 text-brand-blue mx-auto mb-4" />
                 <div className="text-4xl font-bold text-gray-900 mb-2">
@@ -92,7 +92,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Ready to Make a Difference?</h2>
-            <p className="text-xl mb-8 text-orange-100">
+            <p className="text-xl mb-8 text-yellow-100">
               Join thousands of supporters who are helping provide education, clean water, healthcare, and hope to children and families across Ghana
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

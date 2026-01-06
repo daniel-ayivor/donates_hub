@@ -59,7 +59,7 @@ Kwame's transformation from a street vendor to a top student demonstrates the in
       nextSteps: "Continue supporting Kwame through secondary school and provide career guidance as he works toward his dream of becoming a doctor."
     },
     2: {
-      title: "A Small Loan, A Big Dream",
+      title: "Community Support, Big Impact",
       subtitle: "Ama's Market Success",
       beneficiary: "Ama Osei",
       age: "35 years old",
@@ -72,27 +72,27 @@ Kwame's transformation from a street vendor to a top student demonstrates the in
         "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
         "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg"
       ],
-      story: `Ama Osei's journey from struggling single mother to successful entrepreneur began with a dream and a $200 microloan from our Small Business Empowerment Program.
+      story: `Ama Osei's journey from struggling single mother to successful entrepreneur began with a dream and comprehensive business training from our Small Business Empowerment Program.
 
 In June 2023, Ama was working as a domestic helper in Kumasi, earning barely enough to feed her three children - Sarah (14), Kofi (10), and little Abena (6). Despite working long hours, she could barely afford their school fees and often had to choose between buying food or keeping her children in school.
 
 Ama had always dreamed of starting her own business. She noticed that fresh vegetables were expensive and often spoiled quickly in the local markets. Having grown up in a farming family, she understood agriculture and saw an opportunity to connect local farmers directly with urban consumers.
 
-When she heard about our microfinance program through a community meeting, Ama was initially hesitant. She had never taken a loan before and was worried about the responsibility. But after attending our financial literacy workshop, she gained confidence in her business plan.
+When she heard about our business training program through a community meeting, Ama was eager to learn. She attended our three-month entrepreneurship workshop where she learned financial literacy, business planning, marketing, and customer relationship management.
 
-With the $200 loan, Ama started small - purchasing fresh vegetables directly from farmers outside Kumasi and selling them at the local market. She focused on quality and fair prices, quickly building a reputation for offering the freshest produce in her section of the market.
+With her newfound knowledge and a small amount of savings she had carefully set aside, Ama started small - purchasing fresh vegetables directly from farmers outside Kumasi and selling them at the local market. She focused on quality and fair prices, quickly building a reputation for offering the freshest produce in her section of the market.
 
 The business grew steadily. Ama reinvested her profits, expanded her variety of vegetables, and even began selling to local restaurants. Her secret weapon was her relationships - she treated both farmers and customers like family, creating loyalty on both sides of her business.
 
-Within six months, Ama had repaid her initial loan and qualified for a larger $500 loan to expand further. She rented a permanent stall in the market and began employing two part-time helpers during peak seasons.
+Within six months, Ama's business had grown significantly. She rented a permanent stall in the market and began employing two part-time helpers during peak seasons. Our team continued providing mentorship and guidance as she navigated the challenges of scaling her business.
 
-Today, just over a year later, Ama's vegetable business generates three times her previous income. She has repaid all her loans and is now saving money for her children's university education. Sarah, her eldest, dreams of becoming a teacher and is excelling in school thanks to her mother's ability to pay fees on time.
+Today, just over a year later, Ama's vegetable business generates three times her previous income. She is now saving money for her children's university education. Sarah, her eldest, dreams of becoming a teacher and is excelling in school thanks to her mother's ability to pay fees on time.
 
-But Ama's success has rippled beyond her family. She now purchases vegetables from 12 different farmers, providing them with a reliable income source. She has also mentored three other women in her community to start their own small businesses.
+But Ama's success has rippled beyond her family. She now purchases vegetables from 12 different farmers, providing them with a reliable income source. She has also mentored three other women in her community to start their own small businesses, sharing the knowledge she gained from our program.
 
-Ama's transformation demonstrates how a small investment, combined with determination and proper guidance, can create lasting change not just for one family, but for an entire community network.
+Ama's transformation demonstrates how proper training, determination, and ongoing mentorship can create lasting change not just for one family, but for an entire community network.
 
-The most powerful moment came during our annual beneficiary celebration when Ama stood up to speak. With tears in her eyes, she said, "This loan didn't just give me money - it gave me back my dignity and my children their future."`,
+The most powerful moment came during our annual beneficiary celebration when Ama stood up to speak. With tears in her eyes, she said, "This training didn't just teach me business - it gave me back my dignity and my children their future."`,
       impact: {
         direct: "1 family lifted out of poverty",
         economic: "300% income increase",
@@ -102,11 +102,11 @@ The most powerful moment came during our annual beneficiary celebration when Ama
       metrics: [
         { label: "Income Growth", value: "300%", icon: TrendingUp },
         { label: "Farmers Supported", value: "12", icon: Users },
-        { label: "Loan Repayment", value: "100%", icon: Calendar },
+        { label: "Training Months", value: "3", icon: Calendar },
         { label: "Women Mentored", value: "3", icon: Heart }
       ],
       testimonial: {
-        text: "This loan didn't just give me money - it gave me back my dignity and my children their future. Now I can dream bigger for all of us.",
+        text: "This training didn't just teach me business - it gave me back my dignity and my children their future. Now I can dream bigger for all of us.",
         author: "Ama Osei",
         role: "Business Owner & Mother"
       },
@@ -121,7 +121,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
       <div className="pt-20 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Project not found</h1>
-          <Link to="/impact" className="text-orange-500 hover:text-orange-600">
+          <Link to="/impact" className="text-brand-gold hover:text-yellow-600">
             Return to Impact Stories
           </Link>
         </div>
@@ -137,7 +137,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-orange-600">
+      <section className="relative py-32 min-h-[60vh] bg-brand-gold">
         <div className="absolute inset-0">
           <img
             src={project.mainImage}
@@ -148,7 +148,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/impact"
-            className="inline-flex items-center text-white hover:text-orange-200 mb-8 transition-colors"
+            className="inline-flex items-center text-white hover:text-yellow-200 mb-8 transition-colors"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Impact Stories
@@ -166,19 +166,19 @@ The most powerful moment came during our annual beneficiary celebration when Ama
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-4">{project.title}</h1>
-            <p className="text-xl sm:text-2xl text-orange-100 mb-8">{project.subtitle}</p>
+            <p className="text-xl sm:text-2xl text-yellow-100 mb-8">{project.subtitle}</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2 text-orange-300" />
+                <MapPin className="h-5 w-5 mr-2 text-yellow-300" />
                 <span>{project.location}</span>
               </div>
               <div className="flex items-center">
-                <Calendar className="h-5 w-5 mr-2 text-orange-300" />
+                <Calendar className="h-5 w-5 mr-2 text-yellow-300" />
                 <span>{project.date}</span>
               </div>
               <div className="flex items-center">
-                <Users className="h-5 w-5 mr-2 text-orange-300" />
+                <Users className="h-5 w-5 mr-2 text-yellow-300" />
                 <span>{project.beneficiary}</span>
               </div>
             </div>
@@ -217,13 +217,13 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-orange-50 p-6 rounded-xl mb-8"
+                className="bg-yellow-50 p-6 rounded-xl mb-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Impact Metrics</h3>
                 <div className="space-y-4">
                   {project.metrics.map((metric, index) => (
                     <div key={index} className="flex items-center">
-                      <metric.icon className="h-5 w-5 text-orange-500 mr-3" />
+                      <metric.icon className="h-5 w-5 text-brand-gold mr-3" />
                       <div>
                         <div className="font-semibold text-gray-900">{metric.value}</div>
                         <div className="text-sm text-gray-600">{metric.label}</div>
@@ -260,7 +260,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-green-50 p-6 rounded-xl"
+                className="bg-blue-50 p-6 rounded-xl"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Next Steps</h3>
                 <p className="text-gray-700">{project.nextSteps}</p>
@@ -292,7 +292,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="relative overflow-hidden rounded-2xl shadow-sm hover:shadow transition-shadow"
               >
                 <img
                   src={image}
@@ -314,22 +314,22 @@ The most powerful moment came during our annual beneficiary celebration when Ama
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-orange-50 p-12 rounded-xl"
+            className="bg-yellow-50 p-12 rounded-xl"
           >
-            <div className="text-6xl text-orange-500 mb-6">"</div>
+            <div className="text-6xl text-brand-gold mb-6">"</div>
             <blockquote className="text-2xl text-gray-900 font-medium mb-8 leading-relaxed">
               {project.testimonial.text}
             </blockquote>
             <div className="text-lg">
               <div className="font-semibold text-gray-900">{project.testimonial.author}</div>
-              <div className="text-orange-500">{project.testimonial.role}</div>
+              <div className="text-brand-gold">{project.testimonial.role}</div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-orange-500">
+      <section className="py-20 bg-brand-gold">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -338,20 +338,20 @@ The most powerful moment came during our annual beneficiary celebration when Ama
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-6">Help Us Create More Success Stories</h2>
-            <p className="text-xl mb-8 text-orange-100">
+            <p className="text-xl mb-8 text-yellow-100">
               Stories like {project.beneficiary.split(' ')[0]}'s are possible because of supporters like you. 
               Your donation can transform another life today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/donate"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-brand-gold hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Donate Now
               </Link>
               <Link
                 to="/impact"
-                className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-gold px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Read More Stories
               </Link>

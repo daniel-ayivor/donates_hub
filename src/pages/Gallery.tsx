@@ -325,7 +325,7 @@ const Gallery = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-brand-blue">
+      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg"
@@ -370,9 +370,9 @@ const Gallery = () => {
                 <motion.button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  className={`px-6 py-3 rounded-full font-semibold transition-all ${
                     selectedCategory === category.id
-                      ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25'
+                      ? 'bg-purple-500 text-white shadow-sm'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                   whileHover={{ y: -2 }}
@@ -421,33 +421,13 @@ const Gallery = () => {
                   className="group cursor-pointer"
                   onClick={() => openModal(image.id)}
                 >
-                  <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                  <div className="relative overflow-hidden rounded-2xl shadow-sm hover:shadow transition-all">
                     <img
                       src={image.src}
                       alt={image.title}
                       className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    
-                    {/* Overlay Content */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h3 className="text-lg font-bold mb-1">{image.title}</h3>
-                      <div className="flex items-center text-sm opacity-90 mb-2">
-                        <MapPin className="h-3 w-3 mr-1" />
-                        {image.location}
-                        <Calendar className="h-3 w-3 ml-3 mr-1" />
-                        {image.date}
-                      </div>
-                      <div className="flex items-center text-sm opacity-90">
-                        <Users className="h-3 w-3 mr-1" />
-                        {image.participants}
-                      </div>
-                    </div>
-
-                    {/* Hover Icon */}
-                    <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Camera className="h-5 w-5 text-white" />
-                    </div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
                   </div>
                 </motion.div>
               ))}
@@ -470,7 +450,7 @@ const Gallery = () => {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              className="relative max-w-6xl max-h-[90vh] mx-4 bg-white rounded-2xl overflow-hidden shadow-2xl"
+              className="relative w-full max-w-4xl max-h-[85vh] mx-4 bg-white rounded-2xl overflow-y-auto shadow"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -501,41 +481,8 @@ const Gallery = () => {
                 <img
                   src={selectedImageData.src}
                   alt={selectedImageData.title}
-                  className="w-full max-h-[70vh] object-contain mx-auto"
+                  className="w-full max-h-[80vh] object-contain mx-auto"
                 />
-                <div className="absolute inset-0 bg-black/30"></div>
-              </div>
-
-              {/* Content */}
-              <div className="p-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedImageData.title}</h2>
-                <p className="text-lg text-gray-700 mb-6">{selectedImageData.description}</p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="flex items-center">
-                    <MapPin className="h-5 w-5 text-purple-500 mr-2" />
-                    <div>
-                      <div className="text-sm text-gray-500">Location</div>
-                      <div className="font-semibold">{selectedImageData.location}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Calendar className="h-5 w-5 text-purple-500 mr-2" />
-                    <div>
-                      <div className="text-sm text-gray-500">Date</div>
-                      <div className="font-semibold">{selectedImageData.date}</div>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Users className="h-5 w-5 text-purple-500 mr-2" />
-                    <div>
-                      <div className="text-sm text-gray-500">Participants</div>
-                      <div className="font-semibold">{selectedImageData.participants}</div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </motion.div>

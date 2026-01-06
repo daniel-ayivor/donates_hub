@@ -15,7 +15,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   current,
   goal,
   label,
-  color = 'bg-orange-500',
+  color = 'bg-brand-gold',
   height = 'h-4',
   showPercentage = true,
   animationDuration = 2000
