@@ -108,7 +108,7 @@ const FeaturedStories = () => {
         >
           <Link
             to="/impact"
-            className="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+            className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
           >
             View All Stories <ArrowRight className="ml-2 h-5 w-5" />
           </Link>

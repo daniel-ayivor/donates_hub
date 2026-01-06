@@ -129,12 +129,12 @@ const GetInvolved = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-md p-8"
+              className="bg-white rounded-lg shadow-md p-6"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                     Full Name *
                   </label>
                   <input
@@ -144,13 +144,13 @@ const GetInvolved = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
+                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
                     placeholder="Your full name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email Address *
                   </label>
                   <input
@@ -160,13 +160,13 @@ const GetInvolved = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
+                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number
                   </label>
                   <input
@@ -175,13 +175,13 @@ const GetInvolved = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
+                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
                     placeholder="+233 XX XXX XXXX"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
                     Subject *
                   </label>
                   <input
@@ -191,13 +191,13 @@ const GetInvolved = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
+                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
                     placeholder="How can we help you?"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message *
                   </label>
                   <textarea
@@ -207,14 +207,14 @@ const GetInvolved = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
+                    className="w-full p-2.5 border border-gray-300 rounded-lg focus:border-brand-blue focus:ring focus:ring-blue-200"
                     placeholder="Tell us more about your inquiry..."
                   />
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-brand-blue text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                  className="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold text-base hover:bg-blue-700 transition-colors flex items-center justify-center"
                 >
                   <Send className="mr-2 h-5 w-5" />
                   Send Message
@@ -228,9 +228,9 @@ const GetInvolved = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-md p-8"
+              className="bg-white rounded-lg shadow-md p-6"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Find Us</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Us</h2>
               <div className="bg-white rounded-lg overflow-hidden h-[500px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.573421679766!2d-2.3277758!3d7.3368508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjAnMTIuNyJOIDLCsDE5JzQwLjAiVw!5e0!3m2!1sen!2sgh!4v1234567890"

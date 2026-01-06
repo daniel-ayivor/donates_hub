@@ -330,13 +330,13 @@ const AboutUs = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/get-involved"
-                className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-brand-blue hover:bg-gray-100 px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Involved
               </a>
               <a
                 href="/donate"
-                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Support Our Work
               </a>
