@@ -9,21 +9,21 @@ const FeaturedStories = () => {
       id: 1,
       title: "From Street to School",
       subtitle: "Kwame's Educational Journey",
-      image: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
       description: "How a young boy's life was transformed through education support and community care."
     },
     {
       id: 2,
       title: "A Small Loan, A Big Dream",
       subtitle: "Ama's Market Success",
-      image: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg",
       description: "Discover how microfinancing helped a mother of three build a thriving business."
     },
     {
       id: 3,
       title: "Building Tomorrow's Leaders",
       subtitle: "Youth Leadership Program",
-      image: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
       description: "Empowering young minds to become change-makers in their communities."
     }
   ];
@@ -73,9 +73,9 @@ const FeaturedStories = () => {
                     delay: index * 0.15,
                     ease: [0.25, 0.1, 0.25, 1]
                   }}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/60 transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
                 <motion.div
                   className="absolute top-4 right-4 w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100"
                   whileHover={{ scale: 1.1 }}

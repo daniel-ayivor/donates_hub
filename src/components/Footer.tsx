@@ -10,16 +10,22 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <Heart className="h-8 w-8 text-brand-gold" />
-              <span className="text-2xl font-bold">Brighter Futures</span>
+              <span className="text-2xl font-bold">Africa Assistance Plan</span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
-              Empowering children and small businesses in Ghana to build a brighter tomorrow. 
-              Together, we create lasting change in communities across the nation.
+              Committed to eradicating poverty and deprivation among society's most vulnerable. 
+              We ensure holistic well-being through water access, youth empowerment, and community development across Ghana.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              <a href="https://www.facebook.com/AAPGHANA" target="_blank" rel="noopener noreferrer">
+                <Facebook className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              </a>
+              <a href="https://twitter.com/aapghana" target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.instagram.com/africa.assistanceplan/" target="_blank" rel="noopener noreferrer">
+                <Instagram className="h-6 w-6 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -40,15 +46,19 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-orange-500" />
-                <span className="text-gray-300 text-sm">Accra, Ghana</span>
+                <span className="text-gray-300 text-sm">GNAT ST BS-0064-4803, Sunyani, Bono Region, Ghana</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-orange-500" />
-                <span className="text-gray-300 text-sm">+233 XX XXX XXXX</span>
+                <span className="text-gray-300 text-sm">+233 50 403 7082</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-orange-500" />
+                <span className="text-gray-300 text-sm">+233 26 284 8837</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-orange-500" />
-                <span className="text-gray-300 text-sm">info@brighterfutures.org</span>
+                <span className="text-gray-300 text-sm">aap@aapghana.org</span>
               </div>
             </div>
           </div>
@@ -56,8 +66,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            Empowering children, families, and communities across Africa to build a brighter tomorrow.
-            © 2024 African Assistance Plan. All rights reserved. Making a difference, one life at a time.
+            Committed to transparency. When you donate to Africa Assistance Plan, your donations support our programs for the vulnerable in societies where we serve.
+            © 2024 Africa Assistance Plan. All rights reserved.
           </p>
         </div>
       </div>

@@ -21,32 +21,32 @@ const BubbleAnimation: React.FC = () => {
   const sampleImages: ImageThumbnail[] = [
     {
       id: 1,
-      src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg',
       alt: 'Children learning',
     },
     {
       id: 2,
-      src: 'https://images.pexels.com/photos/5691577/pexels-photo-5691577.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg',
       alt: 'Community gathering',
     },
     {
       id: 3,
-      src: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg',
       alt: 'Clean water',
     },
     {
       id: 4,
-      src: 'https://images.pexels.com/photos/8363030/pexels-photo-8363030.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg',
       alt: 'Healthcare support',
     },
     {
       id: 5,
-      src: 'https://images.pexels.com/photos/5905857/pexels-photo-5905857.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg',
       alt: 'Education',
     },
     {
       id: 6,
-      src: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg',
+      src: '/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg',
       alt: 'Happy children',
     },
   ];
@@ -150,7 +150,7 @@ const BubbleAnimation: React.FC = () => {
                 <motion.img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-64 object-cover"
+                  className="w-full h-64 object-cover object-center rounded-lg"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.3 }}
                 />

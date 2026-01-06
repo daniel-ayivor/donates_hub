@@ -11,15 +11,15 @@ const Activities = () => {
       date: "August 15, 2024",
       location: "Multiple Schools, Accra",
       participants: "500+ Children",
-      image: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.55 AM.jpeg",
       description: "Distributed school supplies, uniforms, and backpacks to 500 children across 15 schools in Accra.",
       category: "Education",
       status: "Completed",
       impact: "500 children ready for school",
       gallery: [
-        "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-        "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
-        "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.55 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg"
       ]
     },
     {
@@ -28,15 +28,15 @@ const Activities = () => {
       date: "September 22, 2024",
       location: "Kumasi Community Center",
       participants: "75 Women",
-      image: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
       description: "Three-day intensive workshop on business planning, financial literacy, and marketing for women entrepreneurs.",
       category: "Business",
       status: "Completed",
       impact: "45 new businesses started",
       gallery: [
-        "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg"
       ]
     },
     {
@@ -45,15 +45,15 @@ const Activities = () => {
       date: "October 10, 2024",
       location: "Northern Ghana Villages",
       participants: "1200+ Residents",
-      image: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg",
       description: "Installation of 5 clean water systems in remote villages, providing safe drinking water to over 1200 people.",
       category: "Health",
       status: "Completed",
       impact: "1200+ people with clean water access",
       gallery: [
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
-        "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg"
       ]
     },
     {
@@ -62,15 +62,15 @@ const Activities = () => {
       date: "November 5, 2024",
       location: "Cape Coast University",
       participants: "120 Youth Leaders",
-      image: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
       description: "Annual summit bringing together young leaders from across Ghana to network, learn, and plan community initiatives.",
       category: "Leadership",
       status: "Completed",
       impact: "25 community projects launched",
       gallery: [
-        "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
-        "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-        "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.46 AM.jpeg"
       ]
     },
     {
@@ -79,15 +79,15 @@ const Activities = () => {
       date: "December 12, 2024",
       location: "Rural Communities",
       participants: "800+ Patients",
-      image: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg",
       description: "Monthly mobile health clinic providing free medical check-ups, vaccinations, and health education.",
       category: "Health",
       status: "Ongoing",
       impact: "800+ people served monthly",
       gallery: [
-        "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.43 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.51.09 AM.jpeg"
       ]
     },
     {
@@ -96,15 +96,15 @@ const Activities = () => {
       date: "January 20, 2025",
       location: "Accra Tech Hub",
       participants: "60 Trainees",
-      image: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
       description: "Six-month comprehensive program teaching coding, digital marketing, and computer literacy to unemployed youth.",
       category: "Technology",
       status: "Upcoming",
       impact: "Expected: 50+ job placements",
       gallery: [
-        "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
-        "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
-        "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.37 AM.jpeg"
       ]
     }
   ];
@@ -132,10 +132,10 @@ const Activities = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-teal-600 to-blue-700">
+      <section className="relative py-20 bg-teal-600">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.43.25 AM.jpeg"
             alt="Community activities"
             className="w-full h-full object-cover opacity-20"
           />
@@ -165,19 +165,19 @@ const Activities = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
               <div className="text-gray-700">Events This Year</div>
             </div>
-            <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
+            <div className="text-center p-6 bg-green-50 rounded-xl">
               <div className="text-3xl font-bold text-green-600 mb-2">5,000+</div>
               <div className="text-gray-700">People Reached</div>
             </div>
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl">
+            <div className="text-center p-6 bg-purple-50 rounded-xl">
               <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
               <div className="text-gray-700">Communities Served</div>
             </div>
-            <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl">
+            <div className="text-center p-6 bg-orange-50 rounded-xl">
               <div className="text-3xl font-bold text-orange-600 mb-2">200+</div>
               <div className="text-gray-700">Volunteers Engaged</div>
             </div>
@@ -213,7 +213,7 @@ const Activities = () => {
                   <img
                     src={activity.image}
                     alt={activity.title}
-                    className="w-full h-64 object-cover transform hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
                     <span className={`${categoryColors[activity.category]} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
@@ -223,7 +223,7 @@ const Activities = () => {
                       {activity.status}
                     </span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-black/30"></div>
                 </div>
                 
                 <div className="p-6">
@@ -264,7 +264,7 @@ const Activities = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-teal-500 to-blue-600">
+      <section className="py-20 bg-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

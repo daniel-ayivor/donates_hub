@@ -9,7 +9,7 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
       title: "Back-to-School Drive 2024",
       category: "children-youth",
       location: "Accra, Ghana",
@@ -19,7 +19,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
       title: "Student Reading Program",
       category: "children-youth",
       location: "Kumasi, Ghana",
@@ -29,7 +29,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
       title: "Youth Leadership Summit",
       category: "children-youth",
       location: "Cape Coast, Ghana",
@@ -39,7 +39,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
       title: "Clean Water Installation",
       category: "wash",
       location: "Northern Ghana",
@@ -49,7 +49,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
       title: "Hygiene Education Program",
       category: "wash",
       location: "Rural Communities",
@@ -59,7 +59,7 @@ const Gallery = () => {
     },
     {
       id: 26,
-      src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg",
       title: "Water System Maintenance",
       category: "wash",
       location: "Central Ghana",
@@ -69,7 +69,7 @@ const Gallery = () => {
     },
     {
       id: 27,
-      src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.25 AM.jpeg",
       title: "Community Sanitation Workshop",
       category: "wash",
       location: "Western Ghana",
@@ -79,7 +79,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.26 AM.jpeg",
       title: "Children's Home Support",
       category: "children-youth",
       location: "Accra, Ghana",
@@ -89,7 +89,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg",
       title: "Youth Skills Training",
       category: "children-youth",
       location: "Kumasi, Ghana",
@@ -99,7 +99,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
       title: "Digital Skills Training",
       category: "children-youth",
       location: "Accra Tech Hub",
@@ -109,7 +109,7 @@ const Gallery = () => {
     },
     {
       id: 9,
-      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.23 AM.jpeg",
       title: "Community Church Outreach",
       category: "church-community",
       location: "Various Communities",
@@ -119,7 +119,7 @@ const Gallery = () => {
     },
     {
       id: 10,
-      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.25 AM.jpeg",
       title: "After School Program",
       category: "children-youth",
       location: "Rural Ghana",
@@ -129,7 +129,7 @@ const Gallery = () => {
     },
     {
       id: 11,
-      src: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.26 AM.jpeg",
       title: "Sanitation Facility Construction",
       category: "wash",
       location: "Tamale, Ghana",
@@ -139,7 +139,7 @@ const Gallery = () => {
     },
     {
       id: 12,
-      src: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
       title: "Water Quality Testing",
       category: "wash",
       location: "Remote Villages",
@@ -149,7 +149,7 @@ const Gallery = () => {
     },
     {
       id: 13,
-      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
       title: "Youth Mentorship Program",
       category: "children-youth",
       location: "Cape Coast, Ghana",
@@ -159,7 +159,7 @@ const Gallery = () => {
     },
     {
       id: 14,
-      src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
       title: "Children's Sports Day",
       category: "children-youth",
       location: "Accra, Ghana",
@@ -169,7 +169,7 @@ const Gallery = () => {
     },
     {
       id: 15,
-      src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg",
       title: "Educational Workshop",
       category: "children-youth",
       location: "Kumasi, Ghana",
@@ -179,7 +179,7 @@ const Gallery = () => {
     },
     {
       id: 16,
-      src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg",
       title: "Computer Literacy Program",
       category: "children-youth",
       location: "Accra Tech Hub",
@@ -189,7 +189,7 @@ const Gallery = () => {
     },
     {
       id: 17,
-      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.37 AM.jpeg",
       title: "School Supply Distribution",
       category: "children-youth",
       location: "Multiple Schools",
@@ -199,7 +199,7 @@ const Gallery = () => {
     },
     {
       id: 18,
-      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
       title: "Reading Club Initiative",
       category: "children-youth",
       location: "Community Centers",
@@ -209,7 +209,7 @@ const Gallery = () => {
     },
     {
       id: 19,
-      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.46 AM.jpeg",
       title: "Leadership Training",
       category: "children-youth",
       location: "Youth Centers",
@@ -219,7 +219,7 @@ const Gallery = () => {
     },
     {
       id: 20,
-      src: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.43.55 AM.jpeg",
       title: "Art & Creativity Workshop",
       category: "children-youth",
       location: "Community Centers",
@@ -229,7 +229,7 @@ const Gallery = () => {
     },
     {
       id: 21,
-      src: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.42.59 AM.jpeg",
       title: "Career Guidance Session",
       category: "children-youth",
       location: "Schools",
@@ -239,7 +239,7 @@ const Gallery = () => {
     },
     {
       id: 22,
-      src: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.23 AM.jpeg",
       title: "STEM Education Program",
       category: "children-youth",
       location: "Science Centers",
@@ -249,7 +249,7 @@ const Gallery = () => {
     },
     {
       id: 23,
-      src: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.26 AM.jpeg",
       title: "Scholarship Award Ceremony",
       category: "children-youth",
       location: "Accra, Ghana",
@@ -259,7 +259,7 @@ const Gallery = () => {
     },
     {
       id: 24,
-      src: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg",
       title: "Health & Nutrition Education",
       category: "children-youth",
       location: "Schools & Communities",
@@ -269,7 +269,7 @@ const Gallery = () => {
     },
     {
       id: 25,
-      src: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      src: "/images/WhatsApp Image 2026-01-04 at 12.46.37 AM.jpeg",
       title: "Music & Dance Program",
       category: "children-youth",
       location: "Cultural Centers",
@@ -325,10 +325,10 @@ const Gallery = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-600 to-blue-700">
+      <section className="relative py-20 bg-brand-blue">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg"
             alt="Gallery"
             className="w-full h-full object-cover opacity-20"
           />
@@ -425,9 +425,9 @@ const Gallery = () => {
                     <img
                       src={image.src}
                       alt={image.title}
-                      className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     
                     {/* Overlay Content */}
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -501,9 +501,9 @@ const Gallery = () => {
                 <img
                   src={selectedImageData.src}
                   alt={selectedImageData.title}
-                  className="w-full max-h-[60vh] object-cover"
+                  className="w-full max-h-[70vh] object-contain mx-auto"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/30"></div>
               </div>
 
               {/* Content */}

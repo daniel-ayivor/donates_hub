@@ -16,11 +16,11 @@ const ProjectDetail = () => {
       location: "Accra, Ghana",
       date: "Started: March 2022",
       category: "Education",
-      mainImage: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      mainImage: "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
       gallery: [
-        "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-        "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
-        "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg"
       ],
       story: `When we first met Kwame in March 2022, he was just 8 years old, spending his days on the bustling streets of Accra, selling water sachets to help his grandmother put food on the table. Despite his young age, Kwame had never set foot in a classroom.
 
@@ -66,11 +66,11 @@ Kwame's transformation from a street vendor to a top student demonstrates the in
       location: "Kumasi, Ghana",
       date: "Started: June 2023",
       category: "Business",
-      mainImage: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      mainImage: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
       gallery: [
-        "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg"
       ],
       story: `Ama Osei's journey from struggling single mother to successful entrepreneur began with a dream and a $200 microloan from our Small Business Empowerment Program.
 
@@ -137,7 +137,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-orange-600 to-pink-700">
+      <section className="relative py-20 bg-orange-600">
         <div className="absolute inset-0">
           <img
             src={project.mainImage}
@@ -217,7 +217,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-pink-50 p-6 rounded-2xl mb-8"
+                className="bg-orange-50 p-6 rounded-xl mb-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Impact Metrics</h3>
                 <div className="space-y-4">
@@ -239,7 +239,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-2xl mb-8"
+                className="bg-blue-50 p-6 rounded-xl mb-8"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Key Impact Areas</h3>
                 <div className="space-y-3">
@@ -260,7 +260,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl"
+                className="bg-green-50 p-6 rounded-xl"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Next Steps</h3>
                 <p className="text-gray-700">{project.nextSteps}</p>
@@ -297,9 +297,9 @@ The most powerful moment came during our annual beneficiary celebration when Ama
                 <img
                   src={image}
                   alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-64 object-cover transform hover:scale-110 transition-transform duration-500"
+                  className="w-full h-64 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                <div className="absolute inset-0 bg-black/20"></div>
               </motion.div>
             ))}
           </div>
@@ -314,7 +314,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-50 to-pink-50 p-12 rounded-2xl"
+            className="bg-orange-50 p-12 rounded-xl"
           >
             <div className="text-6xl text-orange-500 mb-6">"</div>
             <blockquote className="text-2xl text-gray-900 font-medium mb-8 leading-relaxed">
@@ -329,7 +329,7 @@ The most powerful moment came during our annual beneficiary celebration when Ama
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-pink-600">
+      <section className="py-20 bg-orange-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

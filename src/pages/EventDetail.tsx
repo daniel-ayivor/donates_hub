@@ -16,14 +16,14 @@ const EventDetail = () => {
       duration: "Full Day Event (8 AM - 5 PM)",
       status: "Completed",
       category: "Education",
-      mainImage: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      mainImage: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
       gallery: [
-        "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-        "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
-        "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
-        "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg"
       ],
       description: "Our largest annual back-to-school initiative, providing essential supplies and support to children across Accra.",
       story: `The morning of August 15th, 2024, dawned bright and full of promise as our team prepared for what would become our most successful Back-to-School Drive to date. After months of planning, fundraising, and coordination with local schools, we were ready to make a significant impact in the lives of hundreds of children across Accra.
@@ -98,12 +98,12 @@ This event reinforced our belief that when a community comes together with a sha
       duration: "3 Days (9 AM - 4 PM daily)",
       status: "Completed",
       category: "Business",
-      mainImage: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      mainImage: "/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg",
       gallery: [
-        "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
-        "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
-        "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
-        "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg"
+        "/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg"
       ],
       description: "An intensive three-day program empowering women with entrepreneurial skills and business knowledge.",
       story: `The September 2024 Women's Entrepreneurship Workshop in Kumasi marked a pivotal moment in our commitment to economic empowerment. Over three transformative days, 75 women from diverse backgrounds came together to learn, share, and build the foundations for their entrepreneurial dreams.
@@ -188,7 +188,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-teal-600 to-blue-700">
+      <section className="relative py-20 bg-teal-600">
         <div className="absolute inset-0">
           <img
             src={event.mainImage}
@@ -255,7 +255,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gradient-to-br from-teal-50 to-blue-50 rounded-xl"
+                className="text-center p-6 bg-teal-50 rounded-xl"
               >
                 <metric.icon className="h-12 w-12 text-teal-600 mx-auto mb-4" />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
@@ -387,9 +387,9 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 <img
                   src={image}
                   alt={`${event.title} - Gallery Image ${index + 1}`}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </motion.div>
             ))}
           </div>
@@ -437,7 +437,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
       )}
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-teal-500 to-blue-600">
+      <section className="py-20 bg-teal-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

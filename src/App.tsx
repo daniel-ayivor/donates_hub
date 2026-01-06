@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import BubbleBackground from './components/BubbleBackground';
 import Home from './pages/Home';
 import OurImpact from './pages/OurImpact';
 import Activities from './pages/Activities';
@@ -19,8 +18,7 @@ import BubbleDemo from './pages/BubbleDemo';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-pink-50 relative">
-        <BubbleBackground />
+      <div className="min-h-screen bg-gray-50 relative">
         <ScrollToTop />
         <Header />
         <div className="relative z-10">

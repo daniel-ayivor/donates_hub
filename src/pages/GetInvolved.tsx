@@ -122,10 +122,10 @@ const GetInvolved = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-green-600 to-teal-700">
+      <section className="relative py-20 bg-green-600">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.46.39 AM.jpeg"
             alt="Volunteers helping"
             className="w-full h-full object-cover opacity-20"
           />
@@ -173,7 +173,7 @@ const GetInvolved = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="text-center p-8 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <way.icon className="h-16 w-16 text-green-500 mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{way.title}</h3>
@@ -211,7 +211,7 @@ const GetInvolved = () => {
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className={`h-2 bg-gradient-to-r ${opportunity.color}`}></div>
+                <div className="h-2 bg-green-500"></div>
                 <div className="p-6">
                   <div className="text-4xl mb-4">{opportunity.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{opportunity.title}</h3>
@@ -264,7 +264,7 @@ const GetInvolved = () => {
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-2xl shadow-xl"
+            className="bg-green-50 p-8 rounded-xl shadow-xl"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -391,7 +391,7 @@ const GetInvolved = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-green-500 to-teal-600 text-white py-4 rounded-xl font-bold text-lg hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+                className="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition-colors flex items-center justify-center"
               >
                 <Send className="mr-2 h-5 w-5" />
                 Submit Application

@@ -9,7 +9,7 @@ const OurImpact = () => {
       id: 1,
       title: "From Street to School",
       subtitle: "Kwame's Educational Journey",
-      image: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
       description: "At 8 years old, Kwame was living on the streets of Accra, selling water to survive. Today, he's a top student in his class, dreaming of becoming a doctor.",
       impact: "100% improvement in literacy",
       category: "Education",
@@ -21,7 +21,7 @@ const OurImpact = () => {
       id: 2,
       title: "A Small Loan, A Big Dream",
       subtitle: "Ama's Market Success",
-      image: "https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
       description: "With a $200 microloan, Ama transformed her small vegetable stand into a thriving market business, supporting her family of five.",
       impact: "300% income increase",
       category: "Business",
@@ -33,7 +33,7 @@ const OurImpact = () => {
       id: 3,
       title: "Building Tomorrow's Leaders",
       subtitle: "Youth Leadership Program",
-      image: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
       description: "Our leadership program has mentored 50 young people, with 80% going on to start their own community initiatives.",
       impact: "50 youth leaders trained",
       category: "Leadership",
@@ -45,7 +45,7 @@ const OurImpact = () => {
       id: 4,
       title: "Clean Water Changes Everything",
       subtitle: "Adwoa's Village Transformation",
-      image: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
       description: "Installing a clean water system in Adwoa's village reduced waterborne diseases by 90% and freed up 4 hours daily for children to attend school.",
       impact: "90% reduction in illness",
       category: "Health",
@@ -57,7 +57,7 @@ const OurImpact = () => {
       id: 5,
       title: "Mother's Support Circle",
       subtitle: "Empowering Women Together",
-      image: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg",
       description: "25 mothers formed a support network, sharing childcare, starting businesses together, and advocating for their children's education.",
       impact: "25 families empowered",
       category: "Community",
@@ -69,7 +69,7 @@ const OurImpact = () => {
       id: 6,
       title: "Technology for Tomorrow",
       subtitle: "Digital Skills Training",
-      image: "https://images.pexels.com/photos/8853497/pexels-photo-8853497.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
       description: "Teaching computer skills to 100 young adults, with 85% finding employment in tech-related fields within 6 months.",
       impact: "85% employment rate",
       category: "Technology",
@@ -94,10 +94,10 @@ const OurImpact = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700">
+      <section className="relative py-20 bg-brand-blue">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg"
             alt="Community impact"
             className="w-full h-full object-cover opacity-20"
           />
@@ -134,7 +134,7 @@ const OurImpact = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="text-center p-6 bg-gray-50 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <metric.icon className={`h-12 w-12 ${metric.color} mx-auto mb-4`} />
                 <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
@@ -173,14 +173,14 @@ const OurImpact = () => {
                   <img
                     src={story.image}
                     alt={story.title}
-                    className="w-full h-64 object-cover transform hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {story.category}
                     </span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-black/30"></div>
                 </div>
                 
                 <div className="p-6">
@@ -217,7 +217,7 @@ const OurImpact = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-pink-600">
+      <section className="py-20 bg-orange-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

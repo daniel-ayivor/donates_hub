@@ -5,32 +5,32 @@ import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield } from
 const AboutUs = () => {
   const teamMembers = [
     {
-      name: "Akosua Mensah",
-      role: "Founder & Executive Director",
-      image: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
-      bio: "A passionate advocate for children's rights with 15 years of experience in international development.",
-      expertise: "Child Development, Policy Advocacy"
+      name: "Rose Meda D. Offei Asare",
+      role: "President & CEO",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.41 AM.jpeg",
+      bio: "Visionary leader committed to transforming lives across Ghana through sustainable community development programs.",
+      expertise: "Leadership, Strategic Planning, Community Development"
     },
     {
-      name: "Kwame Osei",
-      role: "Program Director",
-      image: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
-      bio: "Former business consultant turned social entrepreneur, specializing in sustainable community programs.",
-      expertise: "Program Management, Business Development"
+      name: "Program Director",
+      role: "Water & Sanitation Programs",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg",
+      bio: "Expert in WASH programs, ensuring access to clean water and sanitation for vulnerable communities.",
+      expertise: "Water Systems, Hygiene Education, Infrastructure"
     },
     {
-      name: "Dr. Ama Asante",
-      role: "Health & Education Coordinator",
-      image: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
-      bio: "Medical doctor and educator committed to improving healthcare access in rural communities.",
-      expertise: "Public Health, Educational Development"
+      name: "Youth Programs Coordinator",
+      role: "Children & Youth Empowerment",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.43 AM.jpeg",
+      bio: "Dedicated to preparing children and youth for the future through training and empowerment programs.",
+      expertise: "Youth Development, Education, Skills Training"
     },
     {
-      name: "Joseph Ankrah",
-      role: "Community Outreach Manager",
-      image: "https://images.pexels.com/photos/8363020/pexels-photo-8363020.jpeg",
-      bio: "Local community leader with deep connections across Ghana's regions and villages.",
-      expertise: "Community Engagement, Cultural Liaison"
+      name: "Community Outreach Manager",
+      role: "Church & Community Development",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.51.09 AM.jpeg",
+      bio: "Training and empowering church and community leaders to better serve society's most vulnerable.",
+      expertise: "Community Engagement, Faith-based Programs, Leadership Training"
     }
   ];
 
@@ -81,10 +81,10 @@ const AboutUs = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-600 to-blue-700">
+      <section className="relative py-20 bg-brand-blue">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.51.10 AM.jpeg"
             alt="Our team"
             className="w-full h-full object-cover opacity-20"
           />
@@ -96,7 +96,7 @@ const AboutUs = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl font-bold mb-6"
           >
-            About Brighter Futures
+            About Africa Assistance Plan
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
@@ -119,7 +119,7 @@ const AboutUs = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl"
+              className="bg-orange-50 p-8 rounded-2xl"
             >
               <Target className="h-12 w-12 text-orange-500 mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
@@ -135,7 +135,7 @@ const AboutUs = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl"
+              className="bg-blue-50 p-8 rounded-2xl"
             >
               <Globe className="h-12 w-12 text-blue-500 mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
@@ -210,9 +210,9 @@ const AboutUs = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-48 h-48 mx-auto rounded-full object-cover shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
+                    className="w-48 h-48 mx-auto rounded-full object-cover object-center shadow-lg group-hover:shadow-2xl transition-shadow duration-300"
                   />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-t from-black/20 to-transparent"></div>
+                  <div className="absolute inset-0 rounded-full bg-black/10"></div>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                 <p className="text-orange-500 font-semibold mb-3">{member.role}</p>
@@ -287,7 +287,7 @@ const AboutUs = () => {
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-gradient-to-br from-orange-50 to-pink-50 rounded-2xl"
+                className="text-center p-8 bg-orange-50 rounded-xl"
               >
                 <achievement.icon className="h-16 w-16 text-orange-500 mx-auto mb-4" />
                 <div className="text-4xl font-bold text-gray-900 mb-2">{achievement.number}</div>
@@ -299,7 +299,7 @@ const AboutUs = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-700">
+      <section className="py-20 bg-brand-blue">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

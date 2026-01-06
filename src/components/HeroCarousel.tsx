@@ -8,35 +8,35 @@ const HeroCarousel = () => {
 
   const slides = [
     {
-      image: "https://images.pexels.com/photos/8363028/pexels-photo-8363028.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
       title: "Empowering Education",
       subtitle: "Building Brighter Futures Through Learning",
       description: "Providing quality education and school supplies to children across Ghana, ensuring every child has the opportunity to learn and grow.",
       focus: "Education"
     },
     {
-      image: "https://images.pexels.com/photos/8853502/pexels-photo-8853502.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
       title: "Clean Water for All",
       subtitle: "Life-Changing Access to Safe Water",
       description: "Installing clean water systems in rural communities, bringing health and hope to families who need it most.",
       focus: "Water & Health"
     },
     {
-      image: "https://images.pexels.com/photos/8853498/pexels-photo-8853498.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.26 AM.jpeg",
       title: "Supporting Orphanages",
       subtitle: "Caring for Our Most Vulnerable",
       description: "Providing essential support to orphanages and children's homes, ensuring every child feels loved and cared for.",
       focus: "Orphan Care"
     },
     {
-      image: "https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
       title: "Healthcare Access",
       subtitle: "Bringing Medical Care to Remote Areas",
       description: "Mobile health clinics and medical outreach programs serving communities with limited healthcare access.",
       focus: "Healthcare"
     },
     {
-      image: "https://images.pexels.com/photos/8363016/pexels-photo-8363016.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.25 AM.jpeg",
       title: "Faith & Community",
       subtitle: "Strengthening Spiritual Foundations",
       description: "Supporting churches and faith-based initiatives that serve as pillars of hope and community support.",
@@ -79,9 +79,9 @@ const HeroCarousel = () => {
             <img
               src={slide.image}
               alt={slide.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-900/80 to-purple-900/60"></div>
+            <div className="absolute inset-0 bg-orange-900/60"></div>
           </motion.div>
         ))}
       </div>
@@ -147,7 +147,7 @@ const HeroCarousel = () => {
                 className="relative bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
               >
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-brand-gold to-brand-blue"
+                  className="absolute inset-0 bg-brand-blue"
                   animate={{
                     scale: [1, 1.1, 1],
                     opacity: [0.5, 0.8, 0.5],

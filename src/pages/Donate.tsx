@@ -141,11 +141,11 @@ const Donate = () => {
         </div>
       </motion.div>
       
-      {/* Confetti Effect */}
-      {[...Array(50)].map((_, i) => (
+      {/* Confetti Effect - Reduced for performance */}
+      {[...Array(20)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute w-2 h-2 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full"
+          className="absolute w-2 h-2 bg-orange-500 rounded-full"
           initial={{
             x: window.innerWidth / 2,
             y: window.innerHeight / 2,
@@ -174,10 +174,10 @@ const Donate = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-orange-500 to-pink-600">
+      <section className="relative py-20 bg-orange-500">
         <div className="absolute inset-0">
           <img
-            src="https://images.pexels.com/photos/8854447/pexels-photo-8854447.jpeg"
+            src="/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg"
             alt="Donation impact"
             className="w-full h-full object-cover opacity-20"
           />
@@ -220,19 +220,13 @@ const Donate = () => {
                     <div
                       key={category.id}
                       onClick={() => setSelectedCategory(category.id)}
-                      className={`relative p-6 rounded-2xl cursor-pointer transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group ${
+                      className={`relative p-6 rounded-xl cursor-pointer transition-shadow bg-white ${
                         selectedCategory === category.id
-                          ? 'ring-4 ring-orange-500 shadow-2xl shadow-orange-500/25'
-                          : 'hover:shadow-lg'
+                          ? 'ring-4 ring-orange-500 shadow-xl'
+                          : 'shadow hover:shadow-lg'
                       }`}
                     >
-                      <div className={`absolute inset-0 bg-gradient-to-br ${category.color} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity duration-300`}></div>
-                      <motion.div
-                        whileHover={{ scale: 1.1, rotate: 5 }}
-                        transition={{ type: "spring", stiffness: 300 }}
-                      >
-                        <category.icon className={`h-12 w-12 text-transparent bg-gradient-to-br ${category.color} bg-clip-text mb-4`} />
-                      </motion.div>
+                      <category.icon className="h-12 w-12 text-orange-500 mb-4" />
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
                       <p className="text-gray-600 mb-3">{category.description}</p>
                       <motion.div
@@ -255,24 +249,15 @@ const Donate = () => {
                         setSelectedAmount(amount);
                         setCustomAmount('');
                       }}
-                      className={`p-4 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden ${
+                      className={`p-4 rounded-xl font-semibold transition-all ${
                         selectedAmount === amount && !customAmount
-                          ? 'bg-orange-500 text-white transform scale-105 shadow-lg shadow-orange-500/25'
-                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:scale-105'
+                          ? 'bg-orange-500 text-white shadow-lg'
+                          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                       }`}
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      {selectedAmount === amount && !customAmount && (
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500"
-                          animate={{ opacity: [0.5, 0.8, 0.5] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        />
-                      )}
-                      <span className="relative z-10">
                       ${amount}
-                      </span>
                     </motion.button>
                   ))}
                 </div>
@@ -286,7 +271,7 @@ const Donate = () => {
                       setCustomAmount(e.target.value);
                       setSelectedAmount(0);
                     }}
-                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-orange-500 focus:ring focus:ring-orange-200 text-lg transition-all duration-300 focus:scale-105 focus:shadow-lg"
+                    className="w-full p-4 border-2 border-gray-300 rounded-xl focus:border-orange-500 focus:ring focus:ring-orange-200 text-lg transition-colors"
                   />
                 </div>
 
@@ -311,7 +296,7 @@ const Donate = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-pink-50 p-8 rounded-2xl shadow-xl sticky top-24 text-center"
+                className="bg-orange-50 p-8 rounded-xl shadow-xl sticky top-24 text-center"
               >
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Donate?</h3>
@@ -341,23 +326,10 @@ const Donate = () => {
                 <motion.button
                   onClick={handleDonate}
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-orange-500 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center mb-4 relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed"
-                  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(249, 115, 22, 0.3)" }}
-                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-colors flex items-center justify-center mb-4 disabled:opacity-50 disabled:cursor-not-allowed"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-orange-400 to-pink-500"
-                    animate={{ 
-                      scale: [1, 1.1, 1],
-                      opacity: [0.5, 0.8, 0.5] 
-                    }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity,
-                      ease: "easeInOut" 
-                    }}
-                  />
-                  <span className="relative z-10 flex items-center">
                     {isSubmitting ? (
                       <>
                         <motion.div
@@ -369,12 +341,11 @@ const Donate = () => {
                       </>
                     ) : (
                       <>
-                        <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
+                        <Sparkles className="mr-2 h-5 w-5" />
                         Proceed to Stripe Checkout
-                        <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        <ExternalLink className="ml-2 h-4 w-4" />
                       </>
                     )}
-                  </span>
                 </motion.button>
 
                 <div className="text-center">

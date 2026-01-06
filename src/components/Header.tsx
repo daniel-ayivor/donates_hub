@@ -30,16 +30,18 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm shadow-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-brand-blue" />
-            <span className={`text-2xl font-bold ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/images/logo.jpeg" 
+              alt="African Assistance Plan Logo" 
+              className="h-12 w-12 object-contain rounded-lg"
+            />
+            <span className="text-2xl font-bold text-gray-900">
               African Assistance Plan
             </span>
           </Link>
@@ -51,10 +53,8 @@ const Header = () => {
                 to={item.path}
                 className={`font-medium transition-colors duration-300 ${
                   location.pathname === item.path
-                    ? 'text-brand-blue'
-                    : isScrolled
-                    ? 'text-gray-700 hover:text-brand-blue'
-                    : 'text-white hover:text-brand-gold'
+                    ? 'text-brand-blue font-semibold'
+                    : 'text-gray-700 hover:text-brand-blue'
                 }`}
               >
                 {item.label}
@@ -70,9 +70,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`md:hidden p-2 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}
+            className="md:hidden p-2 text-gray-900"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
