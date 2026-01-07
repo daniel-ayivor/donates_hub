@@ -86,6 +86,13 @@ const Donate = () => {
   const handleDonate = () => {
     const amount = customAmount ? parseInt(customAmount) : selectedAmount;
     
+    // Create URL with donation details as query parameters
+    const stripeUrl = new URL('https://buy.stripe.com/test_4gw6oJ6bUd2v9kY001');
+    
+    // Add category and amount as metadata (you can process this in your Node.js backend)
+    stripeUrl.searchParams.append('client_reference_id', `${selectedCategory}_${amount}`);
+    stripeUrl.searchParams.append('prefilled_email', '');
+    
     setIsSubmitting(true);
     
     // Simulate processing delay
@@ -96,15 +103,8 @@ const Donate = () => {
       // Hide success message and redirect after animation
       setTimeout(() => {
         setShowSuccess(false);
-    // Create URL with donation details as query parameters
-    const stripeUrl = new URL('https://buy.stripe.com/test_4gM5kF1NAd2vfF83KU4Rq00');
-    
-    // Add category and amount as metadata (you can process this in your Node.js backend)
-    stripeUrl.searchParams.append('client_reference_id', `${selectedCategory}_${amount}`);
-    stripeUrl.searchParams.append('prefilled_email', '');
-    
-    // Navigate to Stripe checkout
-    window.open(stripeUrl.toString(), '_blank');
+        // Navigate to Stripe checkout
+        window.location.href = stripeUrl.toString();
       }, 2000);
     }, 1000);
   };
