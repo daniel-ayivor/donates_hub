@@ -141,10 +141,10 @@ const HeroCarousel = () => {
               {slides[currentSlide].description}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-row gap-3 justify-center">
               <Link
                 to="/donate"
-                className="relative bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
+                className="relative bg-brand-blue hover:bg-brand-blue/90 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
               >
                 <motion.div
                   className="absolute inset-0 bg-brand-blue"
@@ -159,14 +159,14 @@ const HeroCarousel = () => {
                   }}
                 />
                 <span className="relative z-10 flex items-center">
-                  <Sparkles className="mr-2 h-5 w-5 animate-pulse" />
+                  <Sparkles className="mr-1 h-4 w-4 md:mr-2 md:h-5 md:w-5 animate-pulse" />
                   Donate Now
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-1 h-4 w-4 md:ml-2 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>
               <Link
                 to="/impact"
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-full font-semibold text-base md:px-8 md:py-4 md:text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/25"
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/25"
               >
                 See Our Impact
               </Link>

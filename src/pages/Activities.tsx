@@ -55,13 +55,31 @@ const Activities = () => {
         "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
         "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg"
       ]
+    },
+    {
+      id: 4,
+      title: "Radio Ministry (JLife FM)",
+      date: "Ongoing",
+      location: "Bono Region, Ghana",
+      participants: "Regional radio audience",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
+      description: "A lead in Christian programs, news and educational information delivery within the Bono region. JLife FM offers its audience the best gospel shows and soul inspiring music.",
+      category: "Media",
+      status: "Ongoing",
+      impact: "Spreading the gospel through radio broadcasting",
+      gallery: [
+        "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
+        "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg"
+      ]
     }
   ];
 
   const categoryColors = {
     WaSH: 'bg-brand-blue',
     Empowerment: 'bg-brand-gold',
-    Youth: 'bg-purple-500'
+    Youth: 'bg-purple-500',
+    Media: 'bg-green-500'
   };
 
   const statusColors = {
@@ -101,7 +119,7 @@ const Activities = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl max-w-3xl mx-auto"
           >
-            Discover our three flagship programs that are transforming lives and empowering communities across Ghana through sustainable development and holistic care.
+            Discover our four flagship programs that are transforming lives and empowering communities across Ghana through sustainable development, holistic care, and media ministry.
           </motion.p>
         </div>
       </section>
@@ -109,7 +127,7 @@ const Activities = () => {
       {/* Activities Summary Stats */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center p-6 bg-blue-50 rounded-xl">
               <div className="text-3xl font-bold text-brand-blue mb-2">22+</div>
               <div className="text-gray-700">Years of WaSH Impact</div>
@@ -121,6 +139,10 @@ const Activities = () => {
             <div className="text-center p-6 bg-purple-50 rounded-xl">
               <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
               <div className="text-gray-700">Churches & Communities</div>
+            </div>
+            <div className="text-center p-6 bg-green-50 rounded-xl">
+              <div className="text-3xl font-bold text-green-600 mb-2">JLife FM</div>
+              <div className="text-gray-700">Radio Ministry</div>
             </div>
           </div>
         </div>
@@ -136,8 +158,8 @@ const Activities = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Three Flagship Programs</h2>
-            <p className="text-xl text-gray-600">Building a brighter future through WaSH, community empowerment, and youth development</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Four Flagship Programs</h2>
+            <p className="text-xl text-gray-600">Building a brighter future through WaSH, community empowerment, youth development, and radio ministry</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
