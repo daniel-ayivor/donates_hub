@@ -8,39 +8,40 @@ const HeroCarousel = () => {
 
   const slides = [
     {
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.07 AM.jpeg",
-      title: "Empowering Education",
+      image: "/images/IMG-20250814-WA0011 (1).jpg",
+      title: "Child Education And Discipleship",
       subtitle: "Building Brighter Futures Through Learning",
-      description: "Providing quality education and school supplies to children across Ghana, ensuring every child has the opportunity to learn and grow.",
-      focus: "Education"
+      // description: "Providing quality education and school supplies to children across Ghana, ensuring every child has the opportunity to learn and grow.",
+      // focus: "Education"
     },
     {
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
       title: "Clean Water for All",
-      subtitle: "Life-Changing Access to Safe Water",
-      description: "Installing clean water systems in rural communities, bringing health and hope to families who need it most.",
-      focus: "Water & Health"
+        subtitle: "In Jesus Name",
+      // subtitle: "Life-Changing Access to Safe Water",
+      // description: "Installing clean water systems in rural communities, bringing health and hope to families who need it most.",
+      // focus: "Water & Health"
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.43.26 AM.jpeg",
       title: "Supporting Orphanages",
       subtitle: "Caring for Our Most Vulnerable",
-      description: "Providing essential support to orphanages and children's homes, ensuring every child feels loved and cared for.",
-      focus: "Orphan Care"
+      // description: "Providing essential support to orphanages and children's homes, ensuring every child feels loved and cared for.",
+      // focus: "Orphan Care"
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
-      title: "Healthcare Access",
-      subtitle: "Bringing Medical Care to Remote Areas",
-      description: "Mobile health clinics and medical outreach programs serving communities with limited healthcare access.",
-      focus: "Healthcare"
+      title: "Tender the Earth ",
+      subtitle: "Tree planting and environmental care",
+      // description: "Mobile health clinics and medical outreach programs serving communities with limited healthcare access.",
+      // focus: "Healthcare"
     },
     {
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.25 AM.jpeg",
-      title: "Faith & Community",
-      subtitle: "Strengthening Spiritual Foundations",
-      description: "Supporting churches and faith-based initiatives that serve as pillars of hope and community support.",
-      focus: "Faith & Community"
+      image: "/images/Jesus Film.JPG",
+      title: "Gospel Proclaimation",
+      subtitle: "Reaching the unreached through Jesus film",
+      // description: "Supporting churches and faith-based initiatives that serve as pillars of hope and community support.",
+      // focus: "Faith & Community"
     }
   ];
 
@@ -66,7 +67,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {slides.map((slide, index) => (
           <motion.div
@@ -81,7 +82,7 @@ const HeroCarousel = () => {
               alt={slide.title}
               className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-blue-900/60"></div>
+            <div className="absolute inset-0 bg-black/65"></div>
           </motion.div>
         ))}
       </div>
@@ -113,11 +114,11 @@ const HeroCarousel = () => {
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-4">
+            {/* <div className="mb-4">
               <span className="bg-brand-gold/90 text-brand-blue px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
                 {slides[currentSlide].focus}
               </span>
-            </div>
+            </div> */}
             
             <motion.h1
               initial={{ y: 80, opacity: 0 }}
@@ -137,9 +138,9 @@ const HeroCarousel = () => {
               {slides[currentSlide].subtitle}
             </h2>
             
-            <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 leading-relaxed">
+            {/* <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 leading-relaxed">
               {slides[currentSlide].description}
-            </p>
+            </p> */}
             
             <div className="flex flex-row gap-3 justify-center">
               <Link
@@ -160,7 +161,7 @@ const HeroCarousel = () => {
                 />
                 <span className="relative z-10 flex items-center">
                   <Sparkles className="mr-1 h-4 w-4 md:mr-2 md:h-5 md:w-5 animate-pulse" />
-                  Donate Now
+                Give
                   <ArrowRight className="ml-1 h-4 w-4 md:ml-2 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Link>

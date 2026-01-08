@@ -63,13 +63,13 @@ const Home = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-blue-50 rounded-xl hover:shadow-sm transition-shadow"
+                className="text-center p-8 bg-brand-blue rounded-xl hover:shadow-sm transition-shadow"
               >
-                <stat.icon className="h-12 w-12 text-brand-blue mx-auto mb-4" />
-                <div className="text-2xl md:text-4xl font-bold text-gray-900 mb-2">
+                <stat.icon className="h-12 w-12 text-brand-gold mx-auto mb-4" />
+                <div className="text-2xl md:text-4xl font-bold text-gray-100 mb-2">
                   <CountUp end={stat.value} prefix={stat.prefix} suffix={stat.suffix} />
                 </div>
-                <div className="text-sm md:text-lg text-gray-600">
+                <div className="text-sm md:text-lg text-gray-100">
                   {stat.label}
                 </div>
               </motion.div>

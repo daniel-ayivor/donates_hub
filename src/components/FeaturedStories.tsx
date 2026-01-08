@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
 const FeaturedStories = () => {
+   const  navigate = useNavigate()
   const stories = [
     {
       id: 1,
@@ -43,10 +44,11 @@ const FeaturedStories = () => {
           <p className="text-xl text-gray-600">Real stories of transformation and impact from our community</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 cursor-pointer md:grid-cols-3 gap-8">
           {stories.map((story, index) => (
             <motion.div
               key={story.id}
+              onClick={()=> navigate(`/impact/${story.id}`)}
               initial={{ y: 80, opacity: 0, scale: 0.9 }}
               whileInView={{ y: 0, opacity: 1, scale: 1 }}
               transition={{
@@ -59,6 +61,7 @@ const FeaturedStories = () => {
                 y: -12,
                 transition: { duration: 0.3 }
               }}
+              // onClick={()=> navigate={`/impact/${story.id}`}}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow transition-all"
             >
               <div className="relative overflow-hidden">

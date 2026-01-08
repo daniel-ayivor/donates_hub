@@ -40,11 +40,11 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/images/logo.jpeg" 
-              alt="African Assistance Plan Logo" 
+              alt="Africa Assistance Plan Logo" 
               className="h-12 w-12 object-contain rounded-lg"
             />
             <span className="hidden md:block text-2xl font-bold text-gray-900">
-              African Assistance Plan
+              Africa Assistance Plan
             </span>
           </Link>
 
@@ -66,7 +66,7 @@ const Header = () => {
               to="/donate"
               className="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-2 rounded-full font-semibold transition-colors duration-300 transform hover:scale-105"
             >
-              Donate Now
+              Give
             </Link>
           </nav>
 
@@ -121,7 +121,7 @@ const Header = () => {
               >
                 <span className="flex items-center justify-center">
                   <Heart className="h-5 w-5 mr-2" />
-                  Donate Now
+                  Give
                 </span>
               </Link>
             </motion.div>
