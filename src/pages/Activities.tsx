@@ -11,7 +11,7 @@ const Activities = () => {
       date: "Ongoing since 2002",
       location: "Churches, Schools, and Communities across Ghana",
       participants: "Thousands of vulnerable community members",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
+      image: "/images/wash3.jpg",
       description: "AAP's WASH programs provide portable water to society's most vulnerable members and enhance proper hygiene and sanitation through churches, schools, and communities. Our WASH program has been running over the past 22 years.",
       category: "WaSH",
       status: "Ongoing",
@@ -28,7 +28,7 @@ const Activities = () => {
       date: "Ongoing",
       location: "Churches and Communities across Ghana",
       participants: "Multiple Churches and Communities",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.23 AM.jpeg",
+      image: "/images/Bible 2 (1).JPG",
       description: "The program seeks to equip Churches and Communities with the right tools, skills and services to build the appropriate strategies to implement holistic development and a sustainable integral mission.",
       category: "Empowerment",
       status: "Ongoing",
@@ -45,7 +45,7 @@ const Activities = () => {
       date: "Ongoing",
       location: "Youth Centers and Schools across Ghana",
       participants: "50,000+ Children and Youth",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.43 AM.jpeg",
       description: "This program prepares the children and youth to face the future through career guidance and counselling, talent development hubs, education, and discipleship training.",
       category: "Youth",
       status: "Ongoing",
@@ -75,14 +75,14 @@ const Activities = () => {
     }
   ];
 
-  const categoryColors = {
+  const categoryColors: Record<string, string> = {
     WaSH: 'bg-brand-blue',
     Empowerment: 'bg-brand-gold',
     Youth: 'bg-purple-500',
     Media: 'bg-green-500'
   };
 
-  const statusColors = {
+  const statusColors: Record<string, string> = {
     Completed: 'bg-yellow-100 text-yellow-800',
     Ongoing: 'bg-blue-100 text-brand-blue',
     Upcoming: 'bg-blue-100 text-blue-700'

@@ -9,7 +9,8 @@ const FeaturedStories = () => {
       id: 1,
       title: "From Street to School",
       subtitle: "Kwame's Educational Journey",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.51.09 AM.jpeg",
+    
       description: "How a young boy's life was transformed through education support and community care."
     },
     {
@@ -23,7 +24,7 @@ const FeaturedStories = () => {
       id: 3,
       title: "Building Tomorrow's Leaders",
       subtitle: "Youth Leadership Program",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.51.10 AM.jpeg",
       description: "Empowering young minds to become change-makers in their communities."
     }
   ];

@@ -8,26 +8,24 @@ const OurImpact = () => {
     {
       id: 1,
       title: "From Street to School",
-      subtitle: "Kwame's Educational Journey",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
-      description: "At 8 years old, Kwame was living on the streets of Accra, selling water to survive. Today, he's a top student in his class, dreaming of becoming a doctor.",
+      subtitle: "Transforming Young Lives Through Education",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.51.10 AM.jpeg",
+      description: "Children who once lived on the streets, selling water to survive, are now thriving students in our education program. Today, many are top performers in their classes, dreaming of becoming doctors, teachers, and community leaders.",
       impact: "100% improvement in literacy",
       category: "Education",
-      beneficiary: "Kwame Asante",
-      age: "Now 12 years old",
-      location: "Accra, Ghana"
+      beneficiary: "Street Children Program",
+      age: "8-15 years old"
     },
     {
       id: 2,
       title: "Community Support, Big Impact",
-      subtitle: "Ama's Market Success",
+      subtitle: "Women's Market Empowerment",
       image: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
-      description: "Through business training and mentorship, Ama transformed her small vegetable stand into a thriving market business, supporting her family of five.",
+      description: "Through business training and mentorship, women in our program have transformed their small vegetable stands into thriving market businesses, now supporting their families with sustainable income.",
       impact: "300% income increase",
       category: "Business",
-      beneficiary: "Ama Osei",
-      age: "35 years old",
-      location: "Kumasi, Ghana"
+      beneficiary: "Women Market Traders",
+      age: "25-45 years old"
     },
     {
       id: 3,
@@ -38,44 +36,40 @@ const OurImpact = () => {
       impact: "50 youth leaders trained",
       category: "Leadership",
       beneficiary: "Youth Cohort 2024",
-      age: "16-24 years old",
-      location: "Multiple regions"
+      age: "16-24 years old"
     },
     {
       id: 4,
       title: "Clean Water Changes Everything",
-      subtitle: "Adwoa's Village Transformation",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
-      description: "Installing a clean water system in Adwoa's village reduced waterborne diseases by 90% and freed up 4 hours daily for children to attend school.",
+      subtitle: "Village Water System Transformation",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.09 AM.jpeg",
+      description: "Installing clean water systems in rural villages has reduced waterborne diseases by 90% and freed up 4 hours daily for children to attend school instead of fetching water from distant sources.",
       impact: "90% reduction in illness",
       category: "Health",
-      beneficiary: "Adwoa's Village",
-      age: "500 residents",
-      location: "Northern Ghana"
+      beneficiary: "Rural Village Communities",
+      age: "500+ residents per village"
     },
     {
       id: 5,
       title: "Mother's Support Circle",
       subtitle: "Empowering Women Together",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
       description: "25 mothers formed a support network, sharing childcare, starting businesses together, and advocating for their children's education.",
       impact: "25 families empowered",
       category: "Community",
       beneficiary: "Mothers' Circle",
-      age: "25-45 years old",
-      location: "Cape Coast, Ghana"
+      age: "25-45 years old"
     },
     {
       id: 6,
       title: "Technology for Tomorrow",
       subtitle: "Digital Skills Training",
-      image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
+      image: "/images/WhatsApp Image 2026-01-04 at 12.46.42 AM.jpeg",
       description: "Teaching computer skills to 100 young adults, with 85% finding employment in tech-related fields within 6 months.",
       impact: "85% employment rate",
       category: "Technology",
       beneficiary: "Tech Training Graduates",
-      age: "18-30 years old",
-      location: "Accra, Ghana"
+      age: "18-30 years old"
     }
   ];
 
@@ -192,10 +186,6 @@ const OurImpact = () => {
                     <div className="flex justify-between text-sm text-gray-500 mb-2">
                       <span>Beneficiary:</span>
                       <span className="font-semibold">{story.beneficiary}</span>
-                    </div>
-                    <div className="flex justify-between text-sm text-gray-500 mb-2">
-                      <span>Location:</span>
-                      <span className="font-semibold">{story.location}</span>
                     </div>
                     <div className="bg-blue-50 p-3 rounded-lg">
                       <div className="text-blue-700 font-semibold text-sm">Impact:</div>

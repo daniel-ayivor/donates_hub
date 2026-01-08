@@ -7,6 +7,7 @@ const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const galleryImages = [
+    // Children & Youth Programs
     {
       id: 1,
       src: "/images/WhatsApp Image 2026-01-04 at 12.43.05 AM.jpeg",
@@ -14,8 +15,7 @@ const Gallery = () => {
       category: "children-youth",
       location: "Accra, Ghana",
       date: "August 2024",
-      participants: "500+ Children",
-      description: "Distributing school supplies and uniforms to children across 15 schools in Accra."
+      participants: "500+ Children"
     },
     {
       id: 2,
@@ -24,8 +24,7 @@ const Gallery = () => {
       category: "children-youth",
       location: "Kumasi, Ghana",
       date: "July 2024",
-      participants: "200+ Students",
-      description: "Children participating in our literacy improvement program."
+      participants: "200+ Students"
     },
     {
       id: 3,
@@ -34,48 +33,7 @@ const Gallery = () => {
       category: "children-youth",
       location: "Cape Coast, Ghana",
       date: "November 2024",
-      participants: "120 Youth Leaders",
-      description: "Empowering young leaders to create positive change in their communities."
-    },
-    {
-      id: 4,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.15 AM.jpeg",
-      title: "Clean Water Installation",
-      category: "wash",
-      location: "Northern Ghana",
-      date: "October 2024",
-      participants: "1200+ Residents",
-      description: "Installing clean water systems in remote villages."
-    },
-    {
-      id: 5,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.17 AM.jpeg",
-      title: "Hygiene Education Program",
-      category: "wash",
-      location: "Rural Communities",
-      date: "December 2024",
-      participants: "300+ Families",
-      description: "Teaching proper hygiene practices and sanitation in rural communities."
-    },
-    {
-      id: 26,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.19 AM.jpeg",
-      title: "Water System Maintenance",
-      category: "wash",
-      location: "Central Ghana",
-      date: "November 2024",
-      participants: "800+ Residents",
-      description: "Regular maintenance and repair of existing water systems."
-    },
-    {
-      id: 27,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.25 AM.jpeg",
-      title: "Community Sanitation Workshop",
-      category: "wash",
-      location: "Western Ghana",
-      date: "September 2024",
-      participants: "150+ Community Members",
-      description: "Training community leaders on sanitation best practices."
+      participants: "120 Youth Leaders"
     },
     {
       id: 6,
@@ -84,8 +42,7 @@ const Gallery = () => {
       category: "children-youth",
       location: "Accra, Ghana",
       date: "September 2024",
-      participants: "50+ Children",
-      description: "Providing care packages and educational support to orphaned children."
+      participants: "50+ Children"
     },
     {
       id: 7,
@@ -94,196 +51,208 @@ const Gallery = () => {
       category: "children-youth",
       location: "Kumasi, Ghana",
       date: "September 2024",
-      participants: "60 Youth",
-      description: "Training young people in vocational skills and entrepreneurship."
+      participants: "60 Youth"
+    },
+    // WASH Programs
+    {
+      id: 4,
+      src: "/images/wash2025.jpg",
+      title: "Clean Water Installation 2025",
+      category: "wash",
+      location: "Northern Ghana",
+      date: "January 2025",
+      participants: "1200+ Residents"
+    },
+    {
+      id: 5,
+      src: "/images/Wash 1.jpg",
+      title: "Water System Construction",
+      category: "wash",
+      location: "Rural Communities",
+      date: "December 2024",
+      participants: "800+ Families"
     },
     {
       id: 8,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
-      title: "Digital Skills Training",
-      category: "children-youth",
-      location: "Accra Tech Hub",
-      date: "January 2025",
-      participants: "60 Trainees",
-      description: "Teaching computer literacy and digital marketing skills."
+      src: "/images/Wash2 (1).jpg",
+      title: "Community Water Project",
+      category: "wash",
+      location: "Central Ghana",
+      date: "November 2024",
+      participants: "600+ Residents"
     },
     {
       id: 9,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.23 AM.jpeg",
-      title: "Community Church Outreach",
-      category: "church-community",
-      location: "Various Communities",
-      date: "Ongoing",
-      participants: "Multiple Congregations",
-      description: "Supporting faith-based community initiatives and programs."
+      src: "/images/wash3.jpg",
+      title: "Hygiene Education Program",
+      category: "wash",
+      location: "Western Ghana",
+      date: "October 2024",
+      participants: "300+ Community Members"
     },
     {
       id: 10,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.25 AM.jpeg",
-      title: "After School Program",
-      category: "children-youth",
-      location: "Rural Ghana",
-      date: "June 2024",
-      participants: "150+ Children",
-      description: "Providing after-school tutoring and mentorship for children."
+      src: "/images/Wash4.jpg",
+      title: "Water System Maintenance",
+      category: "wash",
+      location: "Eastern Ghana",
+      date: "September 2024",
+      participants: "500+ Residents"
     },
     {
       id: 11,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.26 AM.jpeg",
-      title: "Sanitation Facility Construction",
+      src: "/images/wash5.jpg",
+      title: "Clean Water Access Initiative",
       category: "wash",
-      location: "Tamale, Ghana",
+      location: "Northern Region",
       date: "August 2024",
-      participants: "200+ Families",
-      description: "Building proper sanitation facilities for improved community health."
+      participants: "900+ Families"
     },
     {
       id: 12,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.27 AM.jpeg",
-      title: "Water Quality Testing",
+      src: "/images/wash6.jpg",
+      title: "Sanitation Workshop",
       category: "wash",
-      location: "Remote Villages",
-      date: "November 2024",
-      participants: "50+ Communities",
-      description: "Testing and ensuring safe drinking water quality in rural areas."
+      location: "Bono Region",
+      date: "July 2024",
+      participants: "200+ Community Leaders"
     },
     {
       id: 13,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.29 AM.jpeg",
-      title: "Youth Mentorship Program",
-      category: "children-youth",
-      location: "Cape Coast, Ghana",
-      date: "October 2024",
-      participants: "80+ Youth",
-      description: "Connecting young people with mentors for personal and professional development."
+      src: "/images/wash7.jpg",
+      title: "Water Quality Testing",
+      category: "wash",
+      location: "Multiple Regions",
+      date: "June 2024",
+      participants: "15+ Communities"
     },
     {
       id: 14,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.32 AM.jpeg",
-      title: "Children's Sports Day",
-      category: "children-youth",
-      location: "Accra, Ghana",
-      date: "September 2024",
-      participants: "200+ Children",
-      description: "Organizing sports activities to promote physical health and teamwork among children."
+      src: "/images/wash8.jpg",
+      title: "Borehole Drilling Project",
+      category: "wash",
+      location: "Rural Areas",
+      date: "May 2024",
+      participants: "1000+ Residents"
     },
     {
       id: 15,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg",
-      title: "Educational Workshop",
-      category: "children-youth",
-      location: "Kumasi, Ghana",
-      date: "August 2024",
-      participants: "120+ Students",
-      description: "Interactive educational workshops covering science, technology, and life skills."
+      src: "/images/wash9.jpg",
+      title: "Community Hygiene Training",
+      category: "wash",
+      location: "Sunyani",
+      date: "April 2024",
+      participants: "250+ Participants"
     },
     {
       id: 16,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.35 AM.jpeg",
-      title: "Computer Literacy Program",
-      category: "children-youth",
-      location: "Accra Tech Hub",
-      date: "July 2024",
-      participants: "90+ Youth",
-      description: "Teaching basic computer skills and digital literacy to young people."
+      src: "/images/WASH10.JPG",
+      title: "Water Infrastructure Development",
+      category: "wash",
+      location: "Northern Ghana",
+      date: "March 2024",
+      participants: "700+ Beneficiaries"
     },
     {
       id: 17,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.37 AM.jpeg",
-      title: "School Supply Distribution",
-      category: "children-youth",
-      location: "Multiple Schools",
-      date: "January 2024",
-      participants: "400+ Students",
-      description: "Distributing essential school supplies to students in need."
+      src: "/images/Wash11.JPG",
+      title: "Sanitation Facilities Installation",
+      category: "wash",
+      location: "Rural Communities",
+      date: "February 2024",
+      participants: "400+ Families"
     },
     {
       id: 18,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
-      title: "Reading Club Initiative",
-      category: "children-youth",
-      location: "Community Centers",
-      date: "March 2024",
-      participants: "150+ Children",
-      description: "Establishing reading clubs to improve literacy rates among children."
+      src: "/images/Wash12.JPG",
+      title: "Water Safety Campaign",
+      category: "wash",
+      location: "Multiple Districts",
+      date: "January 2024",
+      participants: "1500+ Community Members"
     },
+    // Faith & Community Programs
     {
       id: 19,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.46 AM.jpeg",
-      title: "Leadership Training",
-      category: "children-youth",
-      location: "Youth Centers",
-      date: "May 2024",
-      participants: "75+ Youth",
-      description: "Training young leaders to become advocates for positive change in their communities."
+      src: "/images/Bible Distribution.JPG",
+      title: "Bible Distribution Campaign",
+      category: "faith",
+      location: "Churches across Ghana",
+      date: "December 2024",
+      participants: "1000+ Church Members"
     },
     {
       id: 20,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.43.55 AM.jpeg",
-      title: "Art & Creativity Workshop",
-      category: "children-youth",
+      src: "/images/Bible 2 (1).JPG",
+      title: "Scripture Outreach Program",
+      category: "faith",
       location: "Community Centers",
-      date: "April 2024",
-      participants: "100+ Children",
-      description: "Encouraging creativity and self-expression through art and craft activities."
+      date: "November 2024",
+      participants: "500+ Participants"
     },
     {
       id: 21,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.42.59 AM.jpeg",
-      title: "Career Guidance Session",
-      category: "children-youth",
-      location: "Schools",
-      date: "February 2024",
-      participants: "200+ Students",
-      description: "Providing career guidance and counseling to help students make informed decisions."
+      src: "/images/Jesus Film.JPG",
+      title: "Jesus Film Screening",
+      category: "faith",
+      location: "Rural Communities",
+      date: "October 2024",
+      participants: "800+ Attendees"
     },
     {
       id: 22,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.23 AM.jpeg",
-      title: "STEM Education Program",
-      category: "children-youth",
-      location: "Science Centers",
-      date: "June 2024",
-      participants: "80+ Students",
-      description: "Promoting science, technology, engineering, and mathematics education among youth."
+      src: "/images/Jesus Film 1.JPG",
+      title: "Community Film Ministry",
+      category: "faith",
+      location: "Villages",
+      date: "September 2024",
+      participants: "600+ Community Members"
     },
     {
       id: 23,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.26 AM.jpeg",
-      title: "Scholarship Award Ceremony",
-      category: "children-youth",
-      location: "Accra, Ghana",
-      date: "December 2023",
-      participants: "50+ Recipients",
-      description: "Awarding scholarships to deserving students to support their educational journey."
+      src: "/images/Jesus Film2.JPG",
+      title: "Evangelism Outreach",
+      category: "faith",
+      location: "Multiple Regions",
+      date: "August 2024",
+      participants: "1200+ People Reached"
     },
     {
       id: 24,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.34 AM.jpeg",
-      title: "Health & Nutrition Education",
-      category: "children-youth",
-      location: "Schools & Communities",
-      date: "November 2023",
-      participants: "300+ Children",
-      description: "Teaching children about proper nutrition and healthy lifestyle choices."
+      src: "/images/JesusFilm.JPG",
+      title: "Gospel Film Presentation",
+      category: "faith",
+      location: "Community Gatherings",
+      date: "July 2024",
+      participants: "900+ Attendees"
     },
+    // Health & Support Programs
     {
       id: 25,
-      src: "/images/WhatsApp Image 2026-01-04 at 12.46.37 AM.jpeg",
-      title: "Music & Dance Program",
-      category: "children-youth",
-      location: "Cultural Centers",
-      date: "October 2023",
-      participants: "120+ Youth",
-      description: "Preserving cultural heritage through music and dance education programs."
+      src: "/images/H&S.JPG",
+      title: "Health & Support Initiative",
+      category: "health",
+      location: "Medical Camps",
+      date: "June 2024",
+      participants: "400+ Patients"
+    },
+    {
+      id: 26,
+      src: "/images/H&S 1.JPG",
+      title: "Community Health Outreach",
+      category: "health",
+      location: "Rural Clinics",
+      date: "May 2024",
+      participants: "350+ Beneficiaries"
     }
   ];
 
   const categories = [
-    { id: 'all', label: 'All', count: 25 },
-    { id: 'wash', label: 'WaSH', count: 4 },
-    { id: 'children-youth', label: 'Children & Youth Empowerment', count: 20 },
-    { id: 'church-community', label: 'Church & Community Empowerment', count: 1 }
+    { id: 'all', label: 'All', count: 26 },
+    { id: 'wash', label: 'WaSH Programs', count: 15 },
+    { id: 'children-youth', label: 'Children & Youth', count: 5 },
+    { id: 'faith', label: 'Faith & Community', count: 6 },
+    { id: 'health', label: 'Health & Support', count: 2 }
   ];
 
   const filteredImages = selectedCategory === 'all' 
@@ -425,7 +394,7 @@ const Gallery = () => {
                     <img
                       src={image.src}
                       alt={image.title}
-                      className="w-full h-64 object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
+                      className="w-full h-80 object-cover object-center transform group-hover:scale-110 transition-transform duration-700"
                     />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300"></div>
                   </div>
