@@ -92,27 +92,6 @@ const Partners = () => {
         <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
         <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10"></div>
       </div>
-
-      {/* Alternative: Grid layout for mobile */}
-      <div className="mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:hidden">
-        <div className="grid grid-cols-2 gap-6">
-          {partners.map((partner, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center bg-white rounded-lg shadow-sm p-6"
-            >
-              <img
-                src={partner.logo}
-                alt={partner.name}
-                className="max-w-full max-h-16 object-contain mb-3"
-              />
-              <p className="text-gray-700 font-semibold text-center text-sm">
-                {partner.name}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 };

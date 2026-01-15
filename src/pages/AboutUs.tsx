@@ -136,8 +136,16 @@ const AboutUs = () => {
       </section>
 
       {/* Our History Section */}
-      <section className="py-12 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 bg-white relative overflow-hidden">
+        {/* Blurred World Map Background */}
+        <div className="absolute inset-0 pointer-events-none select-none z-0">
+          <img
+            src="/images/world-map-bg.png"
+            alt="World map background"
+            className="w-full h-full object-cover blur-3xl opacity-20"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.h2
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -157,38 +165,13 @@ const AboutUs = () => {
             Africa Assistance Plan (AAP) was founded in 1983 by Bishop David Donkor on the conviction that lasting transformation is possible only through Jesus Christ, expressed in both word and deed, to share the love of Christ across Africa.<br /><br />
             Over the years, AAP has walked alongside churches, children, families, and communities, responding to practical needs while remaining committed to seeing Jesus lifted up and glorified.
           </motion.p>
-        </div>
-      </section>
 
-      {/* Where We Work Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="text-3xl font-bold text-brand-blue mb-4 text-center"
-          >
-            Where We Work
-          </motion.h2>
-          <motion.ul
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.7 }}
-            viewport={{ once: true }}
-            className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto mb-4 list-none"
-          >
-            <li><strong>Ghana</strong> – 12 Regions</li>
-            <li><strong>Liberia</strong></li>
-            <li><strong>Togo</strong></li>
-          </motion.ul>
-          <motion.p
+             <motion.p
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }}
             viewport={{ once: true }}
-            className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
+            className="text-lg text-gray-700 italic py-2 leading-relaxed text-center max-w-3xl mx-auto"
           >
             Africa Assistance Plan serves communities across Ghana, Liberia, and Togo, bringing Christ-centered transformation to vulnerable populations. In Ghana, our programs reach 12 regions, with our operational base in the Bono Region.
           </motion.p>
