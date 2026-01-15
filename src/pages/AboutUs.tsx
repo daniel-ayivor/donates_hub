@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield } from 'lucide-react';
+import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield, Sparkles, UserCheck, UsersRound } from 'lucide-react';
 
 const AboutUs = () => {
   const teamMembers = [
@@ -8,8 +8,8 @@ const AboutUs = () => {
       name: "Rose Meda Offei-Asare",
       role: "CEO & PRESIDENT",
       image: "https://aapghana.org/wp-content/uploads/2025/05/p-rose-1007x1024.jpg",
-      bio: "Rose is versatile person with over 22 years' experience in the WASH sector and brings a wealth of experience and knowledge to the developmental objective of AAP.",
-      expertise: "WASH Sector, Development, Leadership"
+      bio: "Rose Meda Donkor Offei-Asare, the Chief Executive Officer, provides overall leadership and direction for Africa Assistance Plan. She offers strategic leadership, oversees programs and staff, strengthens partnerships, and ensures that AAP's vision and mission are effectively carried out in service to communities.",
+      expertise: "Strategic Leadership, Program Oversight, Partnership Development"
     },
     {
       name: "Harrieta Bosomtwe",
@@ -21,28 +21,28 @@ const AboutUs = () => {
     {
       name: "Maxwell Asuenabisa",
       role: "DIGITAL MARKETER & FUND RAISING OFFICER",
-      image: "https://aapghana.org/wp-content/uploads/2025/05/max.jpeg",
+      image: "/images/maxwell.jpg",
       bio: "Maxwell is a creative digital marketer with strong skills in content creation, social media strategy, and fundraising. He is passionate about using digital tools to drive impact and support community development.",
       expertise: "Digital Marketing, Fundraising, Social Media"
     },
     {
       name: "Abraham Akrofi",
       role: "COMMUNITY AND CHURCH MOBILIZATION OFFICER",
-      image: "https://aapghana.org/wp-content/uploads/2025/05/Akrofi.jpg",
+      image: "/images/akrofi.jpg",
       bio: "Abraham is a passionate development worker with strong skills in community engagement and faith-based mobilization. He has extensive experience working with churches to promote holistic and sustainable community transformation.",
       expertise: "Community Engagement, Church Mobilization, Development"
     },
     {
       name: "Alexander Agyei",
       role: "PROGRAMS ASSISTANT",
-      image: "https://aapghana.org/wp-content/uploads/2025/05/Alex.jpeg",
+      image: "/images/agyei.jpg",
       bio: "Alexander is a committed and detail-oriented individual with strong skills in project coordination and community outreach. Alexander holds a degree in Environmental Science and is passionate about supporting impactful programs that promote positive change in underserved communities.",
       expertise: "Project Coordination, Environmental Science, Community Outreach"
     },
     {
       name: "Benson Henry Asante",
       role: "CHIEF DRILLER & CHRISTIAN WITNESS COORDINATOR",
-      image: "https://aapghana.org/wp-content/uploads/2022/12/benson-asante.jpg",
+      image: "/images/benson asante.jpg",
       bio: "Benson has over 18 years of drilling experience. He has worked with AAP for over 20 years. He is involved in all AAP's drilling projects either as driller and or supervisor of the projects.",
       expertise: "Drilling, Water Systems, Project Supervision"
     }
@@ -60,23 +60,33 @@ const AboutUs = () => {
   const values = [
     {
       icon: Heart,
-      title: "Compassion",
-      description: "We lead with empathy and understanding, treating every person with dignity and respect."
+      title: "God Factor",
+      description: "God and His Son, Jesus Christ, are at the center of all we do."
     },
     {
-      icon: Target,
-      title: "Impact Focus",
-      description: "Every program is designed for measurable, lasting change in the lives of those we serve."
+      icon: Sparkles,
+      title: "Excellence",
+      description: "We strive to achieve nothing but the best."
+    },
+    {
+      icon: UserCheck,
+      title: "Trustworthy",
+      description: "We are committed to truthfulness."
+    },
+    {
+      icon: UsersRound,
+      title: "Teamwork",
+      description: "Working together achieves more than individual effort alone."
     },
     {
       icon: Shield,
       title: "Integrity",
-      description: "We maintain the highest standards of transparency and accountability in all our operations."
+      description: "Guided by biblical principles, we uphold honesty, moral uprightness, and wholeness."
     },
     {
-      icon: Globe,
-      title: "Sustainability",
-      description: "Our programs are designed to create long-term, self-sustaining positive change."
+      icon: Users,
+      title: "People",
+      description: "Our work is made possible by dedicated and hardworking people."
     }
   ];
 
@@ -125,22 +135,91 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Our History Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-brand-blue mb-4 text-center"
+          >
+            Our History
+          </motion.h2>
+          <motion.p
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
+          >
+            Africa Assistance Plan (AAP) was founded in 1983 by Bishop David Donkor on the conviction that lasting transformation is possible only through Jesus Christ, expressed in both word and deed, to share the love of Christ across Africa.<br /><br />
+            Over the years, AAP has walked alongside churches, children, families, and communities, responding to practical needs while remaining committed to seeing Jesus lifted up and glorified.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Where We Work Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold text-brand-blue mb-4 text-center"
+          >
+            Where We Work
+          </motion.h2>
+          <motion.ul
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.1, duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 leading-relaxed text-center max-w-2xl mx-auto mb-4 list-none"
+          >
+            <li><strong>Ghana</strong> – 12 Regions</li>
+            <li><strong>Liberia</strong></li>
+            <li><strong>Togo</strong></li>
+          </motion.ul>
+          <motion.p
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 leading-relaxed text-center max-w-3xl mx-auto"
+          >
+            Africa Assistance Plan serves communities across Ghana, Liberia, and Togo, bringing Christ-centered transformation to vulnerable populations. In Ghana, our programs reach 12 regions, with our operational base in the Bono Region.
+          </motion.p>
+        </div>
+      </section>
+
+      {/* Vision & Mission */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Vision & Mission</h2>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-yellow-50 p-8 rounded-2xl"
+              className="bg-blue-50 p-8 rounded-2xl"
             >
-              <Target className="h-12 w-12 text-brand-gold mb-4" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
+              <Globe className="h-12 w-12 text-blue-500 mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Child-centred Christian organization that focuses on empowering the church and
-                community for holistic development.
+                Africa Assistance Plan exists to end all forms of poverty.
               </p>
             </motion.div>
 
@@ -149,15 +228,52 @@ const AboutUs = () => {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-blue-50 p-8 rounded-2xl"
+              className="bg-yellow-50 p-8 rounded-2xl"
             >
-              <Globe className="h-12 w-12 text-blue-500 mb-4" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
+              <Target className="h-12 w-12 text-brand-gold mb-4" />
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Mission</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Africa Assistance Plan exists to end all forms of poverty.
+                A child-centered Christian organization focused on empowering the Church and communities for holistic development.
               </p>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Strategy */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Strategy</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Africa Assistance Plan implements a Christ-centered, holistic approach to community development. Our strategy focuses on empowering the Church, strengthening communities, and serving the most vulnerable through integrated programs in children and youth development, water, sanitation and hygiene, and community empowerment. We combine spiritual discipleship with practical interventions, ensuring that every initiative reflects God's love, builds local capacity, and promotes sustainable transformation.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Faith */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <Heart className="h-16 w-16 text-brand-gold mx-auto mb-6" />
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Faith</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Africa Assistance Plan is rooted in the Christian faith. We believe in Jesus Christ as Lord and Savior, and all our work is an expression of His love. Our programs, partnerships, and services are guided by the teachings of the Bible.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -172,10 +288,12 @@ const AboutUs = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600">The principles that guide everything we do</p>
+            <div className="text-xl text-gray-600 text-left max-w-2xl mx-auto mb-10">
+              <strong>The principles that guide everything we do</strong>
+            </div>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -197,6 +315,7 @@ const AboutUs = () => {
       {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Our Leadership */}
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -204,8 +323,35 @@ const AboutUs = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-600">Passionate individuals dedicated to creating positive change</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Leadership</h2>
+            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto mb-12">
+              Africa Assistance Plan is guided by committed Christian leaders who provide spiritual direction, strategic oversight, and accountability to ensure that all our work remains Christ-centered and mission driven.
+            </p>
+          </motion.div>
+
+          {/* Board Members */}
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="mb-16 bg-blue-50 p-8 rounded-2xl"
+          >
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Board Members</h3>
+            <p className="text-lg text-gray-700 leading-relaxed text-center max-w-4xl mx-auto">
+              AAP is governed by a Board of directors who provide governance, policy guidance, and oversight. The Board ensures faithfulness to our Christian values, transparency, and responsible stewardship of resources.
+            </p>
+          </motion.div>
+
+          {/* Team Members */}
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h3>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Heart, Mail, MapPin, Phone, Facebook, Twitter, Instagram } from 'lucide-react';
-
+import logo from '../../public/images/logo.jpeg'
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <Heart className="h-8 w-8 text-brand-gold" />
+              <img src={logo} alt="Africa Assistance Plan Logo" className="h-8 w-8 rounded-md text-brand-gold" />
               <span className="text-2xl font-bold">Africa Assistance Plan</span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
