@@ -8,11 +8,14 @@ import OurImpact from './pages/OurImpact';
 import Activities from './pages/Activities';
 import Donate from './pages/Donate';
 import AboutUs from './pages/AboutUs';
-import GetInvolved from './pages/GetInvolved';
 import ProjectDetail from './pages/ProjectDetail';
 import EventDetail from './pages/EventDetail';
 import Gallery from './pages/Gallery';
 import BubbleDemo from './pages/BubbleDemo';
+
+import GetInvolved from './pages/GetInvolved';
+import Contact from './pages/Contact';
+
 
 function App() {
   return (
@@ -30,7 +33,8 @@ function App() {
               <Route path="/activities/:id" element={<EventDetail />} />
               <Route path="/donate" element={<Donate />} />
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/contact" element={<GetInvolved />} />
+              <Route path="/contact" element={<Contact />} />
+                 <Route path="/get-involved" element={<GetInvolved />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/bubbles" element={<BubbleDemo />} />
             </Routes>

@@ -21,7 +21,8 @@ const Header = () => {
     { path: '/about', label: 'About Us' },
     { path: '/impact', label: 'Our Impact' },
     { path: '/activities', label: 'Activities' },
-    { path: '/gallery', label: 'Gallery' },
+    {path: '/get-involved', label:'Get Involved'},
+    // { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
   ];
 
