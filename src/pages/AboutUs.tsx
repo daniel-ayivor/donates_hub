@@ -1,45 +1,48 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield, Sparkles, UserCheck, UsersRound } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
+
+  const navigate = useNavigate();
   const teamMembers = [
-    {
+    {id:1,
       name: "Rose Meda Offei-Asare",
       role: "CEO & PRESIDENT",
       image: "https://aapghana.org/wp-content/uploads/2025/05/p-rose-1007x1024.jpg",
       bio: "Rose Meda Donkor Offei-Asare, the Chief Executive Officer, provides overall leadership and direction for Africa Assistance Plan. She offers strategic leadership, oversees programs and staff, strengthens partnerships, and ensures that AAP's vision and mission are effectively carried out in service to communities.",
       expertise: "Strategic Leadership, Program Oversight, Partnership Development"
     },
-    {
+    {id:2,
       name: "Harrieta Bosomtwe",
       role: "EXECUTIVE ASSISTANT",
       image: "https://aapghana.org/wp-content/uploads/2025/05/Harrieta-1.jpeg",
       bio: "Harrieta is a dedicated team player with excellent administrative and interpersonal skills. She serves as the Executive Assistant and Children's Ministry Coordinator. She is passionate about nurturing children's spiritual growth while supporting the smooth running of organizational activities.",
       expertise: "Administration, Children's Ministry, Interpersonal Skills"
     },
-    {
+    {id:3,
       name: "Maxwell Asuenabisa",
       role: "DIGITAL MARKETER & FUND RAISING OFFICER",
       image: "/images/maxwell.jpg",
       bio: "Maxwell is a creative digital marketer with strong skills in content creation, social media strategy, and fundraising. He is passionate about using digital tools to drive impact and support community development.",
       expertise: "Digital Marketing, Fundraising, Social Media"
     },
-    {
+    {id:4,
       name: "Abraham Akrofi",
       role: "COMMUNITY AND CHURCH MOBILIZATION OFFICER",
       image: "/images/akrofi.jpg",
       bio: "Abraham is a passionate development worker with strong skills in community engagement and faith-based mobilization. He has extensive experience working with churches to promote holistic and sustainable community transformation.",
       expertise: "Community Engagement, Church Mobilization, Development"
     },
-    {
+    {id:5,
       name: "Alexander Agyei",
       role: "PROGRAMS ASSISTANT",
       image: "/images/agyei.jpg",
       bio: "Alexander is a committed and detail-oriented individual with strong skills in project coordination and community outreach. Alexander holds a degree in Environmental Science and is passionate about supporting impactful programs that promote positive change in underserved communities.",
       expertise: "Project Coordination, Environmental Science, Community Outreach"
     },
-    {
+    {id:6,
       name: "Benson Henry Asante",
       role: "CHIEF DRILLER & CHRISTIAN WITNESS COORDINATOR",
       image: "/images/benson asante.jpg",
@@ -337,9 +340,11 @@ const AboutUs = () => {
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 cursor-pointer md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <motion.div
+             
+              onClick={()=> navigate(`/team/${member.id}`)}
                 key={member.name}
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -359,7 +364,7 @@ const AboutUs = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-brand-gold font-semibold mb-3">{member.role}</p>
-                  <p className="text-gray-600 mb-3">{member.bio}</p>
+                  {/* <p className="text-gray-600 mb-3">{member.bio}</p> */}
                   <p className="text-sm text-gray-500 font-medium">{member.expertise}</p>
                 </div>
               </motion.div>

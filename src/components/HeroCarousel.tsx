@@ -11,37 +11,26 @@ const HeroCarousel = () => {
       image: "/images/IMG-20250814-WA0011 (1).jpg",
       title: "Child Education And Discipleship",
       subtitle: "Building Brighter Futures Through Learning",
-      // description: "Providing quality education and school supplies to children across Ghana, ensuring every child has the opportunity to learn and grow.",
-      // focus: "Education"
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
       title: "Clean Water for All",
         subtitle: "In Jesus Name",
-      // subtitle: "Life-Changing Access to Safe Water",
-      // description: "Installing clean water systems in rural communities, bringing health and hope to families who need it most.",
-      // focus: "Water & Health"
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.43.26 AM.jpeg",
       title: "Supporting Orphanages",
       subtitle: "Caring for Our Most Vulnerable",
-      // description: "Providing essential support to orphanages and children's homes, ensuring every child feels loved and cared for.",
-      // focus: "Orphan Care"
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
       title: "Tender the Earth ",
       subtitle: "Tree planting and environmental care",
-      // description: "Mobile health clinics and medical outreach programs serving communities with limited healthcare access.",
-      // focus: "Healthcare"
     },
     {
       image: "/images/Jesus Film.JPG",
-      title: "Gospel Proclaimation",
-      subtitle: "Reaching the unreached through Jesus film",
-      // description: "Supporting churches and faith-based initiatives that serve as pillars of hope and community support.",
-      // focus: "Faith & Community"
+      title: "Gospel The Proclaimation",
+      subtitle: "One Soul at a Time",
     }
   ];
 

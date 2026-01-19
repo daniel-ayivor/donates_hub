@@ -1,15 +1,9 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, MapPin, Calendar, Users, TrendingUp, Heart } from 'lucide-react';
+import { ArrowLeft, MapPin, Calendar, Users } from 'lucide-react';
 
 // Define interfaces
-interface MetricIcon {
-  label: string;
-  value: string;
-  icon: React.ComponentType<any>;
-}
-
 interface Testimonial {
   text: string;
   author: string;
@@ -30,7 +24,6 @@ interface Project {
   impact: {
     [key: string]: string;
   };
-  metrics: MetricIcon[];
   testimonial: Testimonial;
   nextSteps: string;
 }
@@ -90,12 +83,6 @@ Her story demonstrates that transformation and empowerment can happen at any sta
         economic: "Monthly income for independence",
         inspirational: "Community role model at age 100"
       },
-      metrics: [
-        { label: "Age", value: "100+", icon: Users },
-        { label: "Water Point Users", value: "500+", icon: TrendingUp },
-        { label: "Monthly Stipend", value: "Regular", icon: Calendar },
-        { label: "Community Impact", value: "Transformed", icon: Heart }
-      ],
       testimonial: {
         text: "I am truly grateful to AAP for helping me to discover myself through this training and unearthing in me a great potential despite my age as a centenarian.",
         author: "Mama Hagar Kru",
@@ -143,12 +130,6 @@ Mama Abena and her fellow water managers have become respected community leaders
         health: "Reduced waterborne diseases",
         social: "Strengthened community unity"
       },
-      metrics: [
-        { label: "Years Active", value: "12+", icon: Calendar },
-        { label: "Women Managers", value: "6", icon: Users },
-        { label: "Community Served", value: "800+", icon: TrendingUp },
-        { label: "School Attendance", value: "Increased", icon: Heart }
-      ],
       testimonial: {
         text: "This gift is more than water—it is dignity, hope, and a future for generations to come. We thank AAP for empowering us to take responsibility for our own community.",
         author: "Mama Abena",
@@ -196,12 +177,6 @@ The ripple effects of this program are already visible in Tinga. Teachers report
         social: "Breaking cultural taboos",
         personal: "Restored confidence and dignity"
       },
-      metrics: [
-        { label: "Girls Trained", value: "150+", icon: Users },
-        { label: "School Attendance", value: "Improved", icon: TrendingUp },
-        { label: "Age Group", value: "12-18", icon: Calendar },
-        { label: "Confidence", value: "Restored", icon: Heart }
-      ],
       testimonial: {
         text: "I realized I was not alone, and I found the courage to talk to my family. Menstruation is supposed to be normal, not a punishment.",
         author: "Saddique Rashida",
@@ -251,12 +226,6 @@ The success in Tinga is now being studied by neighboring communities facing simi
         economic: "Improved livelihoods",
         social: "Community unity restored"
       },
-      metrics: [
-        { label: "Years of Peace", value: "10+", icon: Calendar },
-        { label: "Community Members", value: "2,000+", icon: Users },
-        { label: "Conflict Reduction", value: "70%", icon: TrendingUp },
-        { label: "Joint Projects", value: "5+", icon: Heart }
-      ],
       testimonial: {
         text: "The training provided by AAP laid a strong foundation for lasting solutions. True change happens when everyone works together.",
         author: "Abraham Soale",
@@ -306,12 +275,6 @@ The Tainakura story shows that sustainable change comes not from handing solutio
         social: "Community pride and unity",
         economic: "Reduced medical expenses"
       },
-      metrics: [
-        { label: "Community Members", value: "300+", icon: Users },
-        { label: "Disease Reduction", value: "Significant", icon: TrendingUp },
-        { label: "Project Duration", value: "Days", icon: Calendar },
-        { label: "Hygiene Practices", value: "Improved", icon: Heart }
-      ],
       testimonial: {
         text: "We accomplished this together. The community feels cleaner, and there is a sense of pride in knowing that we built our own solution.",
         author: "Adwoa Nyanta",
@@ -365,12 +328,6 @@ Her story demonstrates how culturally sensitive interventions can transform girl
         social: "Breaking cultural silence",
         educational: "Improved academic performance"
       },
-      metrics: [
-        { label: "School Attendance", value: "100%", icon: TrendingUp },
-        { label: "Girls Supported", value: "200+", icon: Users },
-        { label: "Age", value: "15", icon: Calendar },
-        { label: "Confidence", value: "Transformed", icon: Heart }
-      ],
       testimonial: {
         text: "I now know that menstruation is not a punishment from God. The best place I want to be now when I am in that time of the month is school.",
         author: "Sakina",
@@ -422,12 +379,6 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
         community: "Holistic ministry model",
         social: "Community transformation"
       },
-      metrics: [
-        { label: "New Believers", value: "15", icon: Users },
-        { label: "Church Growth", value: "Steady", icon: TrendingUp },
-        { label: "Date Established", value: "Dec 2025", icon: Calendar },
-        { label: "Community Impact", value: "Significant", icon: Heart }
-      ],
       testimonial: {
         text: "By the grace of God, this Church was established with the support of Africa Assistance Plan. The growing congregation stands as a testimony of God's work.",
         author: "Pastor Broohm",
@@ -485,14 +436,8 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
       exit={{ opacity: 0 }}
       className="pt-20"
     >
-      <section className="relative py-32 min-h-[65vh] flex items-center overflow-hidden">
-{/* The container for the image must be absolute and full size */}
-  <div className="absolute inset-0 w-full h-full">
-<div className="w-full h-full object-cover object-[top_center] block bg-brand-blue"></div>
-    
-    {/* Darker gradient for better text contrast */}
-    {/* <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div> */}
-  </div>
+      {/* Hero Section with minimal header */}
+      <section className="relative py-20 bg-brand-blue">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/impact"
@@ -503,7 +448,7 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
           </Link>
 
           <motion.div
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="text-white"
@@ -513,10 +458,10 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
                 {project.category}
               </span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4">{project.title}</h1>
-            <p className="text-xl sm:text-2xl text-yellow-100 mb-8">{project.subtitle}</p>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-2">{project.title}</h1>
+            <p className="text-xl sm:text-2xl text-yellow-100 mb-6">{project.subtitle}</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 mr-2 text-yellow-300" />
                 <span>{project.location}</span>
@@ -534,93 +479,55 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
         </div>
       </section>
 
-      {/* Story Content */}
+      {/* Story Content with Image */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Main Image */}
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={project.mainImage}
+                  alt={project.title}
+                  className="w-full h-auto object-cover object-center"
+                  style={{ imageRendering: 'auto' }}
+                  loading="lazy"
+                />
+              </div>
+              
+            </motion.div>
+
             {/* Main Story */}
-            <div className="lg:col-span-2">
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-              >
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
+              <div className="sticky top-24">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">The Complete Story</h2>
-                <div className="prose prose-lg text-gray-700 leading-relaxed">
+                <div className="prose prose-lg text-gray-700 leading-relaxed max-w-none">
                   {project.story.split('\n\n').map((paragraph, index) => (
                     <p key={index} className="mb-6">
                       {paragraph}
                     </p>
                   ))}
                 </div>
-              </motion.div>
-            </div>
-
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              {/* Impact Metrics */}
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-yellow-50 p-6 rounded-xl mb-8"
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-6">Impact Metrics</h3>
-                <div className="space-y-4">
-                  {project.metrics.map((metric, index) => (
-                    <div key={index} className="flex items-center">
-                      <metric.icon className="h-5 w-5 text-brand-gold mr-3" />
-                      <div>
-                        <div className="font-semibold text-gray-900">{metric.value}</div>
-                        <div className="text-sm text-gray-600">{metric.label}</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Key Impact Areas */}
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-blue-50 p-6 rounded-xl mb-8"
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Key Impact Areas</h3>
-                <div className="space-y-3">
-                  {Object.entries(project.impact).map(([key, value]) => (
-                    <div key={key}>
-                      <div className="text-sm font-semibold text-gray-700 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}:
-                      </div>
-                      <div className="text-gray-600">{value}</div>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              {/* Next Steps */}
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-blue-50 p-6 rounded-xl"
-              >
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Next Steps</h3>
-                <p className="text-gray-700">{project.nextSteps}</p>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-
       {/* Related Stories */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -644,17 +551,16 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group"
               >
                 <Link to={`/impact/${relatedStory.id}`} className="block">
-                  <div className="relative overflow-hidden h-72 group"> {/* Increased height to h-72 for better visibility */}
+                  <div className="relative overflow-hidden h-72 group">
                     <img
                       src={relatedStory.image}
                       alt={relatedStory.title}
-                      /* Added absolute inset-0 to force the image to pin to all corners */
                       className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
                       style={{ imageRendering: 'auto' }}
                       loading="lazy"
                     />
 
-                    {/* Category Badge - Added z-10 to keep it above the image */}
+                    {/* Category Badge */}
                     <div className="absolute top-4 left-4 z-10">
                       <span className="bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                         {relatedStory.category}
@@ -684,7 +590,7 @@ This story demonstrates how holistic ministry—combining spiritual outreach wit
       </section>
 
       {/* Testimonial */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}

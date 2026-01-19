@@ -15,6 +15,7 @@ import BubbleDemo from './pages/BubbleDemo';
 
 import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
+import TeamDetails from './pages/TeamDetails';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
               <Route path="/activities" element={<Activities />} />
               <Route path="/activities/:id" element={<EventDetail />} />
               <Route path="/donate" element={<Donate />} />
+               <Route path="/team/:id" element={<TeamDetails />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/contact" element={<Contact />} />
                  <Route path="/get-involved" element={<GetInvolved />} />

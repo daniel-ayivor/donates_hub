@@ -194,10 +194,7 @@ const Activities = () => {
                   <p className="text-gray-600 mb-4">{activity.description}</p>
                   
                   <div className="space-y-2 mb-4">
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Calendar className="h-4 w-4 mr-2 text-brand-gold" />
-                      {activity.date}
-                    </div>
+             
                     <div className="flex items-center text-sm text-gray-500">
                       <MapPin className="h-4 w-4 mr-2 text-brand-gold" />
                       {activity.location}
@@ -213,12 +210,7 @@ const Activities = () => {
                     <div className="text-blue-600 font-bold">{activity.impact}</div>
                   </div>
 
-                  <Link
-                    to={`/activities/${activity.id}`}
-                    className="inline-flex items-center text-brand-gold hover:text-yellow-700 font-semibold transition-colors duration-300"
-                  >
-                    View Details <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+            
                 </div>
               </motion.div>
             ))}

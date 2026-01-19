@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Heart, Users, TrendingUp, Award } from 'lucide-react';
 
 const OurImpact = () => {
+      const navigate = useNavigate();
   const impactStories = [
     // Your existing 6 stories here...
     // Add these new stories after your existing ones:
@@ -169,6 +170,8 @@ const OurImpact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {impactStories.map((story, index) => (
               <motion.div
+               
+               onClick={()=> navigate(`/impact/${story.id}`)}
                 key={story.id}
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
