@@ -157,18 +157,6 @@ const FeaturedStories = () => {
                 <h4 className="text-lg text-brand-blue font-semibold mb-3">{story.subtitle}</h4>
                 <p className="text-gray-600 mb-6 line-clamp-3">{story.description}</p>
 
-                <div className="mb-4">
-                  <div className="bg-blue-50 p-3 rounded-lg">
-                    <div className="text-blue-700 font-semibold text-sm">Impact:</div>
-                    <div className="text-blue-600 font-bold">{story.impact}</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>{story.beneficiary}</span>
-                  <span className="font-semibold">{story.age}</span>
-                </div>
-
                 <div className="inline-flex items-center text-brand-blue hover:text-brand-blue/80 font-semibold transition-all duration-300 group-hover:translate-x-2">
                   Read Full Story <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>

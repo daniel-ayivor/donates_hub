@@ -114,7 +114,7 @@ const TeamDetails = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl max-w-3xl mx-auto"
           >
-            Discover our four flagship programs that are transforming lives and empowering communities across Ghana through sustainable development, holistic care, and media ministry.
+          Meet the dedicated individuals behind our mission. Our team brings together diverse skills, shared values, and a deep commitment to transforming lives and empowering communities across Ghana through sustainable development, holistic care, and media ministry.
           </motion.p>
         </div>
       </section>

@@ -363,9 +363,9 @@ const AboutUs = () => {
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                  <p className="text-brand-gold font-semibold mb-3">{member.role}</p>
+                  <p className="text-brand-gold font-semibold mb-1">{member.role}</p>
                   {/* <p className="text-gray-600 mb-3">{member.bio}</p> */}
-                  <p className="text-sm text-gray-500 font-medium">{member.expertise}</p>
+                  {/* <p className="text-sm text-gray-500 font-medium">{member.expertise}</p> */}
                 </div>
               </motion.div>
             ))}
