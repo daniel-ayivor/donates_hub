@@ -200,7 +200,7 @@ const OurImpact = () => {
                   <h4 className="text-lg text-brand-gold font-semibold mb-3">{story.subtitle}</h4>
                   <p className="text-gray-600 mb-4">{story.description}</p>
 
-                  <div className="border-t border-gray-200 pt-4 mb-4">
+                  {/* <div className="border-t border-gray-200 pt-4 mb-4">
                     <div className="flex justify-between text-sm text-gray-500 mb-2">
                       <span>Beneficiary:</span>
                       <span className="font-semibold">{story.beneficiary}</span>
@@ -209,13 +209,13 @@ const OurImpact = () => {
                       <div className="text-blue-700 font-semibold text-sm">Impact:</div>
                       <div className="text-blue-600 font-bold">{story.impact}</div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <Link
                     to={`/impact/${story.id}`}
                     className="inline-flex items-center text-brand-gold hover:text-yellow-700 font-semibold transition-colors duration-300"
                   >
-                    Read Full Story <ArrowRight className="ml-2 h-4 w-4" />
+                    Read The impact <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               </motion.div>
