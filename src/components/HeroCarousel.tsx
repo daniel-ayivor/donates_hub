@@ -6,11 +6,16 @@ import { ArrowRight, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+
+
+
+
+
   const slides = [
     {
       image: "/images/IMG-20250814-WA0011 (1).jpg",
-      title: "Child Education And Discipleship",
-      subtitle: "Building Brighter Futures Through Learning",
+      title: "Hope for the African Child",
+      subtitle: "Nourished and rooted in Christ",
     },
     {
       image: "/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg",
@@ -18,14 +23,10 @@ const HeroCarousel = () => {
         subtitle: "In Jesus Name",
     },
     {
-      image: "/images/WhatsApp Image 2026-01-04 at 12.43.26 AM.jpeg",
-      title: "Supporting Orphanages",
-      subtitle: "Caring for Our Most Vulnerable",
-    },
-    {
       image: "/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg",
-      title: "Tender the Earth ",
-      subtitle: "Tree planting and environmental care",
+      title: "Co-laboring with churches",
+      subtitle: "For Holistic Development",
+      
     },
     {
       image: "/images/Jesus Film.JPG",
