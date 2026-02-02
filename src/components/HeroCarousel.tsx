@@ -99,48 +99,47 @@ const HeroCarousel = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {/* <div className="mb-4">
-              <span className="bg-brand-gold/90 text-brand-blue px-4 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
-                {slides[currentSlide].focus}
-              </span>
-            </div> */}
-            
+            initial={{ y: 50, opacity: 0, scale: 0.95 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            exit={{ y: -50, opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          >            
             <motion.h1
-              initial={{ y: 80, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
+              initial={{ y: 80, opacity: 0, scale: 0.9 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
               transition={{
                 duration: 1,
                 ease: [0.25, 0.1, 0.25, 1],
                 delay: 0.2
               }}
-              className="text-3xl md:text-4xl lg:text-6xl font-bold mb-3 md:mb-4 leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 leading-tight drop-shadow-2xl"
             >
               {slides[currentSlide].title}
             </motion.h1>
             
-            <h2 className="text-xl md:text-2xl lg:text-3xl text-brand-gold font-semibold mb-4 md:mb-6">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl md:text-2xl lg:text-3xl text-brand-gold font-semibold mb-4 md:mb-6 drop-shadow-lg"
+            >
               {slides[currentSlide].subtitle}
-            </h2>
+            </motion.h2>
             
-            {/* <p className="text-base md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 leading-relaxed">
-              {slides[currentSlide].description}
-            </p> */}
-            
-            <div className="flex flex-row gap-3 justify-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-row gap-3 justify-center"
+            >
               <Link
                 to="/donate"
-                className="relative bg-brand-blue hover:bg-brand-blue/90 text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 flex items-center justify-center group overflow-hidden"
+                className="group relative bg-brand-gold hover:bg-yellow-500 text-brand-blue px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-110 flex items-center justify-center overflow-hidden shadow-lg hover:shadow-brand"
               >
                 <motion.div
-                  className="absolute inset-0 bg-brand-blue"
+                  className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-brand-gold"
                   animate={{
-                    scale: [1, 1.1, 1],
+                    scale: [1, 1.2, 1],
                     opacity: [0.5, 0.8, 0.5],
                   }}
                   transition={{
@@ -157,11 +156,11 @@ const HeroCarousel = () => {
               </Link>
               <Link
                 to="/impact"
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/25"
+                className="border-2 border-white text-white hover:bg-white hover:text-brand-blue px-4 py-2 md:px-6 md:py-3 rounded-full font-semibold text-sm md:text-base transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-white/25 backdrop-blur-sm"
               >
                 See Our Impact
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </div>

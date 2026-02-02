@@ -126,7 +126,7 @@ const Donate = () => {
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-          className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4"
+          className="w-16 h-16 bg-brand-gold rounded-full flex items-center justify-center mx-auto mb-4"
         >
           <Check className="h-8 w-8 text-white" />
         </motion.div>

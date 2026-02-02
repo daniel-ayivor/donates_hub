@@ -314,7 +314,7 @@ One standout success story is Comfort Adjei, who attended with just an idea for 
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-2xl"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Achievements</h3>
                 <ul className="space-y-2">

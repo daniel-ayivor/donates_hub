@@ -79,7 +79,7 @@ const Activities = () => {
     WaSH: 'bg-brand-blue',
     Empowerment: 'bg-brand-gold',
     Youth: 'bg-purple-500',
-    Media: 'bg-green-500'
+    Media: 'bg-brand-blue'
   };
 
   const statusColors: Record<string, string> = {
@@ -140,8 +140,8 @@ const Activities = () => {
               <div className="text-3xl font-bold text-purple-600 mb-2">100+</div>
               <div className="text-gray-700">Churches & Communities</div>
             </div>
-            <div className="text-center p-6 bg-green-50 rounded-xl">
-              <div className="text-3xl font-bold text-green-600 mb-2">JLife FM</div>
+            <div className="text-center p-6 bg-blue-50 rounded-xl">
+              <div className="text-3xl font-bold text-brand-blue mb-2">JLife FM</div>
               <div className="text-gray-700">Radio Ministry</div>
             </div>
           </div>

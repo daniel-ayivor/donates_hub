@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Users, Zap, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Heart, Droplet, Church, BookOpen } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -14,33 +14,47 @@ const DonatesHubHero = () => {
   const slides = [
     {
       id: 1,
-      headline: 'Welcome to Donates Hub',
-      subtext: 'A platform by AAPG focused on charitable projects, community support, and social impact.',
-      cta: 'Donate Now',
+      headline: 'Hope for the African Child',
+      subtext: 'Nourished and rooted in Christ',
+      cta: 'Give Now',
       ctaLink: '/donate',
-      icon: Users,
+      icon: Heart,
+      image: '/images/IMG-20250814-WA0011 (1).jpg',
       color: 'from-blue-50 to-cyan-50',
       accentColor: 'text-blue-600',
     },
     {
       id: 2,
-      headline: 'Driving Change Through Action',
-      subtext: 'Discover our activities, events, and projects making a difference in communities.',
-      cta: 'View Projects',
-      ctaLink: '/activities',
-      icon: Zap,
-      color: 'from-green-50 to-emerald-50',
-      accentColor: 'text-green-600',
+      headline: 'Clean Water for All',
+      subtext: 'In Jesus Name',
+      cta: 'See Our Impact',
+      ctaLink: '/impact',
+      icon: Droplet,
+      image: '/images/WhatsApp Image 2026-01-04 at 12.46.38 AM.jpeg',
+      color: 'from-blue-50 to-cyan-50',
+      accentColor: 'text-blue-600',
     },
     {
       id: 3,
-      headline: 'Be Part of the Impact',
-      subtext: 'Support our mission by donating, volunteering, or partnering with us.',
+      headline: 'Co-laboring with churches',
+      subtext: 'For Holistic Development',
       cta: 'Get Involved',
       ctaLink: '/get-involved',
-      icon: Heart,
+      icon: Church,
+      image: '/images/WhatsApp Image 2026-01-04 at 12.46.18 AM.jpeg',
       color: 'from-rose-50 to-pink-50',
       accentColor: 'text-rose-600',
+    },
+    {
+      id: 4,
+      headline: 'Gospel The Proclaimation',
+      subtext: 'One Soul at a Time',
+      cta: 'Learn More',
+      ctaLink: '/about',
+      icon: BookOpen,
+      image: '/images/Jesus Film.JPG',
+      color: 'from-purple-50 to-indigo-50',
+      accentColor: 'text-purple-600',
     },
   ];
 
@@ -49,18 +63,22 @@ const DonatesHubHero = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8 },
+      scale: 1,
+      transition: { 
+        duration: 0.8,
+        ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number]
+      },
     },
   };
 
@@ -89,11 +107,22 @@ const DonatesHubHero = () => {
         {slides.map((slide, index) => {
           const IconComponent = slide.icon;
           return (
-            <SwiperSlide key={slide.id} className="min-h-screen">
-              <div
-                className={`w-full min-h-screen bg-gradient-to-br ${slide.color} flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20`}
-              >
-                <div className="max-w-7xl w-full mx-auto">
+            <SwiperSlide key={slide.id}>
+              <div className="relative w-full h-[500px] md:h-[600px] lg:h-[650px] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0 z-0">
+                  <img
+                    src={slide.image}
+                    alt={slide.headline}
+                    className="w-full h-full object-cover object-center"
+                  />
+                  {/* Dark overlay for text readability */}
+                  <div className="absolute inset-0 bg-black/50"></div>
+                  {/* Gradient overlay matching original color scheme */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${slide.color} opacity-30`}></div>
+                </div>
+
+                <div className="relative z-10 max-w-7xl w-full mx-auto">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                     <motion.div
                       variants={containerVariants}
@@ -103,23 +132,21 @@ const DonatesHubHero = () => {
                       className="flex flex-col justify-center"
                     >
                       <motion.div variants={itemVariants} className="mb-6">
-                        <div
-                          className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg`}
-                        >
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/90 backdrop-blur-sm shadow-lg">
                           <IconComponent className={`w-8 h-8 ${slide.accentColor}`} />
                         </div>
                       </motion.div>
 
                       <motion.h1
                         variants={itemVariants}
-                        className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight"
+                        className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 leading-tight drop-shadow-2xl"
                       >
                         {slide.headline}
                       </motion.h1>
 
                       <motion.p
                         variants={itemVariants}
-                        className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed max-w-xl"
+                        className="text-base sm:text-lg lg:text-xl xl:text-2xl text-brand-gold font-semibold mb-6 leading-relaxed max-w-xl drop-shadow-lg"
                       >
                         {slide.subtext}
                       </motion.p>
@@ -127,13 +154,14 @@ const DonatesHubHero = () => {
                       <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                         <Link
                           to={slide.ctaLink}
-                          className="inline-flex items-center justify-center px-8 py-4 bg-[#82ca9d] hover:bg-[#6fb884] text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                          className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-gold hover:bg-yellow-500 text-brand-blue font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand text-base sm:text-lg"
                         >
                           {slide.cta}
+                          <Heart className="ml-2 h-5 w-5 group-hover:animate-pulse-soft" />
                         </Link>
                         <Link
                           to="/#impact"
-                          className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white font-semibold rounded-full transition-all duration-300"
+                          className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm text-base sm:text-lg transform hover:scale-105"
                         >
                           Learn More
                         </Link>
@@ -141,15 +169,14 @@ const DonatesHubHero = () => {
                     </motion.div>
 
                     <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
+                      initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                      transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                       viewport={{ once: true }}
+                      whileHover={{ scale: 1.05, rotate: 2 }}
                       className="hidden lg:flex items-center justify-center"
                     >
-                      <div
-                        className={`relative w-full h-96 rounded-3xl bg-white shadow-2xl flex items-center justify-center overflow-hidden`}
-                      >
+                      <div className="relative w-full h-96 rounded-3xl bg-white/10 backdrop-blur-md shadow-2xl flex items-center justify-center overflow-hidden border border-white/20">
                         <motion.div
                           animate={{
                             y: [0, -20, 0],
@@ -161,20 +188,20 @@ const DonatesHubHero = () => {
                           }}
                           className="text-center"
                         >
-                          <IconComponent className={`w-32 h-32 mx-auto ${slide.accentColor} opacity-80`} />
+                          <IconComponent className="w-32 h-32 mx-auto text-white opacity-90 drop-shadow-lg" />
                         </motion.div>
 
                         <motion.div
                           animate={{
-                            scale: [1, 1.1, 1],
-                            opacity: [0.3, 0.5, 0.3],
+                            scale: [1, 1.15, 1],
+                            opacity: [0.2, 0.6, 0.2],
                           }}
                           transition={{
                             duration: 3,
                             repeat: Infinity,
                             ease: 'easeInOut',
                           }}
-                          className={`absolute inset-0 rounded-3xl border-2 ${slide.accentColor.replace('text-', 'border-')}`}
+                          className="absolute inset-0 rounded-3xl border-2 border-white/50"
                         />
                       </div>
                     </motion.div>
@@ -209,7 +236,7 @@ const DonatesHubHero = () => {
         }
 
         .swiper-pagination-bullet-active {
-          background-color: #82ca9d;
+          background-color: #F5B916;
           width: 32px;
           border-radius: 6px;
           opacity: 1;

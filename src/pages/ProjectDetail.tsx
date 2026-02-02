@@ -44,6 +44,7 @@ interface RelatedStory {
 
 const ProjectDetail = () => {
   const { id } = useParams();
+  const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   const projects: Projects = {
     1: {
@@ -325,6 +326,17 @@ The fellowship began humbly as a cell meeting in the house of the village chief.
 
   const project = projects[id as string];
 
+  // Auto-rotate gallery images in hero background
+  React.useEffect(() => {
+    if (!project || !project.gallery || project.gallery.length <= 1) return;
+    
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % project.gallery.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [project]);
+
   if (!project) {
     return (
       <div className="pt-20 min-h-screen flex items-center justify-center">
@@ -345,12 +357,33 @@ The fellowship began humbly as a cell meeting in the house of the village chief.
       exit={{ opacity: 0 }}
       className="pt-20"
     >
-      {/* Hero Section with minimal header */}
-      <section className="relative py-20 bg-brand-blue">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with rotating gallery images */}
+      <section className="relative py-20 min-h-[500px] flex items-center overflow-hidden">
+        {/* Background Image Carousel with Overlay */}
+        <div className="absolute inset-0 z-0">
+          {project.gallery.map((image, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: currentImageIndex === index ? 1 : 0 }}
+              transition={{ duration: 1, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <img
+                src={image}
+                alt={`${project.title} - Image ${index + 1}`}
+                className="w-full h-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-brand-blue/95 via-brand-blue/85 to-brand-blue/75"></div>
+              <div className="absolute inset-0 bg-black/30"></div>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <Link
             to="/impact"
-            className="inline-flex items-center text-white hover:text-yellow-200 mb-8 transition-colors"
+            className="inline-flex items-center text-white hover:text-yellow-200 mb-8 transition-colors backdrop-blur-sm bg-white/10 px-4 py-2 rounded-full"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Impact Stories
@@ -359,33 +392,64 @@ The fellowship began humbly as a cell meeting in the house of the village chief.
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-white"
           >
             <div className="mb-4">
-              <span className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-brand-gold/90 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
                 {project.category}
               </span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold mb-2">{project.title}</h1>
-            <p className="text-xl sm:text-2xl text-yellow-100 mb-6">{project.subtitle}</p>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 drop-shadow-2xl">{project.title}</h1>
+            <p className="text-xl sm:text-2xl lg:text-3xl text-brand-gold font-semibold mb-8 drop-shadow-lg">{project.subtitle}</p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="flex items-center">
-                <MapPin className="h-5 w-5 mr-2 text-yellow-300" />
-                <span>{project.location}</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
+              <div className="flex items-center backdrop-blur-sm bg-white/10 px-4 py-3 rounded-lg">
+                <MapPin className="h-5 w-5 mr-2 text-brand-gold flex-shrink-0" />
+                <span className="text-sm sm:text-base">{project.location}</span>
               </div>
-              <div className="flex items-center">
-                <Calendar className="h-5 w-5 mr-2 text-yellow-300" />
-                <span>{project.date}</span>
+              <div className="flex items-center backdrop-blur-sm bg-white/10 px-4 py-3 rounded-lg">
+                <Calendar className="h-5 w-5 mr-2 text-brand-gold flex-shrink-0" />
+                <span className="text-sm sm:text-base">{project.date}</span>
               </div>
-              <div className="flex items-center">
-                <Users className="h-5 w-5 mr-2 text-yellow-300" />
-                <span>{project.beneficiary}</span>
+              <div className="flex items-center backdrop-blur-sm bg-white/10 px-4 py-3 rounded-lg">
+                <Users className="h-5 w-5 mr-2 text-brand-gold flex-shrink-0" />
+                <span className="text-sm sm:text-base">{project.beneficiary}</span>
               </div>
             </div>
           </motion.div>
         </div>
+
+        {/* Image Indicators */}
+        {project.gallery.length > 1 && (
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+            {project.gallery.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentImageIndex
+                    ? 'bg-brand-gold scale-125'
+                    : 'bg-white/50 hover:bg-white/70'
+                }`}
+                aria-label={`Go to image ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Progress Bar */}
+        {project.gallery.length > 1 && (
+          <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 z-20">
+            <motion.div
+              className="h-full bg-brand-gold"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 5, ease: "linear" }}
+              key={currentImageIndex}
+            />
+          </div>
+        )}
       </section>
 
       {/* Story Content with Image */}
@@ -508,7 +572,7 @@ The fellowship began humbly as a cell meeting in the house of the village chief.
             viewport={{ once: true }}
             className="bg-yellow-50 p-12 rounded-xl shadow-sm"
           >
-            <div className="text-6xl text-brand-gold mb-6">"</div>
+            <div className="text-5xl text-brand-gold mb-6">"</div>
             <blockquote className="text-2xl text-gray-900 font-medium mb-8 leading-relaxed">
               {project.testimonial.text}
             </blockquote>
