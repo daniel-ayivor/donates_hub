@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Users, Building2, DollarSign, Heart, Droplet, BookOpen, Church, TrendingUp } from 'lucide-react';
 import CountUp from '../components/CountUp';
 import FeaturedStories from '../components/FeaturedStories';
-import HeroCarousel from '../components/HeroCarousel';
+import DonatesHubHero from '../components/DonatesHubHero';
 import Partners from './Partners';
 
 const Home = () => {
@@ -61,8 +61,8 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      {/* Hero Carousel */}
-      <HeroCarousel />
+      {/* Donates Hub Hero Section */}
+      <DonatesHubHero />
 
       {/* Mission Statement */}
       <section className="py-20 bg-white">
