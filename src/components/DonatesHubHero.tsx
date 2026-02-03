@@ -153,7 +153,7 @@ const DonatesHubHero = () => {
                         {slide.subtext}
                       </motion.p>
 
-                      <motion.div variants={itemVariants} className="flex flex-col sm:flex-col gap-4">
+                      <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                         <Link
                           to={slide.ctaLink}
                           className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-gold hover:bg-yellow-500 text-brand-blue font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-brand text-sm sm:text-base"
