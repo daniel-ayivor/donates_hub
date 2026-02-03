@@ -174,22 +174,40 @@ const Donate = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-32 min-h-[60vh] bg-brand-gold">
+      <section className="relative py-24 md:py-32 min-h-[60vh] bg-gradient-to-br from-brand-gold via-yellow-500 to-brand-gold overflow-hidden">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.3, 0.2]
+          }}
+          transition={{ duration: 15, repeat: Infinity }}
+          className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        />
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg"
             alt="Donation impact"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-25"
+            style={{ filter: 'brightness(1.2) contrast(1.05)' }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <motion.h1
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl font-bold mb-6"
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, type: "spring" }}
+            className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-8 border border-white/20"
           >
-            Make a Difference Today
+            <Sparkles className="w-5 h-5" />
+            <span className="text-sm font-semibold">Every Gift Matters</span>
+          </motion.div>
+          <motion.h1
+            initial={{ y: 50, opacity: 0, scale: 0.9 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg"
+          >
+            Make a <span className="text-brand-blue">Lasting Impact</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}

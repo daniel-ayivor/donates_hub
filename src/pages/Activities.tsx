@@ -96,12 +96,21 @@ const Activities = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
+      <section className="relative py-24 md:py-32 min-h-[60vh] bg-gradient-to-br from-brand-blue via-blue-700 to-brand-blue overflow-hidden">
+        <motion.div 
+          animate={{ 
+            x: [0, 100, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+          className="absolute top-10 right-10 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl"
+        />
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.43.25 AM.jpeg"
             alt="Community activities"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-25"
+            style={{ filter: 'brightness(1.2) contrast(1.05)' }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">

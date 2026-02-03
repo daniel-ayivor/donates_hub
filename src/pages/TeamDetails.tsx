@@ -153,11 +153,11 @@ const TeamDetails = () => {
                 </span>
               </div>
               
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 {member.name}
               </h1>
 
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Areas of Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   {member.expertise.split(', ').map((skill, index) => (
@@ -169,7 +169,7 @@ const TeamDetails = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </div> */}
 
               {/* Bio */}
               <div className="prose prose-lg max-w-none mb-8">

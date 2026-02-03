@@ -124,20 +124,11 @@ const FeaturedStories = () => {
               }}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group"
             >
-              <div className="relative overflow-hidden h-96"> {/* Increased from h-64 to h-96 */}
-                <motion.img
+              <div className="relative overflow-hidden h-96">
+                <img
                   src={story.image}
                   alt={story.title}
                   loading="lazy"
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{
-                    duration: 0.8,
-                    delay: index * 0.15,
-                    ease: [0.25, 0.1, 0.25, 1]
-                  }}
-                  /* KEY CHANGES BELOW */
                   className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
                   style={{ imageRendering: 'auto' }}
                 />

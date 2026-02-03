@@ -1,6 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield, Sparkles, UserCheck, UsersRound } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Users, Target, Heart, Award, Globe, Calendar, TrendingUp, Shield, Sparkles, UserCheck, UsersRound, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const AboutUs = () => {
@@ -108,28 +108,37 @@ const AboutUs = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
+      <section className="relative py-24 md:py-32 min-h-[60vh] bg-gradient-to-br from-brand-blue via-blue-600 to-blue-700 overflow-hidden">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.3, 1],
+            rotate: [0, 180, 0]
+          }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-gold/20 rounded-full blur-3xl"
+        />
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.51.10 AM.jpeg"
             alt="Our team"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-25"
+            style={{ filter: 'brightness(1.2) contrast(1.05)' }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.h1
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl font-bold mb-6"
+            initial={{ y: 50, opacity: 0, scale: 0.9 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, type: "spring" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg"
           >
-            Who We Are
+            Who <span className="text-brand-gold">We Are</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl max-w-3xl mx-auto"
+            className="text-base md:text-lg max-w-3xl mx-auto text-blue-100"
           >
             Africa Assistance Plan is a Christian non-governmental organization registered in Ghana and 
             the United States of America. With over 40 years of serving the poor and vulnerable, 

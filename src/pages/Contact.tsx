@@ -64,28 +64,37 @@ const Contact = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-32 min-h-[60vh] bg-brand-blue">
+      <section className="relative py-24 md:py-32 min-h-[60vh] bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue overflow-hidden">
+        <motion.div 
+          animate={{ 
+            scale: [1, 1.2, 1],
+            rotate: [0, 90, 0]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute -top-24 -right-24 w-96 h-96 bg-brand-gold opacity-20 rounded-full blur-3xl"
+        />
         <div className="absolute inset-0">
           <img
             src="/images/WhatsApp Image 2026-01-04 at 12.46.39 AM.jpeg"
             alt="Contact us"
             className="w-full h-full object-cover opacity-20"
+            style={{ filter: 'brightness(1.2) contrast(1.05)' }}
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <motion.h1
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl font-bold mb-6"
+            initial={{ y: 50, opacity: 0, scale: 0.9 }}
+            animate={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, type: "spring" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg"
           >
-            Get in Touch
+            Get in <span className="text-brand-gold">Touch</span>
           </motion.h1>
           <motion.p
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-xl max-w-3xl mx-auto"
+            className="text-base md:text-lg max-w-3xl mx-auto text-blue-100"
           >
             Have questions or want to learn more about our work? We'd love to hear from you. 
             Reach out and let's make a difference together.

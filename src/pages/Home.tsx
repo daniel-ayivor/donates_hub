@@ -67,7 +67,7 @@ const Home = () => {
       {/* Mission Statement */}
       <section className="section-spacing bg-white">
         <div className="max-w-7xl mx-auto container-padding">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image Column */}
             <motion.div
               initial={{ x: -50, opacity: 0 }}
@@ -104,14 +104,14 @@ const Home = () => {
               >
                 Our Mission
               </motion.h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
                 At Africa Assistance Plan, we are committed to eradicating poverty and deprivation among society's most vulnerable.
                 We work to ensure the holistic well-being of every individual through programs focused on water access, sanitation, hygiene,
                 health, children and youth empowerment, and church and community development across Ghana.
               </p>
               <Link
                 to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-white font-semibold rounded-lg hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-gold text-white font-semibold rounded-lg hover:bg-yellow-500 transition-all duration-500 hover:scale-105 shadow-md hover:shadow-lg"
               >
                 Learn More About Us
               </Link>
@@ -130,8 +130,8 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             className="text-center mb-12 md:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Our Impact in Numbers</h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600">Making a measurable difference in communities across Ghana</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Our Impact in Numbers</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600">Making a measurable difference in communities across Ghana</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -155,13 +155,13 @@ const Home = () => {
                 <div className="transform group-hover:scale-110 transition-transform duration-300">
                   <stat.icon className="h-10 w-10 md:h-12 md:w-12 text-brand-gold mx-auto mb-4" />
                 </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                   <CountUp end={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-base sm:text-lg md:text-xl font-semibold text-white mb-2">
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-white mb-2">
                   {stat.label}
                 </div>
-                <div className="text-sm md:text-base text-blue-200">
+                <div className="text-xs md:text-sm text-blue-200">
                   {stat.description}
                 </div>
               </motion.div>
@@ -191,7 +191,7 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
           >
             <motion.h2 
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-8 drop-shadow-lg"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 drop-shadow-lg"
               initial={{ scale: 0.9, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -199,7 +199,7 @@ const Home = () => {
             >
               Ready to Make a Difference?
             </motion.h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 md:mb-10 text-yellow-100 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg mb-8 md:mb-10 text-yellow-100 max-w-2xl mx-auto leading-relaxed">
               Join supporters helping provide education, clean water, and hope to families across Ghana
             </p>
             <motion.div 
@@ -211,14 +211,14 @@ const Home = () => {
             >
               <Link
                 to="/donate"
-                className="group bg-white text-brand-blue hover:bg-brand-gold hover:text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-base sm:text-lg md:text-xl transition-all duration-300 transform hover:scale-105 hover:shadow-brand inline-flex items-center justify-center"
+                className="group bg-white text-brand-blue hover:bg-brand-gold hover:text-white px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg transition-all duration-500 transform hover:scale-105 hover:shadow-brand inline-flex items-center justify-center"
               >
                 Start Donating
                 <Heart className="ml-2 h-5 w-5 group-hover:animate-pulse-soft" />
               </Link>
               <Link
                 to="/contact"
-                className="group border-2 border-white text-white hover:bg-white hover:text-brand-blue px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-base sm:text-lg md:text-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm inline-flex items-center justify-center"
+                className="group border-2 border-white text-white hover:bg-white hover:text-brand-blue px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg transition-all duration-500 transform hover:scale-105 backdrop-blur-sm inline-flex items-center justify-center"
               >
                 Volunteer With Us
                 <Users className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

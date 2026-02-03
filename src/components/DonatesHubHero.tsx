@@ -76,7 +76,7 @@ const DonatesHubHero = () => {
       y: 0,
       scale: 1,
       transition: { 
-        duration: 0.8,
+        duration: 1,
         ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number]
       },
     },
@@ -97,9 +97,10 @@ const DonatesHubHero = () => {
           prevEl: '.swiper-button-prev',
         }}
         autoplay={{
-          delay: 5000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
+        speed={1000}
         onSlideChange={(swiper) => setActiveSlide(swiper.activeIndex)}
         loop
         className="w-full"
@@ -115,11 +116,12 @@ const DonatesHubHero = () => {
                     src={slide.image}
                     alt={slide.headline}
                     className="w-full h-full object-cover object-center"
+                    style={{ filter: 'brightness(1.2) contrast(1.05)' }}
                   />
                   {/* Dark overlay for text readability */}
-                  <div className="absolute inset-0 bg-black/50"></div>
+                  <div className="absolute inset-0 bg-black/40"></div>
                   {/* Gradient overlay matching original color scheme */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${slide.color} opacity-30`}></div>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${slide.color} opacity-20`}></div>
                 </div>
 
                 <div className="relative z-10 max-w-7xl w-full mx-auto">
@@ -139,14 +141,14 @@ const DonatesHubHero = () => {
 
                       <motion.h1
                         variants={itemVariants}
-                        className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 leading-tight drop-shadow-2xl"
+                        className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-3 leading-tight drop-shadow-2xl"
                       >
                         {slide.headline}
                       </motion.h1>
 
                       <motion.p
                         variants={itemVariants}
-                        className="text-base sm:text-lg lg:text-xl xl:text-2xl text-brand-gold font-semibold mb-6 leading-relaxed max-w-xl drop-shadow-lg"
+                        className="text-sm sm:text-base lg:text-lg xl:text-xl text-brand-gold font-semibold mb-6 leading-relaxed max-w-xl drop-shadow-lg"
                       >
                         {slide.subtext}
                       </motion.p>
@@ -154,14 +156,14 @@ const DonatesHubHero = () => {
                       <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
                         <Link
                           to={slide.ctaLink}
-                          className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-gold hover:bg-yellow-500 text-brand-blue font-semibold rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-brand text-base sm:text-lg"
+                          className="group inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 bg-brand-gold hover:bg-yellow-500 text-brand-blue font-semibold rounded-full transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-brand text-sm sm:text-base"
                         >
                           {slide.cta}
                           <Heart className="ml-2 h-5 w-5 group-hover:animate-pulse-soft" />
                         </Link>
                         <Link
                           to="/#impact"
-                          className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-full transition-all duration-300 backdrop-blur-sm text-base sm:text-lg transform hover:scale-105"
+                          className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-full transition-all duration-500 backdrop-blur-sm text-sm sm:text-base transform hover:scale-105"
                         >
                           Learn More
                         </Link>
