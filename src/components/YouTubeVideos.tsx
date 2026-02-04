@@ -32,12 +32,12 @@ const YouTubeVideos = () => {
       title: 'Church Empowerment Programs',
       description: 'Equipping churches to lead transformational development',
     },
-    {
-      id: '4',
-      videoId: 'D4nfACsPv5M',
-      title: 'Youth Development Initiatives',
-      description: 'Nurturing the next generation of leaders',
-    }
+    // {
+    //   id: '4',
+    //   videoId: 'D4nfACsPv5M',
+    //   title: 'Youth Development Initiatives',
+    //   description: 'Nurturing the next generation of leaders',
+    // }
   ];
 
   const getThumbnailUrl = (videoId: string) => {
@@ -116,7 +116,7 @@ const YouTubeVideos = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {videos.map((video) => (
             <motion.button
