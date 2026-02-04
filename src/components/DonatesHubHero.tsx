@@ -47,7 +47,7 @@ const DonatesHubHero = () => {
     },
     {
       id: 4,
-      headline: 'Gospel The Proclaimation',
+      headline: 'Gospel Proclaimation',
       subtext: 'One Soul at a Time',
       cta: 'Learn More',
       ctaLink: '/about',
