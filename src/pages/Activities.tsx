@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Users, ArrowRight } from 'lucide-react';
+import YouTubeVideos from '../components/YouTubeVideos';
 
 const Activities = () => {
   const activities = [
@@ -226,6 +227,9 @@ const Activities = () => {
           </div>
         </div>
       </section>
+
+      {/* YouTube Videos */}
+      <YouTubeVideos />
 
       {/* Call to Action */}
       <section className="py-20 bg-brand-blue">

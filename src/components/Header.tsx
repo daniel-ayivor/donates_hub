@@ -181,6 +181,7 @@ const Header = () => {
     { path: '/', label: 'Home' },
     { path: '/impact', label: 'Our Impact' },
     { path: '/get-involved', label: 'Get Involved' },
+    // { path: '/gallery', label: 'Gallery' },
     { path: '/contact', label: 'Contact' },
   ];
 

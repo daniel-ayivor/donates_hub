@@ -7,6 +7,7 @@ import { Users, Building2, DollarSign, Heart, Droplet, BookOpen, Church, Trendin
 import CountUp from '../components/CountUp';
 import FeaturedStories from '../components/FeaturedStories';
 import DonatesHubHero from '../components/DonatesHubHero';
+import YouTubeVideos from '../components/YouTubeVideos';
 import Partners from './Partners';
 
 const Home = () => {
@@ -171,6 +172,9 @@ const Home = () => {
       </section>
 
       <Partners />
+
+      {/* YouTube Videos */}
+      <YouTubeVideos />
 
       {/* Featured Stories */}
       <FeaturedStories />
