@@ -24,7 +24,9 @@ const PageLoader = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="text-center">
       <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-brand-blue"></div>
-      <p className="mt-4 text-gray-600">Loading...</p>
+       <svg className="mr-3 size-5 animate-spin ..." viewBox="0 0 24 24">
+
+  </svg>
     </div>
   </div>
 );

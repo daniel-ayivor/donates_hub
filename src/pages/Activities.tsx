@@ -215,11 +215,10 @@ const Activities = () => {
                     </div>
                   </div>
 
-                  <div className="bg-blue-50 p-3 rounded-lg mb-4">
+                  {/* <div className="bg-blue-50 p-3 rounded-lg mb-4">
                     <div className="text-blue-700 font-semibold text-sm">Impact:</div>
                     <div className="text-blue-600 font-bold">{activity.impact}</div>
-                  </div>
-
+                  </div> */}
             
                 </div>
               </motion.div>

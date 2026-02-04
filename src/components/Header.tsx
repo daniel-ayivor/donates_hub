@@ -187,7 +187,7 @@ const Header = () => {
 
   const aboutDropdownItems = [
     { path: '/about', label: 'About Us' },
-    { path: '/activities', label: 'Activities' },
+    { path: '/activities', label: ' What We do' },
   ];
 
   return (
