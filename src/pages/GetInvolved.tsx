@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Users, Heart, Mail, Send, ChevronDown, Sparkles, HandHeart, Megaphone, ChevronRight } from 'lucide-react';
 
@@ -186,6 +186,177 @@ const GetInvolved = () => {
               Volunteers support outreach programs, community development activities, discipleship, and humanitarian efforts on the ground.
             </p>
           </motion.div>
+
+          {/* Volunteer Form with Image - Flex Layout */}
+          <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Image Section */}
+            <motion.div
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative h-full min-h-[400px] lg:min-h-[600px]"
+            >
+              <div className="relative h-full rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/images/WhatsApp Image 2026-01-04 at 12.43.30 AM.jpeg"
+                  alt="Volunteers helping community"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-brand-blue/40 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-3">Join Our Team</h3>
+                  <p className="text-base md:text-lg text-blue-100">
+                    Make a difference in communities across Ghana
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Compact Form Portal */}
+            <motion.div
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.form
+                onSubmit={handleSubmit}
+                className="bg-white rounded-2xl shadow-xl p-6 border-t-4 border-brand-gold"
+              >
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                  Volunteer Application
+                </h3>
+                <p className="text-sm text-gray-600 mb-6">
+                  Fill out the form below and we'll get in touch with you soon
+                </p>
+
+                <div className="space-y-4">
+                  {/* Name & Email in Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="name" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none"
+                        placeholder="Your name"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="email" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Email *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Phone & Interest in Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label htmlFor="phone" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Phone *
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none"
+                        placeholder="+233 XX XXX XXXX"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="interest" className="block text-xs font-semibold text-gray-700 mb-1">
+                        Area of Interest *
+                      </label>
+                      <select
+                        id="interest"
+                        name="interest"
+                        value={formData.interest}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none bg-white"
+                      >
+                        <option value="">Select area</option>
+                        <option value="education">Education</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="water">Water & Sanitation</option>
+                        <option value="orphanage">Orphanage</option>
+                        <option value="church">Church Programs</option>
+                        <option value="community">Community Dev.</option>
+                        <option value="media">Media</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Experience Field */}
+                  <div>
+                    <label htmlFor="experience" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Relevant Experience
+                    </label>
+                    <textarea
+                      id="experience"
+                      name="experience"
+                      value={formData.experience}
+                      onChange={handleChange}
+                      rows={2}
+                      className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none resize-none"
+                      placeholder="Your skills and experience"
+                    />
+                  </div>
+
+                  {/* Message Field */}
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-semibold text-gray-700 mb-1">
+                      Why volunteer with us? *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={3}
+                      className="w-full px-3 py-2 text-sm border-2 border-gray-200 rounded-lg focus:border-brand-gold focus:ring-2 focus:ring-brand-gold/20 transition-all duration-300 outline-none resize-none"
+                      placeholder="Share your motivation"
+                    />
+                  </div>
+
+                  {/* Submit Button */}
+                  <motion.button
+                    type="submit"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-gradient-to-r from-brand-blue to-blue-600 hover:from-brand-gold hover:to-yellow-500 text-white px-6 py-3 rounded-full font-semibold transition-all duration-500 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-sm"
+                  >
+                    Submit Application
+                    <Send className="w-4 h-4" />
+                  </motion.button>
+                </div>
+              </motion.form>
+            </motion.div>
+          </div>
         </div>
       </section>
 
