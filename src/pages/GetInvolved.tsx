@@ -139,7 +139,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Introduction */}
-      <section className="section-spacing bg-gradient-to-b from-white to-gray-50">
+      {/* <section className="section-spacing bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ y: 50, opacity: 0, scale: 0.95 }}
@@ -154,7 +154,7 @@ const GetInvolved = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Volunteer Section */}
       <section className="section-spacing bg-gray-50 relative overflow-hidden">
