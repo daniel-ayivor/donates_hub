@@ -180,7 +180,7 @@ const Activities = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow transition-all"
+                className="bg-white cursor-pointer rounded-2xl overflow-hidden shadow-sm hover:shadow transition-all"
               >
                 <div className="relative overflow-hidden">
                   <img
@@ -203,7 +203,7 @@ const Activities = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{activity.title}</h3>
                   <p className="text-gray-600 mb-4">{activity.description}</p>
                   
-                  <div className="space-y-2 mb-4">
+                  {/* <div className="space-y-2 mb-4">
              
                     <div className="flex items-center text-sm text-gray-500">
                       <MapPin className="h-4 w-4 mr-2 text-brand-gold" />
@@ -213,7 +213,7 @@ const Activities = () => {
                       <Users className="h-4 w-4 mr-2 text-brand-gold" />
                       {activity.participants}
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* <div className="bg-blue-50 p-3 rounded-lg mb-4">
                     <div className="text-blue-700 font-semibold text-sm">Impact:</div>
