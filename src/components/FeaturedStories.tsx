@@ -125,12 +125,14 @@ const FeaturedStories = () => {
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group"
             >
               <div className="relative overflow-hidden h-96">
-                <img
+                <motion.img
                   src={story.image}
                   alt={story.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
                   style={{ imageRendering: 'auto' }}
+                  whileHover={{ scale: 1.15 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                 />
                 {/* The rest of your overlays (gradient and category badge) stay inside this div */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

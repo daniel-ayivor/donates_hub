@@ -152,10 +152,12 @@ const OurImpact = () => {
               >
                 <div className="relative overflow-hidden">
                   <div className="relative h-96 overflow-hidden"> {/* Fixed height on the container */}
-                    <img
+                    <motion.img
                       src={story.image}
                       alt={story.title}
-                      className="absolute inset-0 w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500"
+                      className="absolute inset-0 w-full h-full object-cover object-top"
+                      whileHover={{ scale: 1.15 }}
+                      transition={{ duration: 0.6, ease: "easeInOut" }}
                     />
                     {/* The category badge and overlay will now sit correctly on top of the image */}
                     {/* <div className="absolute top-4 left-4 z-10">
