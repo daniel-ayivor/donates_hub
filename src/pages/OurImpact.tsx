@@ -87,12 +87,6 @@ const OurImpact = () => {
     }
   ];
 
-  const impactMetrics = [
-    { icon: Users, label: "Lives Directly Impacted", value: "2,800+", color: "text-blue-500" },
-    { icon: Heart, label: "Families Supported", value: "650+", color: "text-red-500" },
-    { icon: TrendingUp, label: "Income Improvement", value: "85%", color: "text-brand-gold" },
-    { icon: Award, label: "Success Rate", value: "92%", color: "text-purple-500" }
-  ];
 
   return (
     <motion.div
@@ -130,29 +124,6 @@ const OurImpact = () => {
           </motion.p>
         </div>
       </section>
-
-      {/* Impact Metrics */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {impactMetrics.map((metric, index) => (
-              <motion.div
-                key={metric.label}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow transition-shadow"
-              >
-                <metric.icon className={`h-12 w-12 ${metric.color} mx-auto mb-4`} />
-                <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
-                <div className="text-gray-600">{metric.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Impact Stories Gallery */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,17 +170,6 @@ const OurImpact = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{story.title}</h3>
                   <h4 className="text-lg text-brand-gold font-semibold mb-3">{story.subtitle}</h4>
                   <p className="text-gray-600 mb-4">{story.description}</p>
-
-                  {/* <div className="border-t border-gray-200 pt-4 mb-4">
-                    <div className="flex justify-between text-sm text-gray-500 mb-2">
-                      <span>Beneficiary:</span>
-                      <span className="font-semibold">{story.beneficiary}</span>
-                    </div>
-                    <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="text-blue-700 font-semibold text-sm">Impact:</div>
-                      <div className="text-blue-600 font-bold">{story.impact}</div>
-                    </div>
-                  </div> */}
 
                   <Link
                     to={`/impact/${story.id}`}
