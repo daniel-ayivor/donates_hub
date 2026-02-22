@@ -21,7 +21,7 @@ const OurImpact = () => {
     },
     {
       id: 2,
-      title: "Water Brings Community Unity",
+      title: "Elderly Women Regain Purpose",
       subtitle: "Elderly Women Regain Purpose",
       image: "/images/Mama Abena.jpg", // Update with actual image path
       description: "Mama Abena, 76, and other elderly women now manage their community's water system. What began as a borehole in 2012 has become a source of employment, respect, and community pride, transforming daily life for everyone in Asuokor.",
@@ -43,7 +43,7 @@ const OurImpact = () => {
     },
     {
       id: 4,
-      title: "From Conflict to Cooperation",
+      title: "Pastor Resolves Conflicts Between Farmers and Herders",
       subtitle: "Pastor Unites Farmers and Herders",
       image: "/images/Abraham Soale.jpg", // Update with actual image path
       description: "Pastor Abraham Soale used AAP's training to bridge divides between farmers and Fulani herders in Tinga. He helped form a peace council that created community bylaws, mediated disputes, and restored harmony alongside improved sanitation.",
@@ -52,19 +52,19 @@ const OurImpact = () => {
       beneficiary: "Tinga Community Leaders",
       age: "45+ years old"
     },
+    // {
+    //   id: 5,
+    //   title: "Community-Led Sanitation Revolution",
+    //   subtitle: "Tainakura Takes Charge of Health",
+    //   image: "/images/Abena Nyanta.jpg", // Update with actual image path
+    //   description: "After AAP's training on sanitation risks, Adwoa and her community in Tainakura built their own shared latrine. This collective action dramatically improved community health and sparked ongoing conversations about hygiene.",
+    //   impact: "Community-built sanitation facility",
+    //   category: "Sanitation",
+    //   beneficiary: "Tainakura Residents",
+    //   age: "All ages"
+    // },
     {
       id: 5,
-      title: "Community-Led Sanitation Revolution",
-      subtitle: "Tainakura Takes Charge of Health",
-      image: "/images/Abena Nyanta.jpg", // Update with actual image path
-      description: "After AAP's training on sanitation risks, Adwoa and her community in Tainakura built their own shared latrine. This collective action dramatically improved community health and sparked ongoing conversations about hygiene.",
-      impact: "Community-built sanitation facility",
-      category: "Sanitation",
-      beneficiary: "Tainakura Residents",
-      age: "All ages"
-    },
-    {
-      id: 6,
       title: "Menstrual Dignity in School",
       subtitle: "Sakina's Path to Confidence",
       image: "/images/Sakina.jpg", // Update with actual image path
@@ -75,8 +75,8 @@ const OurImpact = () => {
       age: "15 years old"
     },
     {
-      id: 7,
-      title: "A Church is Planted",
+      id: 6,
+      title: "A New Church is Planted",
       subtitle: "New Fellowship Through Service",
       image: "/images/nyanta1.jpg", // Update with actual image path
       description: "After a successful outreach in Kyebi Nkwanta where 15 people accepted Christ, Pastor Broohm started a church with AAP's support. What began as a cell meeting in the chief's house has grown into a thriving Sunday congregation.",
@@ -138,7 +138,7 @@ const OurImpact = () => {
             <p className="text-xl text-gray-600">Each story represents a life changed, a dream realized, and hope restored</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 cursor-pointer md:grid-cols-2 lg:grid-cols-3 gap-8">
             {impactStories.map((story, index) => (
               <motion.div
                
@@ -158,18 +158,18 @@ const OurImpact = () => {
                       className="absolute inset-0 w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500"
                     />
                     {/* The category badge and overlay will now sit correctly on top of the image */}
-                    <div className="absolute top-4 left-4 z-10">
+                    {/* <div className="absolute top-4 left-4 z-10">
                       <span className="bg-brand-gold text-white px-3 py-1 rounded-full text-sm font-semibold">
                         {story.category}
                       </span>
-                    </div>
+                    </div> */}
                     <div className="absolute inset-0 bg-black/20 z-0"></div>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{story.title}</h3>
-                  <h4 className="text-lg text-brand-gold font-semibold mb-3">{story.subtitle}</h4>
-                  <p className="text-gray-600 mb-4">{story.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{story.title}</h3>
+                  {/* <h4 className="text-lg text-brand-gold font-semibold mb-3">{story.subtitle}</h4>
+                  <p className="text-gray-600 mb-4">{story.description}</p> */}
 
                   <Link
                     to={`/impact/${story.id}`}
