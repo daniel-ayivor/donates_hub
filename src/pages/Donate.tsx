@@ -199,8 +199,8 @@ const Donate = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-xl max-w-3xl mx-auto"
           >
-            Your donation creates lasting change through education, clean water, healthcare, orphan care, 
-            and faith-based programs across Ghana. Every contribution matters, no matter the size.
+            Your donation creates lasting change through education, clean water, 
+            and build new local churchs across across Ghana. Every contribution matters, no matter the size.
           </motion.p>
         </div>
       </section>
@@ -368,7 +368,7 @@ const Donate = () => {
       {showSuccess && <SuccessAnimation />}
 
       {/* Other Ways to Help */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
@@ -401,7 +401,7 @@ const Donate = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </motion.div>
   );
 };

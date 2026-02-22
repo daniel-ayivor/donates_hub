@@ -28,7 +28,7 @@ const Home = () => {
     },
     { 
       icon: Heart, 
-      label: 'People Reached with Gospel', 
+      label: 'People Reached with the Gospel', 
       value: 875000,
       description: 'Lives touched with the message',
       suffix: '+'
@@ -42,9 +42,9 @@ const Home = () => {
     },
     { 
       icon: DollarSign, 
-      label: 'People Received Soft Loans', 
-      value: 5000,
-      description: 'To start businesses',
+      label: 'Churches Planted', 
+      value: 5,
+      description: 'New fellowships established through outreach',
       suffix: ''
     },
     { 
