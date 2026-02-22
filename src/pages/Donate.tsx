@@ -1,7 +1,6 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Gift, Users, GraduationCap, Building2, Stethoscope, Droplets, ExternalLink, Check, Sparkles } from 'lucide-react';
-import { StarsContext } from '../App';
 
 const Donate = () => {
   const [selectedAmount, setSelectedAmount] = useState(50);
@@ -9,7 +8,6 @@ const Donate = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const { triggerStars } = useContext(StarsContext);
 
   const donationCategories = [
     {
@@ -87,9 +85,6 @@ const Donate = () => {
 
   const handleDonate = () => {
     const amount = customAmount ? parseInt(customAmount) : selectedAmount;
-    
-    // Trigger the floating stars animation
-    triggerStars();
     
     // Create URL with donation details as query parameters
     const stripeUrl = new URL('https://buy.stripe.com/28o4jrdrTcBs8pyeUU');

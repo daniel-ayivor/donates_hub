@@ -1,19 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
-import { lazy, Suspense, useState, createContext, useEffect } from 'react';
+import { lazy, Suspense } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import FloatingStars from './components/FloatingStars';
-
-// Create context for floating stars
-export const StarsContext = createContext<{
-  showStars: boolean;
-  triggerStars: () => void;
-}>({
-  showStars: false,
-  triggerStars: () => {},
-});
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -42,35 +32,13 @@ const PageLoader = () => (
 );
 
 
-// Component to trigger stars on route change
-function StarsOnNavigation({ triggerStars }: { triggerStars: () => void }) {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Trigger stars whenever the route changes
-    triggerStars();
-  }, [location.pathname, triggerStars]);
-
-  return null;
-}
-
 function App() {
-  const [showStars, setShowStars] = useState(false);
-
-  const triggerStars = () => {
-    setShowStars(true);
-    setTimeout(() => setShowStars(false), 3000);
-  };
-
   return (
     <Router>
-      <StarsContext.Provider value={{ showStars, triggerStars }}>
-        <div className="min-h-screen bg-gray-50 relative">
-          <ScrollToTop />
-          <StarsOnNavigation triggerStars={triggerStars} />
-          <Header />
-          <FloatingStars show={showStars} />
-          <div className="relative z-10">
+      <div className="min-h-screen bg-gray-50 relative">
+        <ScrollToTop />
+        <Header />
+        <div className="relative z-10">
             <Suspense fallback={<PageLoader />}>
               <AnimatePresence mode="wait">
                 <Routes>
@@ -92,7 +60,6 @@ function App() {
           </div>
           <Footer />
         </div>
-      </StarsContext.Provider>
     </Router>
   );
 }

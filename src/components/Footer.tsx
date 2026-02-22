@@ -12,9 +12,8 @@ const Footer = () => {
               <img src={logo} alt="Africa Assistance Plan Logo" className="h-8 w-8 rounded-md text-brand-gold" />
               <span className="text-2xl font-bold">Africa Assistance Plan</span>
             </Link>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Committed to eradicating poverty and deprivation among society's most vulnerable. 
-              We ensure holistic well-being through water access, youth empowerment, and community development across Ghana.
+            <p className="text-yellow-600 mb-6 max-w-md">
+          ...That Africa Might Be Saved!
             </p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/AAPGHANA" target="_blank" rel="noopener noreferrer">

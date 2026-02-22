@@ -138,23 +138,6 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Introduction */}
-      {/* <section className="section-spacing bg-gradient-to-b from-white to-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ y: 50, opacity: 0, scale: 0.95 }}
-            whileInView={{ y: 0, opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center bg-white rounded-2xl shadow-lg p-8 md:p-12 border-t-4 border-brand-gold"
-          >
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-              There are many ways to walk with <span className="font-semibold text-brand-blue">Africa Assistance Plan</span> as we serve communities and proclaim Christ. 
-              AAP has projects running throughout the year, and there are always opportunities to get involved.
-            </p>
-          </motion.div>
-        </div>
-      </section> */}
 
       {/* Volunteer Section */}
       <section className="section-spacing bg-gray-50 relative overflow-hidden">
@@ -529,6 +512,11 @@ const GetInvolved = () => {
                 title: "As a Business",
                 description: "Partner through corporate giving, social responsibility initiatives, in-kind support, or strategic partnerships that create lasting Kingdom impact.",
                 icon: "💼"
+              },
+              {
+                title: "As an Advocate",
+                description: "Be a voice for the vulnerable. We invite media influencers, creatives, journalists, and activists to use their platforms to share our stories, raise awareness about community needs, and mobilize others to stand for justice, dignity, and hope in Christ.",
+                icon: "📢"
               }
             ].map((partner, index) => (
               <motion.div
@@ -553,13 +541,7 @@ const GetInvolved = () => {
                   </motion.div>
                   <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 group-hover:text-brand-blue transition-colors duration-300">{partner.title}</h3>
                   <p className="text-sm md:text-base text-gray-700 leading-relaxed mb-4">{partner.description}</p>
-                  <motion.div
-                    initial={{ x: -10, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    className="flex items-center gap-2 text-brand-blue font-semibold text-sm group-hover:gap-4 transition-all duration-300"
-                  >
-                    Learn More <ChevronRight className="w-4 h-4" />
-                  </motion.div>
+         
                 </div>
               </motion.div>
             ))}
@@ -567,56 +549,23 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Advocate & Newsletter Section - Side by Side */}
+      {/* Newsletter Section */}
       <section className="section-spacing bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity }}
           className="absolute top-0 right-0 w-96 h-96 bg-brand-gold rounded-full blur-3xl"
         />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-            {/* Advocate Card */}
-            <motion.div
-              initial={{ x: -50, opacity: 0, scale: 0.95 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue text-white rounded-3xl shadow-2xl p-8 md:p-12 relative overflow-hidden"
-            >
-              <motion.div 
-                animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-                transition={{ duration: 8, repeat: Infinity }}
-                className="absolute top-0 right-0 w-64 h-64 bg-brand-gold/20 rounded-full blur-3xl"
-              />
-              <div className="relative">
-                <motion.div
-                  initial={{ scale: 0, rotate: 180 }}
-                  whileInView={{ scale: 1, rotate: 0 }}
-                  transition={{ duration: 0.6, type: "spring" }}
-                  viewport={{ once: true }}
-                  className="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl shadow-lg mb-6 border border-white/20"
-                >
-                  <Megaphone className="h-10 w-10 text-brand-gold" />
-                </motion.div>
-                <h2 className="text-2xl md:text-3xl font-bold mb-6">Advocate</h2>
-                <p className="text-sm md:text-base leading-relaxed text-blue-100">
-                  Be a voice for the vulnerable. We invite media influencers, creatives, journalists, and activists to use their platforms 
-                  to share our stories, raise awareness about community needs, and mobilize others to stand for justice, dignity, and hope in Christ.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Newsletter Card */}
-            <motion.div
-              initial={{ x: 50, opacity: 0, scale: 0.95 }}
-              whileInView={{ x: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl p-8 md:p-12 border-t-4 border-brand-gold relative overflow-hidden"
-            >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          {/* Newsletter Card */}
+          <motion.div
+            initial={{ y: 50, opacity: 0, scale: 0.95 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
+            className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-2xl p-8 md:p-12 border-t-4 border-brand-gold relative overflow-hidden"
+          >
               <motion.div 
                 animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
                 transition={{ duration: 6, repeat: Infinity }}
@@ -657,7 +606,6 @@ const GetInvolved = () => {
                 </motion.div>
               </div>
             </motion.div>
-          </div>
         </div>
       </section>
     </motion.div>
