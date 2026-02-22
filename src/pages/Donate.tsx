@@ -27,26 +27,10 @@ const Donate = () => {
       impact: '$200 = Clean water access for 10 families'
     },
     {
-      id: 'health',
-      title: 'Healthcare Access',
-      icon: Stethoscope,
-      description: 'Support mobile clinics, health education, and medical care for orphanages',
-      color: 'from-red-500 to-red-600',
-      impact: '$75 = Medical care for a family of 5'
-    },
-    {
-      id: 'orphanage',
-      title: 'Orphanage Support',
-      icon: Heart,
-      description: 'Provide food, shelter, and care for orphaned children',
-      color: 'from-pink-500 to-pink-600',
-      impact: '$50 = Monthly support for 1 orphaned child'
-    },
-    {
       id: 'church',
-      title: 'Church & Faith Programs',
+      title: 'Build A New Local Church',
       icon: Building2,
-      description: 'Support churches and faith-based community initiatives',
+      description: 'Provide A Place of Worship to a Local Church',
       color: 'from-purple-500 to-purple-600',
       impact: '$100 = Support community faith programs'
     },

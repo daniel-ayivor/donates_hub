@@ -424,37 +424,6 @@ const AboutUs = () => {
       </section>
 
       {/* Achievements */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Achievements</h2>
-            <p className="text-xl text-gray-600">The impact we've made together</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.label}
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-8 bg-yellow-50 rounded-xl"
-              >
-                <achievement.icon className="h-16 w-16 text-brand-gold mx-auto mb-4" />
-                <div className="text-4xl font-bold text-gray-900 mb-2">{achievement.number}</div>
-                <div className="text-gray-600 font-semibold">{achievement.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-brand-blue">
