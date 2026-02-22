@@ -214,7 +214,7 @@ const AboutUs = () => {
               <Globe className="h-12 w-12 text-blue-500 mb-4" />
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Vision</h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Africa Assistance Plan exists to end all forms of poverty.
+              ...That Africa Might Be Saved!
               </p>
             </motion.div>
 

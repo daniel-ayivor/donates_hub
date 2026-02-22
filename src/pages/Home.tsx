@@ -3,7 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Users, Building2, DollarSign, Heart, Droplet, BookOpen, Church, TrendingUp } from 'lucide-react';
+import { Users, Building2, DollarSign, Heart, Droplet, BookOpen, Church, TrendingUp, ChurchIcon } from 'lucide-react';
 import CountUp from '../components/CountUp';
 import FeaturedStories from '../components/FeaturedStories';
 import DonatesHubHero from '../components/DonatesHubHero';
@@ -41,7 +41,7 @@ const Home = () => {
       suffix: ''
     },
     { 
-      icon: DollarSign, 
+      icon: ChurchIcon, 
       label: 'Churches Planted', 
       value: 5,
       description: 'New fellowships established through outreach',

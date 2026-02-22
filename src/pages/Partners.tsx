@@ -48,7 +48,7 @@ const Partners = () => {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Partners</h2>
           <p className="text-xl text-gray-600">
-            Working together to transform communities across Africa
+           AAP has, over the years, co-laboured with faithful partners, both past and present
           </p>
         </motion.div>
       </div>
