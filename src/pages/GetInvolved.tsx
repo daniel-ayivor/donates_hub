@@ -282,13 +282,10 @@ const GetInvolved = () => {
                       >
                         <option value="">Select area</option>
                         <option value="education">Education</option>
-                        <option value="healthcare">Healthcare</option>
                         <option value="water">Water & Sanitation</option>
-                        <option value="orphanage">Orphanage</option>
                         <option value="church">Church Programs</option>
                         <option value="community">Community Dev.</option>
-                        <option value="media">Media</option>
-                        <option value="other">Other</option>
+          
                       </select>
                     </div>
                   </div>

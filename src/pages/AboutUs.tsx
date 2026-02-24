@@ -283,7 +283,7 @@ const AboutUs = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <div className="text-xl text-gray-600 text-left max-w-2xl mx-auto mb-10">
+            <div className="text-xl text-gray-600  max-w-2xl mx-auto mb-10">
               <strong>The principles that guide everything we do</strong>
             </div>
           </motion.div>

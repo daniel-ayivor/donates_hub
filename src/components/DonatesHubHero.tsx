@@ -25,7 +25,7 @@ const DonatesHubHero = () => {
     },
     {
       id: 2,
-      headline: 'Clean Water for All',
+      headline: 'Clean water,  good hygiene & and sanitation for all',
       subtext: 'In Jesus Name',
       cta: 'See Our Impact',
       ctaLink: '/impact',
