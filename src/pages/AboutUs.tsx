@@ -17,7 +17,7 @@ const AboutUs = () => {
     {id:2,
       name: "Harrieta Bosomtwe",
       role: "EXECUTIVE ASSISTANT",
-      image: "https://aapghana.org/wp-content/uploads/2025/05/Harrieta-1.jpeg",
+      image: "/images/harriet.jpeg",
       bio: "Harrieta is a dedicated team player with excellent administrative and interpersonal skills. She serves as the Executive Assistant and Children's Ministry Coordinator. She is passionate about nurturing children's spiritual growth while supporting the smooth running of organizational activities.",
       expertise: "Administration, Children's Ministry, Interpersonal Skills"
     },
