@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Project from './pages/Project';
+import OurProject from './components/OurProject';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -49,7 +50,8 @@ function App() {
                   <Route path="/activities" element={<Activities />} />
                   <Route path="/activities/:id" element={<EventDetail />} />
                   <Route path="/donate" element={<Donate />} />
-                       <Route path="/project" element={<Project />} />
+                  <Route path="/our-project" element={<OurProject />} />
+                  <Route path="/project" element={<Project />} />
                   <Route path="/team/:id" element={<TeamDetails />} />
                   <Route path="/about" element={<AboutUs />} />
                   <Route path="/contact" element={<Contact />} />
