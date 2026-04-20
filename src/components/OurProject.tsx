@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, FC } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 interface ProjectSection {
@@ -165,7 +165,7 @@ const sectionCardVariants = {
     visible: { y: 0, opacity: 1 },
 };
 
-const OurProject = () => {
+const OurProject: FC = () => {
     const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
 
     const toggleSection = (sectionId: string) => {
@@ -225,18 +225,13 @@ const OurProject = () => {
                                     viewport={{ once: true }}
                                     className="relative overflow-hidden bg-gray-50"
                                 >
-
                                     <img
                                         src={section.image}
                                         alt={section.title}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="w-full h-56 sm:h-64 lg:h-72 object-cover object-top transition-transform duration-700 group-hover:scale-[1.01]"
-
                                     />
-                                    {/* <img
-                    src={section.image}
-                    alt={section.title}
-                    className="w-full h-56 sm:h-64 lg:h-72 object-contain p-3 sm:p-4 transition-transform duration-700 group-hover:scale-[1.01]"
-                  /> */}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
                                     <div className="absolute left-5 top-5 inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-blue shadow-sm backdrop-blur">
                                         Project {index + 1}
@@ -270,6 +265,7 @@ const OurProject = () => {
                                             {isExpanded && (
                                                 <motion.div
                                                     key={`${section.id}-extra`}
+                                                    id={`${section.id}-extra-content`}
                                                     initial={{ opacity: 0, height: 0 }}
                                                     animate={{ opacity: 1, height: 'auto' }}
                                                     exit={{ opacity: 0, height: 0 }}
@@ -279,6 +275,18 @@ const OurProject = () => {
                                                     {extraParagraphs.map((paragraph, paragraphIndex) => (
                                                         <p key={`${section.id}-extra-paragraph-${paragraphIndex}`}>{paragraph}</p>
                                                     ))}
+
+                                                    <div className="mt-8 border-t border-gray-200 pt-6">
+                                                        <h3 className="text-xl font-semibold text-gray-900 mb-3">Your Support at a Glance</h3>
+                                                        <ul className="space-y-2 text-gray-700">
+                                                            {section.supportGlance.map((item, itemIndex) => (
+                                                                <li key={`${section.id}-support-${itemIndex}`} className="flex gap-2">
+                                                                    <span className="text-brand-gold">•</span>
+                                                                    <span>{item}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>
@@ -289,10 +297,13 @@ const OurProject = () => {
                                             whileTap={{ scale: 0.98 }}
                                             type="button"
                                             onClick={() => toggleSection(section.id)}
+                                            aria-expanded={isExpanded}
+                                            aria-controls={`${section.id}-extra-content`}
                                             className="mt-5 inline-flex items-center gap-2 text-brand-blue font-semibold hover:text-brand-gold transition-colors"
                                         >
                                             {isExpanded ? 'Read less' : 'Read more'}
                                             <motion.span
+                                                aria-hidden
                                                 animate={{ rotate: isExpanded ? 180 : 0 }}
                                                 transition={{ duration: 0.2 }}
                                             >
@@ -301,17 +312,19 @@ const OurProject = () => {
                                         </motion.button>
                                     )}
 
-                                    <div className="mt-8 border-t border-gray-200 pt-6">
-                                        <h3 className="text-xl font-semibold text-gray-900 mb-3">Your Support at a Glance</h3>
-                                        <ul className="space-y-2 text-gray-700">
-                                            {section.supportGlance.map((item, itemIndex) => (
-                                                <li key={`${section.id}-support-${itemIndex}`} className="flex gap-2">
-                                                    <span className="text-brand-gold">•</span>
-                                                    <span>{item}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
+                                    {!shouldShowToggle && (
+                                        <div className="mt-8 border-t border-gray-200 pt-6">
+                                            <h3 className="text-xl font-semibold text-gray-900 mb-3">Your Support at a Glance</h3>
+                                            <ul className="space-y-2 text-gray-700">
+                                                {section.supportGlance.map((item, itemIndex) => (
+                                                    <li key={`${section.id}-support-${itemIndex}`} className="flex gap-2">
+                                                        <span className="text-brand-gold">•</span>
+                                                        <span>{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
                             </motion.article>
                         );

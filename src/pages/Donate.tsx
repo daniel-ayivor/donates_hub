@@ -11,36 +11,60 @@ const Donate = () => {
 
   const donationCategories = [
     {
-      id: 'education',
-      title: 'Education Support',
+      id: 'child-discipleship',
+      title: 'Support Child Discipleship',
       icon: GraduationCap,
-      description: 'Fund school supplies, uniforms, and educational programs for children and orphanages',
+      description: 'With $50 per year, you help disciple a child for one year, nurturing them to grow firm in Christ.',
       color: 'from-blue-500 to-blue-600',
-      impact: '$25 = School supplies for 1 child for a month'
+      impact: '$50 per year sponsors one child\'s discipleship'
     },
     {
-      id: 'water',
-      title: 'Clean Water Access',
-      icon: Droplets,
-      description: 'Install water systems and promote hygiene in communities',
+      id: 'school-feeding',
+      title: 'Provide School Meals',
+      icon: Users,
+      description: 'With $30 per month, you provide one warm meal daily for a child in our school feeding program for a whole month.',
       color: 'from-cyan-500 to-cyan-600',
-      impact: '$200 = Clean water access for 10 families'
+      impact: '$30 per month feeds one child for a month'
     },
     {
-      id: 'church',
-      title: 'Build A New Local Church',
-      icon: Building2,
-      description: 'Provide A Place of Worship to a Local Church',
+      id: 'sponsor-education',
+      title: 'Sponsor a Child\'s Education',
+      icon: Gift,
+      description: 'With $50 per month, you support 5 children\' education, supplies, and care at our learning centres.',
       color: 'from-purple-500 to-purple-600',
-      impact: '$100 = Support community faith programs'
+      impact: '$50 per month supports 5 children'
     },
     {
-      id: 'general',
-      title: 'Where Needed Most',
+      id: 'gospel-outreach',
+      title: 'Support Gospel Outreach',
       icon: Heart,
-      description: 'Support all our programs and initiatives',
+      description: 'With $300, you support one Jesus Film outreach and evangelism in a hard-to-reach community.',
       color: 'from-orange-500 to-pink-500',
-      impact: 'Your donation makes the biggest impact'
+      impact: '$300 = one Jesus Film outreach'
+    },
+    {
+      id: 'school-furniture',
+      title: 'Provide School Furniture',
+      icon: Building2,
+      description: 'With $30 you provide a school desk; with $100 you provide a table and chairs for a kindergarten class.',
+      color: 'from-yellow-500 to-yellow-600',
+      impact: '$30 = school desk, $100 = table & chairs set'
+    },
+    {
+      id: 'clean-water',
+      title: 'Provide Clean Water',
+      icon: Droplets,
+      description: 'With $6,000, you help construct a new borehole to provide safe water for an entire community/school with sanitation & hygiene education.',
+      color: 'from-cyan-600 to-teal-600',
+      impact: '$6,000 = one borehole + sanitation & hygiene education'
+    },
+    {
+      id: 'build-church',
+      title: 'Build a Church',
+      icon: Building2,
+      description: 'With $10,000, you build a place of worship for a local church in a village.',
+      color: 'from-purple-500 to-indigo-600',
+      impact: '$10,000 = build a local church'
     }
   ];
 
@@ -48,23 +72,43 @@ const Donate = () => {
 
   const getImpactMessage = () => {
     const amount = customAmount ? parseInt(customAmount) : selectedAmount;
-    if (selectedCategory === 'education') {
-      const months = Math.floor(amount / 25);
-      return months > 0 ? `Provides school supplies for ${months} child${months > 1 ? 'ren' : ''} for a month` : '';
-    } else if (selectedCategory === 'water') {
-      const families = Math.floor(amount / 20);
-      return families > 0 ? `Provides clean water access for ${families} famil${families > 1 ? 'ies' : 'y'}` : '';
-    } else if (selectedCategory === 'health') {
-      const families = Math.floor(amount / 75);
-      return families > 0 ? `Provides medical care for ${families} famil${families > 1 ? 'ies' : 'y'}` : '';
-    } else if (selectedCategory === 'orphanage') {
-      const children = Math.floor(amount / 50);
-      return children > 0 ? `Provides monthly support for ${children} orphaned child${children > 1 ? 'ren' : ''}` : '';
-    } else if (selectedCategory === 'church') {
-      const programs = Math.floor(amount / 100);
-      return programs > 0 ? `Supports ${programs} community faith program${programs > 1 ? 's' : ''}` : '';
+    switch (selectedCategory) {
+      case 'child-discipleship': {
+        const count = Math.floor(amount / 50);
+        return count > 0 ? `Disciples ${count} child${count > 1 ? 'ren' : ''} for a year` : '';
+      }
+      case 'school-feeding': {
+        const months = Math.floor(amount / 30);
+        return months > 0 ? `Provides daily school meals for ${months} month${months > 1 ? 's' : ''} for one child` : '';
+      }
+      case 'sponsor-education': {
+        const sets = Math.floor(amount / 50);
+        const children = sets * 5;
+        return sets > 0 ? `Supports ${children} child${children > 1 ? 'ren' : ''} for a month` : '';
+      }
+      case 'gospel-outreach': {
+        const events = Math.floor(amount / 300);
+        return events > 0 ? `Funds ${events} Jesus Film outreach event${events > 1 ? 's' : ''}` : '';
+      }
+      case 'school-furniture': {
+        if (amount >= 100) {
+          const sets = Math.floor(amount / 100);
+          return `Provides ${sets} table & chairs set${sets > 1 ? 's' : ''} for kindergarten classes`;
+        }
+        const desks = Math.floor(amount / 30);
+        return desks > 0 ? `Provides ${desks} school desk${desks > 1 ? 's' : ''}` : '';
+      }
+      case 'clean-water': {
+        const boreholes = Math.floor(amount / 6000);
+        return boreholes > 0 ? `Helps construct ${boreholes} borehole${boreholes > 1 ? 's' : ''} with sanitation & hygiene education` : '';
+      }
+      case 'build-church': {
+        const buildings = Math.floor(amount / 10000);
+        return buildings > 0 ? `Builds ${buildings} local church${buildings > 1 ? 'es' : ''}` : '';
+      }
+      default:
+        return 'Makes a significant impact in our communities';
     }
-    return 'Makes a significant impact in our communities';
   };
 
   const handleDonate = () => {
@@ -76,6 +120,10 @@ const Donate = () => {
     // Add category and amount as metadata (you can process this in your Node.js backend)
     stripeUrl.searchParams.append('client_reference_id', `${selectedCategory}_${amount}`);
     stripeUrl.searchParams.append('prefilled_email', '');
+    // Include the selected amount so checkout/session can read it (dollars)
+    stripeUrl.searchParams.append('amount', String(amount));
+    // Optionally include currency (adjust if you use a different currency)
+    stripeUrl.searchParams.append('currency', 'USD');
     
     setIsSubmitting(true);
     
@@ -216,7 +264,14 @@ const Donate = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Choose Your Impact</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">How Can I Make an Impact?</h2>
+                <p className="text-gray-700 max-w-3xl mx-auto mb-4">
+                  The most valuable support for us is regular, unrestricted giving. This allows us to plan effectively and carry out sustainable, Christ-centered projects that transform lives.
+                  You can also support specific projects through one-time donations, helping us respond to urgent needs and expand ongoing work.
+                </p>
+                <p className="text-gray-700 font-semibold mb-4">Here are some practical ways your support can make a difference:</p>
+                <p className="mt-1 text-brand-blue font-bold mb-6">Nyame nhyira wo pii! — “God bless you very much!” (Twi)</p>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                   {donationCategories.map((category) => (
                     <div
@@ -324,7 +379,6 @@ const Donate = () => {
                   </motion.div>
                 </div>
 
-
                 <motion.button
                   onClick={handleDonate}
                   disabled={isSubmitting}
@@ -363,45 +417,8 @@ const Donate = () => {
           </div>
         </div>
       </section>
-      
       {/* Success Animation Overlay */}
       {showSuccess && <SuccessAnimation />}
-
-      {/* Other Ways to Help */}
-      {/* <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-gray-900 mb-12">Other Ways to Support</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
-                <Users className="h-12 w-12 text-blue-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Volunteer</h3>
-                <p className="text-gray-600 mb-4">Join our team and contribute your skills directly to our mission.</p>
-                <button className="text-blue-500 font-semibold hover:text-blue-600">Learn More</button>
-              </div>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
-                <Gift className="h-12 w-12 text-brand-gold mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Monthly Giving</h3>
-                <p className="text-gray-600 mb-4">Provide sustained support with a monthly donation plan.</p>
-                <button className="text-brand-gold font-semibold hover:text-yellow-700">Set Up Monthly</button>
-              </div>
-              
-              <div className="bg-white p-8 rounded-2xl shadow-sm hover:shadow transition-shadow">
-                <Heart className="h-12 w-12 text-purple-500 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Share Our Story</h3>
-                <p className="text-gray-600 mb-4">Help us reach more people by sharing our mission on social media.</p>
-                <button className="text-purple-500 font-semibold hover:text-purple-600">Share Now</button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
     </motion.div>
   );
 };
