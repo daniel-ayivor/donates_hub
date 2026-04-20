@@ -41,7 +41,7 @@ const Header = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/impact', label: 'Our Impact' },
-    { path: '/current-project', label: 'Current Project' },
+    { path: '/current-project', label: 'Current Projects' },
     // { path: '/project', label: 'Project' },
     { path: '/get-involved', label: 'Get Involved' },
 
