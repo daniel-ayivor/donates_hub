@@ -50,7 +50,7 @@ function App() {
                   <Route path="/activities" element={<Activities />} />
                   <Route path="/activities/:id" element={<EventDetail />} />
                   <Route path="/donate" element={<Donate />} />
-                  <Route path="/our-project" element={<OurProject />} />
+                  <Route path="/current-project" element={<OurProject />} />
                   <Route path="/project" element={<Project />} />
                   <Route path="/team/:id" element={<TeamDetails />} />
                   <Route path="/about" element={<AboutUs />} />

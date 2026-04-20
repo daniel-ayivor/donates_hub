@@ -333,7 +333,7 @@ const Donate = () => {
                 </div>
 
                 {/* Impact Display */}
-                <motion.div 
+                {/* <motion.div 
                   className="bg-blue-50 p-6 rounded-xl mb-8 border border-blue-200"
                   whileHover={{ scale: 1.02, boxShadow: "0 10px 25px rgba(34, 197, 94, 0.1)" }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -342,7 +342,7 @@ const Donate = () => {
                   <p className="text-blue-700 text-lg">
                     ${customAmount || selectedAmount} {getImpactMessage()}
                   </p>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
             </div>
 
