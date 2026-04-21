@@ -64,7 +64,7 @@ const Contact = () => {
       className="pt-20"
     >
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32 min-h-[60vh] bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue overflow-hidden">
+      {/* <section className="relative py-24 md:py-32 min-h-[85vh] bg-gradient-to-br from-brand-blue via-blue-600 to-brand-blue overflow-hidden">
         <motion.div 
           animate={{ 
             scale: [1, 1.2, 1],
@@ -75,7 +75,7 @@ const Contact = () => {
         />
         <div className="absolute inset-0">
           <img
-            src="/images/WhatsApp Image 2026-01-04 at 12.46.39 AM.jpeg"
+            src="/images/GetOut.jpeg"
             alt="Contact us"
             className="w-full h-full object-cover opacity-20"
             style={{ filter: 'brightness(1.2) contrast(1.05)' }}
@@ -100,8 +100,64 @@ const Contact = () => {
             Reach out and let's make a difference together.
           </motion.p>
         </div>
-      </section>
+      </section> */}
+<section className="relative py-24 md:py-32 min-h-screen overflow-hidden">
+  {/* Background image — full clarity */}
+  <div className="absolute inset-0">
+    <img
+      src="/images/GetOut.jpeg"
+      alt="Contact us"
+      className="w-full h-full object-cover"
+      style={{ filter: 'brightness(1.1) contrast(1.05)' }}
+    />
+    {/* Light dark veil for text readability */}
+    <div className="absolute inset-0 bg-black/25" />
+  </div>
 
+  {/* Single faint light streak */}
+  <div
+    className="absolute inset-0 pointer-events-none"
+    style={{
+      background: 'linear-gradient(120deg, rgba(255,255,255,0.06) 0%, transparent 50%)',
+    }}
+  />
+
+  {/* Soft ambient orb */}
+  <motion.div
+    animate={{ scale: [1, 1.2, 1], opacity: [0.08, 0.15, 0.08] }}
+    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+    className="absolute -top-24 -right-24 w-96 h-96 rounded-full"
+    style={{
+      background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%)',
+    }}
+  />
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+    <motion.h1
+      initial={{ y: 50, opacity: 0, scale: 0.9 }}
+      animate={{ y: 0, opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8, type: "spring" }}
+      className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
+      style={{ textShadow: '0 2px 16px rgba(0,0,0,0.35)' }}
+    >
+      Get in <span className="text-brand-gold">Touch</span>
+    </motion.h1>
+
+    <motion.p
+      initial={{ y: 30, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
+      className="text-base md:text-lg max-w-3xl mx-auto"
+      style={{ 
+        color: 'rgba(255,255,255,0.90)',
+        textShadow: '0 1px 10px rgba(0,0,0,0.3)' 
+      }}
+    >
+      Have questions or want to learn more about our work? We'd love to hear from you.
+      Reach out and let's make a difference together.
+    </motion.p>
+  </div>
+</section>
       {/* Contact Info Cards */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
