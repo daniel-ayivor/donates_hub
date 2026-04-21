@@ -45,7 +45,7 @@ const AboutUs = () => {
     {id:6,
       name: "Benson Henry Asante",
       role: "CHIEF DRILLER & CHRISTIAN WITNESS COORDINATOR",
-      image: "/images/benson asante.jpg",
+      image: "/images/Benson Asante- Jesus Film Cordinator.jpg.jpeg",
       bio: "Benson has over 18 years of drilling experience. He has worked with AAP for over 20 years. He is involved in all AAP's drilling projects either as driller and or supervisor of the projects.",
       expertise: "Drilling, Water Systems, Project Supervision"
     }
