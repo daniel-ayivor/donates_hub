@@ -103,12 +103,10 @@ const Home = () => {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                Our Mission
+                This is our mission.
               </motion.h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed mb-6">
-                At Africa Assistance Plan, we are committed to eradicating poverty and deprivation among society's most vulnerable.
-                We work to ensure the holistic well-being of every individual through programs focused on water access, sanitation, hygiene,
-                health, children and youth empowerment, and church and community development across Ghana.
+              Child-centred Christian organization that focuses on empowering the church and community for holistic development.
               </p>
               <Link
                 to="/about"

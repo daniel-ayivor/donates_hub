@@ -64,7 +64,7 @@ const AboutUs = () => {
     {
       icon: Heart,
       title: "God Factor",
-      description: "God and His Son, Jesus Christ, are at the center of all we do."
+      description: "God the father, the Son, and the Holy Spirit, is at the centre of all we do."
     },
     {
       icon: Sparkles,
