@@ -24,7 +24,7 @@ const AboutUs = () => {
     {id:3,
       name: "Maxwell Asuenabisa",
       role: "DIGITAL MARKETER & FUND RAISING OFFICER",
-      image: "/images/maxwell.jpg",
+      image: "/images/maxwellsss.jpeg",
       bio: "Maxwell is a creative digital marketer with strong skills in content creation, social media strategy, and fundraising. He is passionate about using digital tools to drive impact and support community development.",
       expertise: "Digital Marketing, Fundraising, Social Media"
     },
