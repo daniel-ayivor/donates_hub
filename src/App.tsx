@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Project from './pages/Project';
 import OurProject from './components/OurProject';
+import FAQChatbot from './components/FAQChatbot';
+import CookieConsent from './components/CookieConsent';
 
 // Lazy load pages for code splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -63,6 +65,9 @@ function App() {
             </Suspense>
           </div>
           <Footer />
+
+             <CookieConsent />
+        <FAQChatbot />
         </div>
     </Router>
   );
