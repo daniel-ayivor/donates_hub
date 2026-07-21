@@ -189,12 +189,12 @@ const Activities = () => {
                     className="w-full h-64 object-cover object-center transform hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4 flex gap-2">
-                    <span className={`${categoryColors[activity.category]} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
+                    {/* <span className={`${categoryColors[activity.category]} text-white px-3 py-1 rounded-full text-sm font-semibold`}>
                       {activity.category}
                     </span>
                     <span className={`${statusColors[activity.status]} px-3 py-1 rounded-full text-sm font-semibold`}>
                       {activity.status}
-                    </span>
+                    </span> */}
                   </div>
                   <div className="absolute inset-0 bg-black/30"></div>
                 </div>
