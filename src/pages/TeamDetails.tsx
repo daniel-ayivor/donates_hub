@@ -31,7 +31,7 @@ const TeamDetails = () => {
       id: 3,
       name: "Maxwell Asuenabisa",
       role: "DIGITAL MARKETER & FUND RAISING OFFICER",
-      image: "/images/maxwell.jpg",
+      image: "/images/maxwellsss.jpeg",
       bio: "Maxwell is a creative digital marketer with strong skills in content creation, social media strategy, and fundraising. He is passionate about using digital tools to drive impact and support community development.",
       expertise: "Digital Marketing, Fundraising, Social Media",
       fullDetails: "Maxwell leverages the power of digital media to amplify AAP's message and mobilize resources for community transformation. His innovative approach to fundraising combines compelling storytelling with strategic campaigns that engage donors and supporters across multiple platforms. Through creative content creation and data-driven strategies, Maxwell has successfully increased AAP's online presence and donor engagement, ensuring that the organization has the resources needed to continue its vital work in communities across Africa."
@@ -58,7 +58,7 @@ const TeamDetails = () => {
       id: 6,
       name: "Benson Henry Asante",
       role: "CHIEF DRILLER & CHRISTIAN WITNESS COORDINATOR",
-      image: "/images/benson asante.jpg",
+      image: "/images/Benson Asante- Jesus Film Cordinator.jpg.jpeg",
       bio: "Benson has over 18 years of drilling experience. He has worked with AAP for over 20 years. He is involved in all AAP's drilling projects either as driller and or supervisor of the projects.",
       expertise: "Drilling, Water Systems, Project Supervision",
       fullDetails: "Benson is the backbone of AAP's Water, Sanitation, and Hygiene (WaSH) program. With over two decades of dedicated service to the organization, his expertise in drilling and water systems has brought clean, safe water to countless communities across Ghana. Beyond his technical skills, Benson embodies AAP's Christian mission, using every borehole project as an opportunity to share the love of Christ and witness to communities. His commitment, experience, and spiritual dedication make him an invaluable member of the AAP team and a living testimony to the organization's values."
@@ -200,11 +200,11 @@ const TeamDetails = () => {
                   <span>Email</span>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/77662355/admin/page-posts/published?lipi=urn%3Ali%3Apage%3Aorganization_admin_admin_page_posts_published%3Bebdc7271-1896-4b11-8d58-08fd6cd28cd9"
                   className="flex items-center gap-2 text-brand-blue hover:text-brand-gold transition-colors"
                 >
                   <Linkedin className="h-5 w-5" />
-                  <span>LinkedIn</span>
+                  <span >LinkedIn</span>
                 </a>
               </div>
             </motion.div>

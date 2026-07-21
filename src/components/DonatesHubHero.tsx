@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Heart, Droplet, Church, BookOpen } from 'lucide-react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+// import 'swiper/css';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
 
 const DonatesHubHero = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -178,7 +178,7 @@ const DonatesHubHero = () => {
                       whileHover={{ scale: 1.05, rotate: 2 }}
                       className="hidden lg:flex items-center justify-center"
                     >
-                      <div className="relative w-full h-96 rounded-3xl bg-white/10 backdrop-blur-md shadow-2xl flex items-center justify-center overflow-hidden border border-white/20">
+                      <div className="relative w-60 h-40 rounded-3xl bg-white/10 backdrop-blur-md shadow-2xl flex items-center justify-center overflow-hidden border border-white/20">
                         <motion.div
                           animate={{
                             y: [0, -20, 0],
@@ -190,7 +190,7 @@ const DonatesHubHero = () => {
                           }}
                           className="text-center"
                         >
-                          <IconComponent className="w-32 h-32 mx-auto text-white opacity-90 drop-shadow-lg" />
+                          <IconComponent className="w-20 h-20 mx-auto text-white opacity-90 drop-shadow-lg" />
                         </motion.div>
 
                         <motion.div
